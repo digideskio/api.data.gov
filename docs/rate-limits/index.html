@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web Service Rate Limits</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="en" name="language">
+    <meta content="width=1015,maximum-scale=1.0" name="viewport">
+    <meta name="generator" content="nanoc 3.6.4"> 
+
+    <link rel="stylesheet" type="text/css" media="all" href="/assets/application-fa44f066e1914b3090823a20902161b7.css" />
+    <!--[if IE]>
+      <link rel="stylesheet" type="text/css" media="all" href="/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/assets/ie_lt_9-592d2b1bfdec04e5ce3219e54a1a7316.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/application-fcc9a5d9994aeef74fd27431c769c9fd.js"></script>
+  </head>
+  <body>
+    <div id="preheader">
+  <div id="preheader-inner" class="container-fluid">
+    <div class="row-fluid">
+      <div id="whitehouse"><p><img src="/images/gsa/usaflag-cb0d50f585d.gif" alt="USA Flag" /> <em>An Official Website of the United States Government</em></p></div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container-fluid">
+      <div class="corner-ribbon-wrapper right">
+        <div class="corner-ribbon">
+          <span>BETA</span>
+        </div>
+      </div>
+
+      <div id="main" class="row-fluid">
+        <header>
+          <div id="logo"><a class="logo" href="#" title="Home">Data.gov</a></div>
+        </header>
+        <nav class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li class="nav-home "><a href="/">Home</a></li>
+      <li class="nav-documentation active"><a href="/docs">Documentation</a></li>
+      <li class="nav-community "><a href="/community">Community</a></li>
+    </ul>
+  </div>
+</nav>
+                                                                                                                                       
+
+
+        
+  <ul class="breadcrumb">
+    
+    
+      
+        
+          <li>
+            <a href="/">Home</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/">Documentation</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="active">Web Service Rate Limits</li>
+        
+      
+    
+  </ul>
+
+
+
+        <div id="content">
+          <h1>Web Service Rate Limits</h1>
+
+<p>Limits are placed on the number of Data.gov Web service requests you may make using your API key.</p>
+
+<ul>
+<li><strong>Hourly Limit:</strong> 1,000 requests per hour</li>
+<li><strong>Daily Limit:</strong> 10,000 requests per calendar day</li>
+</ul>
+
+<p>For each API key, these limits are applied across all Data.gov Web services requests. Exceeding these limits will lead to your API key being temporarily blocked from making further requests. Depending on the limit exceeded, the block will be lifted automatically by waiting until the next hour or calendar day.</p>
+
+<h2>Understanding Rate Limit Time Periods</h2>
+
+<h3>Hourly Limit</h3>
+
+<p>The hourly counters for your API key reset at the beginning of every hour.</p>
+
+<p><em>Example:</em> If you started making requests at 10:00AM and made your 1,000th request of the hour at 10:40AM, your API key would become temporarily blocked. This temporary block of your API key would be lifted at 11:00AM, at which point you could make more web service requests (assuming you hadn&#39;t also exceeded your daily limit).</p>
+
+<h3>Daily Limit</h3>
+
+<p>The daily counters for your API key reset at midnight <a href="http://en.wikipedia.org/wiki/Coordinated_Universal_Time">UTC</a>.</p>
+
+<p><em>Example:</em> If you started making requests at 00:00:00 UTC and made your 10,000th request of the day at 16:00:00 UTC, your API key would become temporarily blocked. This temporary block of your API key would be lifted at 00:00:00 UTC of the following day, at which point you could make more web service requests.</p>
+
+<h2>Rate Limit Error Response</h2>
+
+<p>If your API key exceeds the rate limits, you will receive a response with an HTTP status code of 503, Service Unavailable. The response body will contain an error message reading &quot;503 Service Unavailable (Rate Limit Exceeded).&quot; For example, a JSON request that has exceed the rate limits would respond with:</p>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;errors&quot;</span><span class="p">:[</span>
+    <span class="s2">&quot;503 Service Unavailable (Rate Limit Exceeded)&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+<p>For more details on how errors are returned, see the <a href="/docs/errors">general Web service errors</a>.</p>
+
+<h2>Need Higher Limits?</h2>
+
+<p>If you&#39;re building an application that needs higher rate limits, we&#39;d be happy to work with you. <a href="/contact">Contact us</a> for more details.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="container-fluid">
+      <div id="footer-inner">
+        <div id="footer-menu">
+          <ul class="menu">
+            <li class="first leaf"><a href="http://www.data.gov/about">About</a></li>
+            <li class="leaf"><a href="http://www.data.gov/accessibility">Accessibility</a></li>
+            <li class="leaf"><a href="http://www.data.gov/contact-us">Contact Us</a></li>
+            <li class="leaf"><a href="http://www.data.gov/data-policy">Data Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/faq">FAQ</a></li>
+            <li class="leaf"><a href="http://www.data.gov/privacy-policy">Privacy Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/sitemap" title="">Sitemap</a></li>
+            <li class="last leaf"><a href="http://www.usa.gov" title="">USA.gov</a></li>
+          </ul>
+        </div>
+        <div id="footer-logo"><img src="/images/gsa/datagov-footer-logo-cb3085c5b9a.png" alt="Data.gov" /></div>
+      </div>
+    </div>
+  </body>
+</html>
