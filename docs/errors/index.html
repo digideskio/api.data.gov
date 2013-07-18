@@ -124,9 +124,18 @@
 <p>Depending on the requested format, the error message response may be returned in JSON, XML, CSV, or plain text. Unknown request formats will return errors in plain text format.</p>
 
 <h4>JSON Example</h4>
-
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;errors&quot;</span><span class="p">:[</span>
+    <span class="s2">&quot;An invalid api_key was supplied. Get one at http://api.data.gov/&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
 <h4>XML Example</h4>
-
+<div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;errors&gt;</span>
+  <span class="nt">&lt;error&gt;</span>An invalid api_key was supplied. Get one at http://api.data.gov/<span class="nt">&lt;/error&gt;</span>
+<span class="nt">&lt;/errors&gt;</span>
+</pre></div>
 <h4>CSV Example</h4>
 <div class="highlight"><pre><span class="n">Error</span>
 <span class="n">An</span> <span class="n">invalid</span> <span class="n">api_key</span> <span class="n">was</span> <span class="n">supplied</span><span class="p">.</span> <span class="n">Get</span> <span class="n">one</span> <span class="n">at</span> <span class="n">http</span><span class="o">:</span><span class="c1">//api.data.gov/</span>
