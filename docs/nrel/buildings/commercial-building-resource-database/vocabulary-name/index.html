@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vocabulary Name</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="en" name="language">
+    <meta content="width=1015,maximum-scale=1.0" name="viewport">
+    <meta name="generator" content="nanoc 3.6.4"> 
+
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-fa44f066e1914b3090823a20902161b7.css" />
+    <!--[if IE]>
+      <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/static/assets/ie_lt_9-592d2b1bfdec04e5ce3219e54a1a7316.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/assets/application-fcc9a5d9994aeef74fd27431c769c9fd.js"></script>
+  </head>
+  <body>
+    <div id="preheader">
+  <div id="preheader-inner" class="container-fluid">
+    <div class="row-fluid">
+      <div id="whitehouse"><p><img src="/images/gsa/usaflag-cb0d50f585d.gif" alt="USA Flag" /> <em>An Official Website of the United States Government</em></p></div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container-fluid">
+      <div class="corner-ribbon-wrapper right">
+        <div class="corner-ribbon">
+          <span>BETA</span>
+        </div>
+      </div>
+
+      <div id="main" class="row-fluid">
+        <header>
+          <div id="logo"><a class="logo" href="#" title="Home">Data.gov</a></div>
+        </header>
+        <nav class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li class="nav-home "><a href="/">Home</a></li>
+      <li class="nav-documentation active"><a href="/docs">Documentation</a></li>
+      <li class="nav-community "><a href="/community">Community</a></li>
+    </ul>
+  </div>
+</nav>
+                                                                                                                                       
+
+
+        
+  <ul class="breadcrumb">
+    
+    
+      
+        
+          <li>
+            <a href="/">Home</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/">Documentation</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/">National Renewable Energy Laboratory</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/buildings/">Buildings</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/buildings/commercial-building-resource-database/">Commercial Building Resource Database</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="active">Vocabulary Name</li>
+        
+      
+    
+  </ul>
+
+
+
+        <div id="content">
+          <h1>Vocabulary Name</h1>
+
+<p>A list of terms for a given vocabulary in the Commercial Buildings Resource Database. Useful for advanced search integration.</p>
+
+<h2>Request URL</h2>
+
+<p><code>GET http://api.data.gov/nrel/commercial-building-resources/resources.format?parameters</code></p>
+
+<h2>Request Parameters</h2>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Parameter</th>
+      <th class="doc-parameters-required" scope="col">Required</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">vocabulary-name</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string</div>
+
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None</div>
+
+        <div class="doc-parameter-value-field">
+          <strong>Options:</strong> <em>audience-types</em>,<i> building-types, collections, construction-types, institutions, keywords, portals, publication-types, resource-types, states, terms, tool-types, topics </i>
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>The vocabulary to retrieve terms for.  If "terms" is used, this will return terms from all vocabularies.  Otherwise this will return only terms from the specified vocabulary.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">format</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string</div>
+
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> xml</div>
+
+        <div class="doc-parameter-value-field">
+          <strong>Options:</strong> <em>json</em>, <em>xml</em>
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>The output response format.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">api_key</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string</div>
+
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None</div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Your developer API key. See <a href="/doc/api-key">API keys</a> for more information.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Response Fields</h2>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Field</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">result</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> Array</div>
+
+        <div class="doc-parameter-value-field"> </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Array of terms from the requested vocabulary, listed in no specific order. See term fields for details.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Term Fields</h3>
+
+<p>Fields returned with each result.</p>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Parameter</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">tid</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> integer</div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>The unique id of the term.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">vid</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field"><strong>Type: integer</strong></div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Version id of the term.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">name</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field"><b>Type: String</b></div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Display name of term.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">description</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field"><b>Type: String</b></div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Display name of term.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">format</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field"><b>Type: String</b></div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Format of term.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">weight</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field"><b>Type: String</b></div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Display order for term.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">vocabulary_machine_name</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field"><b>Type: String</b></div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Unique id for vocabulary.  Unless input "vocabulary_name" = "terms" was used to select terms from all vocabularies, this field will be the same for all results.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">rdf_mapping</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field"><b>Type: Object</b></div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Resource Description Framework (RDF) metadata.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+
+<h3>JSON Output Format</h3>
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;tid&quot;</span><span class="p">:</span> <span class="s2">&quot;51&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;vid&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Datacenter&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">&quot;weight&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;vocabulary_machine_name&quot;</span><span class="p">:</span> <span class="s2">&quot;building_types&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;rdf_mapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;rdftype&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;skos:Concept&quot;</span>
+                <span class="p">],</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;predicates&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;rdfs:label&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;skos:prefLabel&quot;</span>
+                    <span class="p">]</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;predicates&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;skos:definition&quot;</span>
+                    <span class="p">]</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;vid&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;predicates&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;skos:inScheme&quot;</span>
+                    <span class="p">],</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;rel&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;parent&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;predicates&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;skos:broader&quot;</span>
+                    <span class="p">],</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;rel&quot;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+<span class="err">...</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+<h3>XML Output Format</h3>
+<div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;result</span> <span class="na">is_array=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;item&gt;</span>
+    <span class="nt">&lt;tid&gt;</span>51<span class="nt">&lt;/tid&gt;</span>
+    <span class="nt">&lt;vid&gt;</span>9<span class="nt">&lt;/vid&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Datacenter<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;description/&gt;</span>
+    <span class="nt">&lt;format/&gt;</span>
+    <span class="nt">&lt;weight&gt;</span>0<span class="nt">&lt;/weight&gt;</span>
+    <span class="nt">&lt;vocabulary_machine_name&gt;</span>building_types<span class="nt">&lt;/vocabulary_machine_name&gt;</span>
+    <span class="nt">&lt;rdf_mapping&gt;</span>
+      <span class="nt">&lt;rdftype</span> <span class="na">is_array=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;item&gt;</span>skos:Concept<span class="nt">&lt;/item&gt;</span>
+      <span class="nt">&lt;/rdftype&gt;</span>
+      <span class="nt">&lt;name&gt;</span>
+        <span class="nt">&lt;predicates</span> <span class="na">is_array=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;item&gt;</span>rdfs:label<span class="nt">&lt;/item&gt;</span>
+          <span class="nt">&lt;item&gt;</span>skos:prefLabel<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;/predicates&gt;&lt;/name&gt;</span>
+      <span class="nt">&lt;description&gt;</span>
+        <span class="nt">&lt;predicates</span> <span class="na">is_array=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;item&gt;</span>skos:definition<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;/predicates&gt;</span>
+      <span class="nt">&lt;/description&gt;</span>
+      <span class="nt">&lt;vid&gt;</span>
+        <span class="nt">&lt;predicates</span> <span class="na">is_array=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;item&gt;</span>skos:inScheme<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;/predicates&gt;</span>
+        <span class="nt">&lt;type&gt;</span>rel<span class="nt">&lt;/type&gt;</span>
+      <span class="nt">&lt;/vid&gt;</span>
+      <span class="nt">&lt;parent&gt;</span>
+        <span class="nt">&lt;predicates</span> <span class="na">is_array=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;item&gt;</span>skos:broader<span class="nt">&lt;/item&gt;</span>
+        <span class="nt">&lt;/predicates&gt;</span>
+        <span class="nt">&lt;type&gt;</span>rel<span class="nt">&lt;/type&gt;</span>
+      <span class="nt">&lt;/parent&gt;</span>
+    <span class="nt">&lt;/rdf_mapping&gt;</span>
+  <span class="nt">&lt;/item&gt;</span>
+  ...
+<span class="nt">&lt;/result&gt;</span>
+</pre></div>
+<h2>Rate Limits</h2>
+
+<p><a href="/docs/rate-limits">Standard rate limits</a> apply. No more than 1,000 requests may be made in any hour. No more than 10,000 requests may be made in any day.</p>
+
+<h2>Errors</h2>
+
+<p><a href="/docs/errors">Standard errors</a> may be returned.</p>
+
+
+          <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
+            This website is a <a href="https://github.com/GUI/api.data.gov">public GitHub repository</a>. Please help us by adding to it.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="container-fluid">
+      <div id="footer-inner">
+        <div id="footer-menu">
+          <ul class="menu">
+            <li class="first leaf"><a href="http://www.data.gov/about">About</a></li>
+            <li class="leaf"><a href="http://www.data.gov/accessibility">Accessibility</a></li>
+            <li class="leaf"><a href="http://www.data.gov/contact-us">Contact Us</a></li>
+            <li class="leaf"><a href="http://www.data.gov/data-policy">Data Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/faq">FAQ</a></li>
+            <li class="leaf"><a href="http://www.data.gov/privacy-policy">Privacy Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/sitemap" title="">Sitemap</a></li>
+            <li class="last leaf"><a href="http://www.usa.gov" title="">USA.gov</a></li>
+          </ul>
+        </div>
+        <div id="footer-logo"><img src="/images/gsa/datagov-footer-logo-cb3085c5b9a.png" alt="Data.gov" /></div>
+      </div>
+    </div>
+  </body>
+</html>
