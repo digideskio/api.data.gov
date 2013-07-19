@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Raw Data</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="en" name="language">
+    <meta content="width=1015,maximum-scale=1.0" name="viewport">
+    <meta name="generator" content="nanoc 3.6.4"> 
+
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-fa44f066e1914b3090823a20902161b7.css" />
+    <!--[if IE]>
+      <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/static/assets/ie_lt_9-592d2b1bfdec04e5ce3219e54a1a7316.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/assets/application-fcc9a5d9994aeef74fd27431c769c9fd.js"></script>
+  </head>
+  <body>
+    <div id="preheader">
+  <div id="preheader-inner" class="container-fluid">
+    <div class="row-fluid">
+      <div id="whitehouse"><p><img src="/images/gsa/usaflag-cb0d50f585d.gif" alt="USA Flag" /> <em>An Official Website of the United States Government</em></p></div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container-fluid">
+      <div class="corner-ribbon-wrapper right">
+        <div class="corner-ribbon">
+          <span>BETA</span>
+        </div>
+      </div>
+
+      <div id="main" class="row-fluid">
+        <header>
+          <div id="logo"><a class="logo" href="#" title="Home">Data.gov</a></div>
+        </header>
+        <nav class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li class="nav-home "><a href="/">Home</a></li>
+      <li class="nav-documentation active"><a href="/docs">Documentation</a></li>
+      <li class="nav-community "><a href="/community">Community</a></li>
+    </ul>
+  </div>
+</nav>
+                                                                                                                                       
+
+
+        
+  <ul class="breadcrumb">
+    
+    
+      
+        
+          <li>
+            <a href="/">Home</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/">Documentation</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/">National Renewable Energy Laboratory</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/solar/">Solar</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/solar/pvdaq-v3/">PVDAQ (PV Data Acquisition)</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="active">Raw Data</li>
+        
+      
+    
+  </ul>
+
+
+
+        <div id="content">
+          <h1>Raw Data</h1>
+
+<p>Return raw data for a specific PVDAQ system and date range.</p>
+
+<h2>Request URL</h2>
+
+<pre>GET https://api.data.gov/nrel/pvdaq/v3/data<em>.format?parameters</em></pre>
+
+<h2>HTTP Basic Authentication</h2>
+
+<p>For PVDAQ services, in addition to your developer API key, you must also provide a username and password for your PVDAQ account via <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic Authentication</a>. For login credentials, contact <a href="ryan.smith@nrel.gov">Ryan Smith</a>.</p>
+
+<h2>Request Parameters</h2>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Parameter</th>
+      <th class="doc-parameters-required" scope="col">Required</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">format</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Options:</strong> <em>json</em>, <em>xml</em>
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>The output response format. Given in the URL as the file extension.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">api_key</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Your developer API key. See <a href="/doc/api-key">API keys</a> for more information.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">system_id</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> integer
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Return data for the given system ID. Your PVDAQ user account must have access to the given system.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">start_date</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> date
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Return data between this start date and the <em>end_date</em> given (MM/DD/YYYY format)</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">end_date</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> date
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Return data between the <em>start_date</em> given and this end date (MM/DD/YYYY format).</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">user_id</th>
+      <td class="doc-parameter-required">No</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">For PVDAQ admin user accounts only. Return only systems belonging to the given username.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Response Fields</h2>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Field</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">outputs</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> record
+        </div>
+      </td>
+      <td class="doc-parameter-description">A record containing the data and header names. See <a href="#output-record-fields">output record fields</a> for response details.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">errors</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> array
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>If errors were encountered, a list describing each error. Errors will be returned with an HTTP status code of 422 (<span>Unprocessable Entity).</span></p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">warnings</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> array
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>List of warnings, including information about API deprecations.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">infos</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> array
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>List of additional, non-error information.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">inputs</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> record
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>List of request parameters given.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">version</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>The current version of the PVDAQ web service.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Output Record Fields</h3>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Field</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">data</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> array
+        </div>
+      </td>
+      <td class="doc-parameter-description">An array of records containing the data for the site. The first row lists the field names.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">headers</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> record
+        </div>
+      </td>
+      <td class="doc-parameter-description">List of header names used in the associated output data.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+
+<h3>JSON Output Format</h3>
+
+<pre>GET <a href="https://api.data.gov/nrel/pvdaq/v3/data.json?api_key=DEMO_KEY&amp;system_id=2&amp;start_date=3/24/2011&amp;end_date=3/25/2011">https://api.data.gov/nrel/pvdaq/v3/data.json?api_key=DEMO_KEY&amp;system_id=2&amp;start_date=3/24/2011&amp;end_date=3/25/2011</a></pre>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;infos&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;inputs&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;DEMO_KEY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;end_date&quot;</span><span class="p">:</span> <span class="s2">&quot;3/25/2011&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;start_date&quot;</span><span class="p">:</span> <span class="s2">&quot;3/24/2011&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;system_id&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;outputs&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">[</span>
+        <span class="s2">&quot;SiteID&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Date-Time&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;poa_irradiance&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dc_power&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dc_pos_voltage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dc_pos_current&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;module_temp_1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;das_temp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;das_battery_voltage&quot;</span>
+      <span class="p">],</span>
+      <span class="p">[</span>
+        <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;2011-03-24 00:00:00&quot;</span><span class="p">,</span>
+        <span class="mi">0</span><span class="p">,</span>
+        <span class="mf">-0.0002</span><span class="p">,</span>
+        <span class="mf">-0.7311</span><span class="p">,</span>
+        <span class="mf">0.0003</span><span class="p">,</span>
+        <span class="mf">-3.5754</span><span class="p">,</span>
+        <span class="mf">4.3217</span><span class="p">,</span>
+        <span class="mf">12.2088</span>
+      <span class="p">],</span>
+      <span class="p">[</span>
+        <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;2011-03-24 00:01:00&quot;</span><span class="p">,</span>
+        <span class="mi">0</span><span class="p">,</span>
+        <span class="mf">-0.0002</span><span class="p">,</span>
+        <span class="mf">-0.767</span><span class="p">,</span>
+        <span class="mf">0.0003</span><span class="p">,</span>
+        <span class="mf">-3.4774</span><span class="p">,</span>
+        <span class="mf">4.2991</span><span class="p">,</span>
+        <span class="mf">12.2088</span>
+      <span class="p">]</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;headers&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;SiteID&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Date-Time&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;poa_irradiance&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;dc_power&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;dc_pos_voltage&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;dc_pos_current&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;module_temp_1&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;das_temp&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;das_battery_voltage&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;3.0.0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;warnings&quot;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+</pre></div>
+<h3>XML Output Format</h3>
+
+<pre>GET <a href="https://api.data.gov/nrel/pvdaq/v3/data.xml?api_key=DEMO_KEY&amp;system_id=2&amp;start_date=3/24/2011&amp;end_date=3/25/2011">https://api.data.gov/nrel/pvdaq/v3/data.xml?api_key=DEMO_KEY&amp;system_id=2&amp;start_date=3/24/2011&amp;end_date=3/25/2011</a></pre>
+<div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;response&gt;</span>
+  <span class="nt">&lt;errors</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;outputs&gt;</span>
+    <span class="nt">&lt;headers</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;header&gt;</span>SiteID<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>Date-Time<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>poa_irradiance<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>dc_power<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>dc_pos_voltage<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>dc_pos_current<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>module_temp_1<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>das_temp<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>das_battery_voltage<span class="nt">&lt;/header&gt;</span>
+    <span class="nt">&lt;/headers&gt;</span>
+    <span class="nt">&lt;data</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>SiteID<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>Date-Time<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>poa_irradiance<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>dc_power<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>dc_pos_voltage<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>dc_pos_current<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>module_temp_1<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>das_temp<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>das_battery_voltage<span class="nt">&lt;/datum&gt;</span>
+      <span class="nt">&lt;/datum&gt;</span>
+      <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>2<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>2011-03-24 00:00:00<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>-0.0002<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>-0.7311<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>0.0003<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>-3.5754<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>4.3217<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>12.2088<span class="nt">&lt;/datum&gt;</span>
+      <span class="nt">&lt;/datum&gt;</span>
+      <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>2<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>2011-03-24 00:01:00<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>-0.0002<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>-0.767<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>0.0003<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>-3.4774<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>4.2991<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>12.2088<span class="nt">&lt;/datum&gt;</span>
+      <span class="nt">&lt;/datum&gt;</span>
+    <span class="nt">&lt;/data&gt;</span>
+  <span class="nt">&lt;/outputs&gt;</span>
+  <span class="nt">&lt;warnings</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;infos</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;inputs&gt;</span>
+    <span class="nt">&lt;api-key&gt;</span>DEMO_KEY<span class="nt">&lt;/api-key&gt;</span>
+    <span class="nt">&lt;system-id&gt;</span>2<span class="nt">&lt;/system-id&gt;</span>
+    <span class="nt">&lt;start-date&gt;</span>3/24/2011<span class="nt">&lt;/start-date&gt;</span>
+    <span class="nt">&lt;end-date&gt;</span>3/25/2011<span class="nt">&lt;/end-date&gt;</span>
+  <span class="nt">&lt;/inputs&gt;</span>
+  <span class="nt">&lt;version&gt;</span>3.0.1<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/response&gt;</span>
+</pre></div>
+<h3>CSV Output Format</h3>
+
+<pre>GET <a href="https://api.data.gov/nrel/pvdaq/v3/data.csv?api_key=DEMO_KEY&amp;system_id=2&amp;start_date=3/24/2011&amp;end_date=3/25/2011">https://api.data.gov/nrel/pvdaq/v3/data.csv?api_key=DEMO_KEY&amp;system_id=2&amp;start_date=3/24/2011&amp;end_date=3/25/2011</a></pre>
+<div class="highlight"><pre><span class="n">SiteID</span><span class="p">,</span><span class="n">Date</span><span class="o">-</span><span class="n">Time</span><span class="p">,</span><span class="n">poa_irradiance</span><span class="p">,</span><span class="n">dc_power</span><span class="p">,</span><span class="n">dc_pos_voltage</span><span class="p">,</span><span class="n">dc_pos_current</span><span class="p">,</span><span class="n">module_temp_1</span><span class="p">,</span><span class="n">das_temp</span><span class="p">,</span><span class="n">das_battery_voltage</span>
+<span class="mi">2</span><span class="p">,</span><span class="mi">2011</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mi">24</span> <span class="mo">00</span><span class="o">:</span><span class="mo">00</span><span class="o">:</span><span class="mo">00</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mf">0.0002</span><span class="p">,</span><span class="o">-</span><span class="mf">0.7311</span><span class="p">,</span><span class="mf">0.0003</span><span class="p">,</span><span class="o">-</span><span class="mf">3.5754</span><span class="p">,</span><span class="mf">4.3217</span><span class="p">,</span><span class="mf">12.2088</span>
+<span class="mi">2</span><span class="p">,</span><span class="mi">2011</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mi">24</span> <span class="mo">00</span><span class="o">:</span><span class="mo">01</span><span class="o">:</span><span class="mo">00</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="o">-</span><span class="mf">0.0002</span><span class="p">,</span><span class="o">-</span><span class="mf">0.767</span><span class="p">,</span><span class="mf">0.0003</span><span class="p">,</span><span class="o">-</span><span class="mf">3.4774</span><span class="p">,</span><span class="mf">4.2991</span><span class="p">,</span><span class="mf">12.2088</span>
+</pre></div>
+<h2>Rate Limits</h2>
+
+<p><a href="/docs/rate-limits">Standard rate limits</a> apply. No more than 1,000 requests may be made in any hour. No more than 10,000 requests may be made in any day.</p>
+
+<h2>Data Limits</h2>
+
+<p>If the service estimates that the amount of data that will be returned for a requested system and date range cannot be generated and returned in a reasonable amount of time it will return an error message with a suggested date range to try again. The infos section will also include URLs where you can download the full annual CSV of raw data for the system and year(s) for the requested date range.</p>
+
+<h2>Errors</h2>
+
+<p><a href="/docs/errors">Standard errors</a> may be returned. In addition, the following service-specific errors may be returned:</p>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">HTTP Status Code</th>
+      <th class="doc-parameters-required" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">401</th>
+      <td class="doc-parameter-description">Unauthorized - For PVDAQ services, you must also provide a username and password for your PVDAQ account via <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic Authentication</a>. For login credentials, contact <a href="mailto:ryan.smith@nrel.gov">Ryan Smith</a>.</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">422</th>
+      <td class="doc-parameter-description">Unprocessable Entity - An invalid value was given for a query parameter. The response body will describe the specific error.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+          <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
+            This website is a <a href="https://github.com/GUI/api.data.gov">public GitHub repository</a>. Please help us by adding to it.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="container-fluid">
+      <div id="footer-inner">
+        <div id="footer-menu">
+          <ul class="menu">
+            <li class="first leaf"><a href="http://www.data.gov/about">About</a></li>
+            <li class="leaf"><a href="http://www.data.gov/accessibility">Accessibility</a></li>
+            <li class="leaf"><a href="http://www.data.gov/contact-us">Contact Us</a></li>
+            <li class="leaf"><a href="http://www.data.gov/data-policy">Data Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/faq">FAQ</a></li>
+            <li class="leaf"><a href="http://www.data.gov/privacy-policy">Privacy Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/sitemap" title="">Sitemap</a></li>
+            <li class="last leaf"><a href="http://www.usa.gov" title="">USA.gov</a></li>
+          </ul>
+        </div>
+        <div id="footer-logo"><img src="/images/gsa/datagov-footer-logo-cb3085c5b9a.png" alt="Data.gov" /></div>
+      </div>
+    </div>
+  </body>
+</html>

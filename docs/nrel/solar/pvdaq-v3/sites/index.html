@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sites Metadata</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="en" name="language">
+    <meta content="width=1015,maximum-scale=1.0" name="viewport">
+    <meta name="generator" content="nanoc 3.6.4"> 
+
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-fa44f066e1914b3090823a20902161b7.css" />
+    <!--[if IE]>
+      <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/static/assets/ie_lt_9-592d2b1bfdec04e5ce3219e54a1a7316.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/assets/application-fcc9a5d9994aeef74fd27431c769c9fd.js"></script>
+  </head>
+  <body>
+    <div id="preheader">
+  <div id="preheader-inner" class="container-fluid">
+    <div class="row-fluid">
+      <div id="whitehouse"><p><img src="/images/gsa/usaflag-cb0d50f585d.gif" alt="USA Flag" /> <em>An Official Website of the United States Government</em></p></div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container-fluid">
+      <div class="corner-ribbon-wrapper right">
+        <div class="corner-ribbon">
+          <span>BETA</span>
+        </div>
+      </div>
+
+      <div id="main" class="row-fluid">
+        <header>
+          <div id="logo"><a class="logo" href="#" title="Home">Data.gov</a></div>
+        </header>
+        <nav class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li class="nav-home "><a href="/">Home</a></li>
+      <li class="nav-documentation active"><a href="/docs">Documentation</a></li>
+      <li class="nav-community "><a href="/community">Community</a></li>
+    </ul>
+  </div>
+</nav>
+                                                                                                                                       
+
+
+        
+  <ul class="breadcrumb">
+    
+    
+      
+        
+          <li>
+            <a href="/">Home</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/">Documentation</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/">National Renewable Energy Laboratory</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/solar/">Solar</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/solar/pvdaq-v3/">PVDAQ (PV Data Acquisition)</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="active">Sites Metadata</li>
+        
+      
+    
+  </ul>
+
+
+
+        <div id="content">
+          <h1>Sites Metadata</h1>
+
+<p>Fetch metadata for PVDAQ sites.</p>
+
+<h2>Request URL</h2>
+
+<pre>GET https://api.data.gov/nrel/pvdaq/v3/sites<em>.format?parameters</em></pre>
+
+<h2>HTTP Basic Authentication</h2>
+
+<p>For PVDAQ services, in addition to your developer API key, you must also provide a username and password for your PVDAQ account via <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic Authentication</a>. For login credentials, contact <a href="ryan.smith@nrel.gov">Ryan Smith</a>.</p>
+
+<h2>Request Parameters</h2>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Parameter</th>
+      <th class="doc-parameters-required" scope="col">Required</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">format</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Options:</strong> <em>json</em>, <em>xml</em>
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>The output response format. Given in the URL as the file extension.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">api_key</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Your developer API key. See <a href="/doc/api-key">API keys</a> for more information.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">system_id</th>
+      <td class="doc-parameter-required">No</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> integer
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Return only the system with the given ID. Will only return systems your PVDAQ user account has access to.</p>
+        <p>If left empty, all systems available to your PVDAQ user account will be returned.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">user_id</th>
+      <td class="doc-parameter-required">No</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">For PVDAQ admin user accounts only. Return only systems belonging to the given username.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Response Fields</h2>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Field</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">outputs</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> array
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>An array of records describing each site.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">errors</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> array
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>If errors were encountered, a list describing each error. Errors will be returned with an HTTP status code of 422 (<span>Unprocessable Entity).</span></p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">warnings</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> array
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>List of warnings, including information about API deprecations.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">infos</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> array
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>List of additional, non-error information.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">inputs</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> record
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>List of request parameters given.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">version</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>The current version of the web service.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+
+<h3>JSON Output Format</h3>
+
+<pre>GET <a href="https://api.data.gov/nrel/pvdaq/v3/sites.json?api_key=DEMO_KEY&amp;system_id=2">https://api.data.gov/nrel/pvdaq/v3/sites.json?api_key=DEMO_KEY&amp;system_id=2</a></pre>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;infos&quot;</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="nt">&quot;inputs&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;DEMO_KEY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;system_id&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;outputs&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;available_years&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mi">2011</span><span class="p">,</span>
+        <span class="mi">2012</span><span class="p">,</span>
+        <span class="mi">2013</span><span class="p">,</span>
+        <span class="mi">2010</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;comments&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;confidential&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;inverter_mfg&quot;</span><span class="p">:</span> <span class="s2">&quot;Fronius&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;inverter_mfg_hide&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;inverter_model&quot;</span><span class="p">:</span> <span class="s2">&quot;IG 4000&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;inverter_model_hide&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;module_mfg&quot;</span><span class="p">:</span> <span class="s2">&quot;Sharp&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;module_mfg_hide&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;module_model&quot;</span><span class="p">:</span> <span class="s2">&quot;ND-208U1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;module_model_hide&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;site_power&quot;</span><span class="p">:</span> <span class="mi">2912</span><span class="p">,</span>
+      <span class="nt">&quot;site_power_hide&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;module_tech&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;name_private&quot;</span><span class="p">:</span> <span class="s2">&quot;Nelson Home, Golden, CO, Array 1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name_public&quot;</span><span class="p">:</span> <span class="s2">&quot;[2] Residential 1a&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;site_area&quot;</span><span class="p">:</span> <span class="mf">22.82</span><span class="p">,</span>
+      <span class="nt">&quot;site_azimuth&quot;</span><span class="p">:</span> <span class="mf">181.2</span><span class="p">,</span>
+      <span class="nt">&quot;site_elevation&quot;</span><span class="p">:</span> <span class="mi">1675</span><span class="p">,</span>
+      <span class="nt">&quot;site_latitude&quot;</span><span class="p">:</span> <span class="mf">39.7214</span><span class="p">,</span>
+      <span class="nt">&quot;site_longitude&quot;</span><span class="p">:</span> <span class="mf">105.0972</span><span class="p">,</span>
+      <span class="nt">&quot;site_tilt&quot;</span><span class="p">:</span> <span class="mf">18.5</span><span class="p">,</span>
+      <span class="nt">&quot;system_id&quot;</span><span class="p">:</span> <span class="mi">2</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;3.0.1&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;warnings&quot;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+</pre></div>
+<h3>XML Output Format</h3>
+
+<pre>GET <a href="https://api.data.gov/nrel/pvdaq/v3/sites.xml?system_id=2&amp;api_key=DEMO_KEY">https://api.data.gov/nrel/pvdaq/v3/sites.xml?system_id=2&amp;api_key=DEMO_KEY</a></pre>
+<div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;response&gt;</span>
+  <span class="nt">&lt;errors</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;outputs</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;output&gt;</span>
+      <span class="nt">&lt;available-years</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;available-year</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/available-year&gt;</span>
+        <span class="nt">&lt;available-year</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>2012<span class="nt">&lt;/available-year&gt;</span>
+        <span class="nt">&lt;available-year</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>2013<span class="nt">&lt;/available-year&gt;</span>
+        <span class="nt">&lt;available-year</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>2010<span class="nt">&lt;/available-year&gt;</span>
+      <span class="nt">&lt;/available-years&gt;</span>
+      <span class="nt">&lt;comments</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;confidential</span> <span class="na">type=</span><span class="s">&quot;boolean&quot;</span><span class="nt">&gt;</span>false<span class="nt">&lt;/confidential&gt;</span>
+      <span class="nt">&lt;inverter-mfg&gt;</span>Fronius<span class="nt">&lt;/inverter-mfg&gt;</span>
+      <span class="nt">&lt;inverter-mfg-hide</span> <span class="na">type=</span><span class="s">&quot;boolean&quot;</span><span class="nt">&gt;</span>false<span class="nt">&lt;/inverter-mfg-hide&gt;</span>
+      <span class="nt">&lt;inverter-model&gt;</span>IG 4000<span class="nt">&lt;/inverter-model&gt;</span>
+      <span class="nt">&lt;inverter-model-hide</span> <span class="na">type=</span><span class="s">&quot;boolean&quot;</span><span class="nt">&gt;</span>false<span class="nt">&lt;/inverter-model-hide&gt;</span>
+      <span class="nt">&lt;module-mfg&gt;</span>Sharp<span class="nt">&lt;/module-mfg&gt;</span>
+      <span class="nt">&lt;module-mfg-hide</span> <span class="na">type=</span><span class="s">&quot;boolean&quot;</span><span class="nt">&gt;</span>false<span class="nt">&lt;/module-mfg-hide&gt;</span>
+      <span class="nt">&lt;module-model&gt;</span>ND-208U1<span class="nt">&lt;/module-model&gt;</span>
+      <span class="nt">&lt;module-model-hide</span> <span class="na">type=</span><span class="s">&quot;boolean&quot;</span><span class="nt">&gt;</span>false<span class="nt">&lt;/module-model-hide&gt;</span>
+      <span class="nt">&lt;site-power</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>2912.0<span class="nt">&lt;/site-power&gt;</span>
+      <span class="nt">&lt;site-power-hide</span> <span class="na">type=</span><span class="s">&quot;boolean&quot;</span><span class="nt">&gt;</span>false<span class="nt">&lt;/site-power-hide&gt;</span>
+      <span class="nt">&lt;module-tech</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>2<span class="nt">&lt;/module-tech&gt;</span>
+      <span class="nt">&lt;name-private&gt;</span>Nelson Home, Golden, CO, Array 1<span class="nt">&lt;/name-private&gt;</span>
+      <span class="nt">&lt;name-public&gt;</span>[2] Residential 1a<span class="nt">&lt;/name-public&gt;</span>
+      <span class="nt">&lt;site-area</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>22.82<span class="nt">&lt;/site-area&gt;</span>
+      <span class="nt">&lt;site-azimuth</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>181.2<span class="nt">&lt;/site-azimuth&gt;</span>
+      <span class="nt">&lt;site-elevation</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>1675.0<span class="nt">&lt;/site-elevation&gt;</span>
+      <span class="nt">&lt;site-latitude</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>39.7214<span class="nt">&lt;/site-latitude&gt;</span>
+      <span class="nt">&lt;site-longitude</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>105.0972<span class="nt">&lt;/site-longitude&gt;</span>
+      <span class="nt">&lt;site-tilt</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>18.5<span class="nt">&lt;/site-tilt&gt;</span>
+      <span class="nt">&lt;system-id</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>2<span class="nt">&lt;/system-id&gt;</span>
+    <span class="nt">&lt;/output&gt;</span>
+  <span class="nt">&lt;/outputs&gt;</span>
+  <span class="nt">&lt;warnings</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;infos</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;inputs&gt;</span>
+    <span class="nt">&lt;system-id&gt;</span>2<span class="nt">&lt;/system-id&gt;</span>
+    <span class="nt">&lt;api-key&gt;</span>DEMO_KEY<span class="nt">&lt;/api-key&gt;</span>
+  <span class="nt">&lt;/inputs&gt;</span>
+  <span class="nt">&lt;version&gt;</span>3.0.1<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/response&gt;</span>
+</pre></div>
+<h2>Rate Limits</h2>
+
+<p><a href="/docs/rate-limits">Standard rate limits</a> apply. No more than 1,000 requests may be made in any hour. No more than 10,000 requests may be made in any day.</p>
+
+<h2>Errors</h2>
+
+<p><a href="/docs/errors">Standard errors</a> may be returned. In addition, the following service-specific errors may be returned:</p>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">HTTP Status Code</th>
+      <th class="doc-parameters-required" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">401</th>
+      <td class="doc-parameter-description">Unauthorized - For PVDAQ services, you must also provide a username and password for your PVDAQ account via <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic Authentication</a>. For login credentials, contact <a href="mailto:ryan.smith@nrel.gov">Ryan Smith</a>.</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">422</th>
+      <td class="doc-parameter-description">Unprocessable Entity - An invalid value was given for a query parameter. The response body will describe the specific error.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+          <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
+            This website is a <a href="https://github.com/GUI/api.data.gov">public GitHub repository</a>. Please help us by adding to it.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="container-fluid">
+      <div id="footer-inner">
+        <div id="footer-menu">
+          <ul class="menu">
+            <li class="first leaf"><a href="http://www.data.gov/about">About</a></li>
+            <li class="leaf"><a href="http://www.data.gov/accessibility">Accessibility</a></li>
+            <li class="leaf"><a href="http://www.data.gov/contact-us">Contact Us</a></li>
+            <li class="leaf"><a href="http://www.data.gov/data-policy">Data Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/faq">FAQ</a></li>
+            <li class="leaf"><a href="http://www.data.gov/privacy-policy">Privacy Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/sitemap" title="">Sitemap</a></li>
+            <li class="last leaf"><a href="http://www.usa.gov" title="">USA.gov</a></li>
+          </ul>
+        </div>
+        <div id="footer-logo"><img src="/images/gsa/datagov-footer-logo-cb3085c5b9a.png" alt="Data.gov" /></div>
+      </div>
+    </div>
+  </body>
+</html>

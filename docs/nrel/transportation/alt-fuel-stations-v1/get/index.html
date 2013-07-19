@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Get Station by ID</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="en" name="language">
+    <meta content="width=1015,maximum-scale=1.0" name="viewport">
+    <meta name="generator" content="nanoc 3.6.4"> 
+
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-fa44f066e1914b3090823a20902161b7.css" />
+    <!--[if IE]>
+      <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/static/assets/ie_lt_9-592d2b1bfdec04e5ce3219e54a1a7316.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/assets/application-fcc9a5d9994aeef74fd27431c769c9fd.js"></script>
+  </head>
+  <body>
+    <div id="preheader">
+  <div id="preheader-inner" class="container-fluid">
+    <div class="row-fluid">
+      <div id="whitehouse"><p><img src="/images/gsa/usaflag-cb0d50f585d.gif" alt="USA Flag" /> <em>An Official Website of the United States Government</em></p></div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container-fluid">
+      <div class="corner-ribbon-wrapper right">
+        <div class="corner-ribbon">
+          <span>BETA</span>
+        </div>
+      </div>
+
+      <div id="main" class="row-fluid">
+        <header>
+          <div id="logo"><a class="logo" href="#" title="Home">Data.gov</a></div>
+        </header>
+        <nav class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li class="nav-home "><a href="/">Home</a></li>
+      <li class="nav-documentation active"><a href="/docs">Documentation</a></li>
+      <li class="nav-community "><a href="/community">Community</a></li>
+    </ul>
+  </div>
+</nav>
+                                                                                                                                       
+
+
+        
+  <ul class="breadcrumb">
+    
+    
+      
+        
+          <li>
+            <a href="/">Home</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/">Documentation</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/">National Renewable Energy Laboratory</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/transportation/">Transportation</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/transportation/alt-fuel-stations-v1/">Alternative Fuel Stations</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="active">Get Station by ID</li>
+        
+      
+    
+  </ul>
+
+
+
+        <div id="content">
+          <h1>Get Station by ID</h1>
+
+<p>Fetch the details of a specific alternative fuel station given the station&#39;s ID.</p>
+
+<h2>Request URL</h2>
+
+<pre>GET http://api.data.gov/nrel/alt-fuel-stations/v1/:id<em>.format?parameters</em></pre>
+
+<h2>Request Parameters</h2>
+
+<p>The following query parameters may be passed in the request to control the output:</p>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Parameter</th>
+      <th class="doc-parameters-required" scope="col">Required</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">format</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Options:</strong> <em>json</em>, <em>xml</em>, <em>csv</em>
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>The output response format. Given in the URL as the file extension.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">api_key</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Your developer API key. See <a href="/doc/api-key">API key usage</a> for more information.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">id</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> integer
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>The unique ID of the station to find.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Response Fields</h2>
+
+<p>The response is composed of the fuel station matching the requested query. The station has the following attributes:</p>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Field</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">fuel_type_code</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>The type of alternative fuel the station provides. Fuel types are given as code values as described below:</p>
+        <table border="0" cellpadding="0" cellspacing="0" class="doc-parameter-options">
+          <thead>
+            <tr>
+              <th scope="col">Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">BD</th>
+              <td>Biodiesel (B20 and above)</td>
+            </tr>
+            <tr>
+              <th scope="row">CNG</th>
+              <td>Compressed Natural Gas</td>
+            </tr>
+            <tr>
+              <th scope="row">E85</th>
+              <td>Ethanol (E85)</td>
+            </tr>
+            <tr>
+              <th scope="row">ELEC</th>
+              <td>Electric</td>
+            </tr>
+            <tr>
+              <th scope="row">HY</th>
+              <td>Hydrogen</td>
+            </tr>
+            <tr>
+              <th scope="row">LNG</th>
+              <td>Liquefied Natural Gas</td>
+            </tr>
+            <tr>
+              <th scope="row">LPG</th>
+              <td>Liquefied Petroleum Gas (Propane)</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">station_name</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">The name of the station.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">street_address</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">The street address of the station's location.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">intersection_directions</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">Brief additional information about how to locate the station.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">city</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">The city of the station's location.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">state</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">The two character U.S. state or Canadian province code of the station's location.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">zip</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">The ZIP code (postal code) of the station's location.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">plus4</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">The plus-4 portion of the station's ZIP code (U.S. ZIP codes only).</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">station_phone</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">The phone number of the station.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">status_code</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>The current status of the station, given as code values as described below:</p>
+        <table border="0" cellpadding="0" cellspacing="0" class="doc-parameter-options">
+          <thead>
+            <tr>
+              <th scope="col">Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">E</th>
+              <td>Open: The station is open.</td>
+            </tr>
+            <tr>
+              <th scope="row">P</th>
+              <td>Planned: The station is not yet open, but plans to carry alternative fuel in the future, or the station is temporarily out of service. See the "Expected Date" field for an anticipated open date.</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">expected_date</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> date
+        </div>
+      </td>
+      <td class="doc-parameter-description">For planned stations, the date the station is expected to open or start carrying alternative fuel.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">groups_with_access_code</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">A description of who is allowed to access the station and other station access information. Stations with the groups_with_access_code "Private - fleet customers only" may allow other entities to fuel through a business-to-business arrangement. For more information, fleet customers should refer to the access_days_time field for contact information or contact the station directly.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">access_days_time</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">Hours of operation for the station.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">cards_accepted</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>A space-separated list of payment methods accepted. Payment methods are given as code values as described below:</p>
+        <table border="0" cellpadding="0" cellspacing="0" class="doc-parameter-options">
+          <thead>
+            <tr>
+              <th scope="col">Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">A</th>
+              <td>American Express</td>
+            </tr>
+            <tr>
+              <th scope="row">D</th>
+              <td>Discover</td>
+            </tr>
+            <tr>
+              <th scope="row">M</th>
+              <td>MasterCard</td>
+            </tr>
+            <tr>
+              <th scope="row">V</th>
+              <td>VISA</td>
+            </tr>
+            <tr>
+              <th scope="row">Cash</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Checks</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">CFN</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">CleanEnergy</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">FuelMan</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">GasCard</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">PHH</th>
+              <td>PHH Services</td>
+            </tr>
+            <tr>
+              <th scope="row">Voyager</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">Wright_Exp</th>
+              <td>WEX</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">owner_type_code</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>A space-separated list of payment methods accepted. Payment methods are given as code values as described below:</p>
+        <table border="0" cellpadding="0" cellspacing="0" class="doc-parameter-options">
+          <thead>
+            <tr>
+              <th scope="col">Option</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">P</th>
+              <td>Privately owned</td>
+            </tr>
+            <tr>
+              <th scope="row">T</th>
+              <td>Utility owned</td>
+            </tr>
+            <tr>
+              <th scope="row">FG</th>
+              <td>Federal government owned</td>
+            </tr>
+            <tr>
+              <th scope="row">LG</th>
+              <td>Local government owned</td>
+            </tr>
+            <tr>
+              <th scope="row">SG</th>
+              <td>State government owned</td>
+            </tr>
+            <tr>
+              <th scope="row">J</th>
+              <td>Jointly owned (combination of owner types)</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">federal_agency</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> record
+        </div>
+      </td>
+      <td class="doc-parameter-description">If the station is owned by a federal agency, a record for the federal agency that owns this station. See <a href="#federal-agency-record-fields">federal agency record fields</a> for response details.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">bd_blends</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">For biodiesel stations, the level of biodiesel blends the station provides.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">e85_blender_pump</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> boolean
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>For E85 stations, an indication of whether the station has a blender pump on site, given as a boolean:</p>
+        <table border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">true</th>
+              <td>In addition to E85, the station has a blender pump capable of providing mid-level ethanol blends.</td>
+            </tr>
+            <tr>
+              <th scope="row">false</th>
+              <td>The station does not have a blender pump.</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">lpg_primary</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> boolean
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>For propane stations, the type of station, given as a boolean:</p>
+        <table border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">true</th>
+              <td>
+                Primary: A propane station is considered primary because it meets the following criteria, developed based on feedback from the propane industry:
+
+                <ol>
+                  <li>The price of a gallon of propane autogas, including all taxes, at the station is less expensive than other propane sold (e.g., gas grill bottles); and</li>
+                  <li>The station accepts credit cards.</li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">false</th>
+              <td>Secondary: The station does not meet the criteria to be considered primary.</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">ng_fill_type_code</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>For CNG stations, the type of dispensing capability available, given as code values as described below:</p>
+        <table border="0" cellpadding="0" cellspacing="0" class="doc-parameter-options">
+          <thead>
+            <tr>
+              <th scope="col">Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Q</th>
+              <td>Quick fill</td>
+            </tr>
+            <tr>
+              <th scope="row">T</th>
+              <td>Timed fill</td>
+            </tr>
+            <tr>
+              <th scope="row">B</th>
+              <td>Both: quick fill and timed fill</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">ng_psi</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">For CNG stations, a space separated list of PSI pressures available.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">ng_vehicle_class</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>For CNG and LNG stations, the maximum vehicle size that can physically access the fueling infrastructure, given as code values as described below:</p>
+        <table border="0" cellpadding="0" cellspacing="0" class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">LD</th>
+              <td>Station can only accommodate light-duty vehicles (Classes 1-2).</td>
+            </tr>
+            <tr>
+              <th scope="row">MD</th>
+              <td>Station can accommodate light- and medium-duty vehicles (Classes 1-5).</td>
+            </tr>
+            <tr>
+              <th scope="row">HD</th>
+              <td>Station can accommodate light-, medium-, and heavy-duty vehicles (Classes 1-8).</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Note: This field does not take into account station capacity or other considerations.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">ev_level1_evse_num</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> integer
+        </div>
+      </td>
+      <td class="doc-parameter-description">For electric stations, the number of Level 1 EVSE (standard 110V outlet).</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">ev_level2_evse_num</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> integer
+        </div>
+      </td>
+      <td class="doc-parameter-description">For electric stations, the number of Level 2 EVSE (J1772 connector).</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">ev_dc_fast_num</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> integer
+        </div>
+      </td>
+      <td class="doc-parameter-description">For electric stations, the number of DC Fast Chargers.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">ev_other_evse</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        For electric stations, the number and type of additional EVSE, such as:
+
+        <ul>
+          <li>SP Inductive - Small paddle inductive</li>
+          <li>LP Inductive - Large paddle inductive</li>
+          <li>Avcon Conductive</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">ev_network</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">For electric stations, the name of the EVSE network, if applicable.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">ev_network_web</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">For electric stations, the EVSE network Web site, if applicable.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">hy_status_link</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">For hydrogen stations, a link to a website that provides up-to-date information about the current status of this hydrogen station.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">geocode_status</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>A rating indicating the approximate accuracy of the latitude and longitude for the station's address, given as code values as described below:</p>
+        <table border="0" cellpadding="0" cellspacing="0" class="doc-parameter-options">
+          <thead>
+            <tr>
+              <th scope="col">Value</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">GPS</th>
+              <td>The location is from a real GPS readout at the station.</td>
+            </tr>
+            <tr>
+              <th scope="row">200-9</th>
+              <td>Premise (building name, property name, shopping center, etc.) level accuracy.</td>
+            </tr>
+            <tr>
+              <th scope="row">200-8</th>
+              <td>Address level accuracy.</td>
+            </tr>
+            <tr>
+              <th scope="row">200-7</th>
+              <td>Intersection level accuracy.</td>
+            </tr>
+            <tr>
+              <th scope="row">200-6</th>
+              <td>Street level accuracy.</td>
+            </tr>
+            <tr>
+              <th scope="row">200-5</th>
+              <td>ZIP code (postal code) level accuracy.</td>
+            </tr>
+            <tr>
+              <th scope="row">200-4</th>
+              <td>Town (city, village) level accuracy.</td>
+            </tr>
+            <tr>
+              <th scope="row">200-3</th>
+              <td>Sub-region (county, municipality, etc.) level accuracy.</td>
+            </tr>
+            <tr>
+              <th scope="row">200-2</th>
+              <td>Region (state, province, prefecture, etc.) level accuracy.</td>
+            </tr>
+            <tr>
+              <th scope="row">200-1</th>
+              <td>Country level accuracy.</td>
+            </tr>
+            <tr>
+              <th scope="row">200-0</th>
+              <td>Unknown accuracy.</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">latitude</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> decimal
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Range:</strong> <em>-90</em> to <em>90</em>
+        </div>
+      </td>
+      <td class="doc-parameter-description">The latitude of the station's address (see the "Geocode Status" field for details on the latitude's accuracy).</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">longitude</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> decimal
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Range:</strong> <em>-180</em> to <em>180</em>
+        </div>
+      </td>
+      <td class="doc-parameter-description">The longitude of the station's address (see the "Geocode Status" field for details on the longitude's accuracy).</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">open_date</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> date
+        </div>
+      </td>
+      <td class="doc-parameter-description">The date that the station began offering the fuel. Please note that LPG (propane) stations do not have open dates.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">date_last_confirmed</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> date
+        </div>
+      </td>
+      <td class="doc-parameter-description">The date the station's details were last confirmed.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">updated_at</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> datetime
+        </div>
+      </td>
+      <td class="doc-parameter-description">The time the station's details were last updated (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format).</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">id</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> integer
+        </div>
+      </td>
+      <td class="doc-parameter-description">A unique identifier for this specific station.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Federal Agency Record Fields</h3>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Field</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">id</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> integer
+        </div>
+      </td>
+      <td class="doc-parameter-description">A unique identifier for the federal agency.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">name</th>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+      </td>
+      <td class="doc-parameter-description">The name of the federal agency.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Examples</h2>
+
+<h3>JSON Output Format</h3>
+
+<pre>GET <a href="/nrel/alt-fuel-stations/v1/39534.json?api_key=DEMO_KEY">/nrel/alt-fuel-stations/v1/39534.json?api_key=DEMO_KEY</a></pre>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;alt_fuel_station&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;access_days_time&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;bd_blends&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;cards_accepted&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Golden&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;date_last_confirmed&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-12-31&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;e85_blender_pump&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;ev_dc_fast_num&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;ev_level1_evse_num&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;ev_level2_evse_num&quot;</span><span class="p">:</span> <span class="mi">38</span><span class="p">,</span>
+    <span class="nt">&quot;ev_network&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;ev_network_web&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;ev_other_evse&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;expected_date&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;federal_agency&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;U.S. Department of Energy&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;fuel_type_code&quot;</span><span class="p">:</span> <span class="s2">&quot;ELEC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;geocode_status&quot;</span><span class="p">:</span> <span class="s2">&quot;200-8&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;groups_with_access_code&quot;</span><span class="p">:</span> <span class="s2">&quot;Private access only&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;hy_status_link&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">39534</span><span class="p">,</span>
+    <span class="nt">&quot;intersection_directions&quot;</span><span class="p">:</span> <span class="s2">&quot;Building 17&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">39.7408399</span><span class="p">,</span>
+    <span class="nt">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">-105.1685277</span><span class="p">,</span>
+    <span class="nt">&quot;lpg_primary&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;ng_fill_type_code&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;ng_psi&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;ng_vehicle_class&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;open_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2011-05-20&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;owner_type_code&quot;</span><span class="p">:</span> <span class="s2">&quot;FG&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;plus4&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;CO&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;station_name&quot;</span><span class="p">:</span> <span class="s2">&quot;National Renewable Energy Laboratory - Denver West&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;station_phone&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;15013 Denver West Pkwy&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2013-01-16T16:09:02Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;zip&quot;</span><span class="p">:</span> <span class="s2">&quot;80401&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<h3>XML Output Format</h3>
+
+<pre>GET <a href="/nrel/alt-fuel-stations/v1/39534.xml?api_key=DEMO_KEY">/nrel/alt-fuel-stations/v1/39534.xml?api_key=DEMO_KEY</a></pre>
+<div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;alt-fuel-station&gt;</span>
+  <span class="nt">&lt;access-days-time</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;bd-blends</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;cards-accepted</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;city&gt;</span>Golden<span class="nt">&lt;/city&gt;</span>
+  <span class="nt">&lt;date-last-confirmed&gt;</span>2012-12-31<span class="nt">&lt;/date-last-confirmed&gt;</span>
+  <span class="nt">&lt;expected-date</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;fuel-type-code&gt;</span>ELEC<span class="nt">&lt;/fuel-type-code&gt;</span>
+  <span class="nt">&lt;geocode-status&gt;</span>200-8<span class="nt">&lt;/geocode-status&gt;</span>
+  <span class="nt">&lt;groups-with-access-code&gt;</span>Private access only<span class="nt">&lt;/groups-with-access-code&gt;</span>
+  <span class="nt">&lt;hy-status-link</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;intersection-directions&gt;</span>Building 17<span class="nt">&lt;/intersection-directions&gt;</span>
+  <span class="nt">&lt;latitude&gt;</span>39.7408399<span class="nt">&lt;/latitude&gt;</span>
+  <span class="nt">&lt;longitude&gt;</span>-105.1685277<span class="nt">&lt;/longitude&gt;</span>
+  <span class="nt">&lt;open-date&gt;</span>2011-05-20<span class="nt">&lt;/open-date&gt;</span>
+  <span class="nt">&lt;owner-type-code&gt;</span>FG<span class="nt">&lt;/owner-type-code&gt;</span>
+  <span class="nt">&lt;plus4</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;station-name&gt;</span>National Renewable Energy Laboratory - Denver West<span class="nt">&lt;/station-name&gt;</span>
+  <span class="nt">&lt;station-phone</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;status-code&gt;</span>E<span class="nt">&lt;/status-code&gt;</span>
+  <span class="nt">&lt;street-address&gt;</span>15013 Denver West Pkwy<span class="nt">&lt;/street-address&gt;</span>
+  <span class="nt">&lt;zip&gt;</span>80401<span class="nt">&lt;/zip&gt;</span>
+  <span class="nt">&lt;state&gt;</span>CO<span class="nt">&lt;/state&gt;</span>
+  <span class="nt">&lt;ng-fill-type-code</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;ng-psi</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;ng-vehicle-class</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;e85-blender-pump</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;ev-level1-evse-num</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;ev-level2-evse-num&gt;</span>38<span class="nt">&lt;/ev-level2-evse-num&gt;</span>
+  <span class="nt">&lt;ev-dc-fast-num</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;ev-other-evse</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;ev-network</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;ev-network-web</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;lpg-primary</span> <span class="na">nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;id&gt;</span>39534<span class="nt">&lt;/id&gt;</span>
+  <span class="nt">&lt;updated-at&gt;</span>2013-01-16T16:09:02Z<span class="nt">&lt;/updated-at&gt;</span>
+  <span class="nt">&lt;federal-agency&gt;</span>
+    <span class="nt">&lt;id</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>8<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;name&gt;</span>U.S. Department of Energy<span class="nt">&lt;/name&gt;</span>
+  <span class="nt">&lt;/federal-agency&gt;</span>
+<span class="nt">&lt;/alt-fuel-station&gt;</span>
+</pre></div>
+<h3>CSV Output Format</h3>
+
+<pre>GET <a href="/nrel/alt-fuel-stations/v1/39534.csv?api_key=DEMO_KEY">/nrel/alt-fuel-stations/v1/39534.csv?api_key=DEMO_KEY</a></pre>
+<div class="highlight"><pre><span class="n">Fuel</span> <span class="n">Type</span> <span class="n">Code</span><span class="p">,</span><span class="n">Station</span> <span class="n">Name</span><span class="p">,</span><span class="n">Street</span> <span class="n">Address</span><span class="p">,</span><span class="n">Intersection</span> <span class="n">Directions</span><span class="p">,</span><span class="n">City</span><span class="p">,</span><span class="n">State</span><span class="p">,</span><span class="n">ZIP</span><span class="p">,</span><span class="n">Plus4</span><span class="p">,</span><span class="n">Station</span> <span class="n">Phone</span><span class="p">,</span><span class="n">Status</span> <span class="n">Code</span><span class="p">,</span><span class="n">Expected</span> <span class="n">Date</span><span class="p">,</span><span class="n">Groups</span> <span class="n">With</span> <span class="n">Access</span> <span class="n">Code</span><span class="p">,</span><span class="n">Access</span> <span class="n">Days</span> <span class="n">Time</span><span class="p">,</span><span class="n">Cards</span> <span class="n">Accepted</span><span class="p">,</span><span class="n">BD</span> <span class="n">Blends</span><span class="p">,</span><span class="n">NG</span> <span class="n">Fill</span> <span class="n">Type</span> <span class="n">Code</span><span class="p">,</span><span class="n">NG</span> <span class="n">PSI</span><span class="p">,</span><span class="n">EV</span> <span class="n">Level1</span> <span class="n">EVSE</span> <span class="n">Num</span><span class="p">,</span><span class="n">EV</span> <span class="n">Level2</span> <span class="n">EVSE</span> <span class="n">Num</span><span class="p">,</span><span class="n">EV</span> <span class="n">DC</span> <span class="n">Fast</span> <span class="n">Count</span><span class="p">,</span><span class="n">EV</span> <span class="n">Other</span> <span class="n">Info</span><span class="p">,</span><span class="n">EV</span> <span class="n">Network</span><span class="p">,</span><span class="n">EV</span> <span class="n">Network</span> <span class="n">Web</span><span class="p">,</span><span class="n">Geocode</span> <span class="n">Status</span><span class="p">,</span><span class="n">Latitude</span><span class="p">,</span><span class="n">Longitude</span><span class="p">,</span><span class="n">Date</span> <span class="n">Last</span> <span class="n">Confirmed</span><span class="p">,</span><span class="n">ID</span><span class="p">,</span><span class="n">Updated</span> <span class="n">At</span><span class="p">,</span><span class="n">Owner</span> <span class="n">Type</span> <span class="n">Code</span><span class="p">,</span><span class="n">Federal</span> <span class="n">Agency</span> <span class="n">ID</span><span class="p">,</span><span class="n">Federal</span> <span class="n">Agency</span> <span class="n">Name</span><span class="p">,</span><span class="n">Open</span> <span class="n">Date</span><span class="p">,</span><span class="n">Hydrogen</span> <span class="n">Status</span> <span class="n">Link</span><span class="p">,</span><span class="n">NG</span> <span class="n">Vehicle</span> <span class="n">Class</span><span class="p">,</span><span class="n">LPG</span> <span class="n">Primary</span><span class="p">,</span><span class="n">E85</span> <span class="n">Blender</span> <span class="n">Pump</span>
+<span class="n">ELEC</span><span class="p">,</span><span class="n">National</span> <span class="n">Renewable</span> <span class="n">Energy</span> <span class="n">Laboratory</span> <span class="o">-</span> <span class="n">Denver</span> <span class="n">West</span><span class="p">,</span><span class="mi">15013</span> <span class="n">Denver</span> <span class="n">West</span> <span class="n">Pkwy</span><span class="p">,</span><span class="n">Building</span> <span class="mi">17</span><span class="p">,</span><span class="n">Golden</span><span class="p">,</span><span class="n">CO</span><span class="p">,</span><span class="mi">80401</span><span class="p">,,,</span><span class="n">E</span><span class="p">,,</span><span class="n">Private</span> <span class="n">access</span> <span class="n">only</span><span class="p">,,,,,,,</span><span class="mi">38</span><span class="p">,,,,,</span><span class="mi">200</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span><span class="mf">39.7408399</span><span class="p">,</span><span class="o">-</span><span class="mf">105.1685277</span><span class="p">,</span><span class="mi">2012</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">31</span><span class="p">,</span><span class="mi">39534</span><span class="p">,</span><span class="mi">2013</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mi">16</span> <span class="mi">16</span><span class="o">:</span><span class="mi">09</span><span class="o">:</span><span class="mo">02</span> <span class="n">UTC</span><span class="p">,</span><span class="n">FG</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="n">U</span><span class="p">.</span><span class="n">S</span><span class="p">.</span> <span class="n">Department</span> <span class="n">of</span> <span class="n">Energy</span><span class="p">,</span><span class="mi">2011</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">20</span><span class="p">,,,,</span>
+</pre></div>
+<h2>Rate Limits</h2>
+
+<p><a href="/docs/rate-limits">Standard rate limits</a> apply. No more than 1,000 requests may be made in any hour. No more than 10,000 requests may be made in any day.</p>
+
+<h2>Errors</h2>
+
+<p><a href="/docs/errors">Standard errors</a> may be returned. In addition, the following service-specific errors may be returned:</p>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">HTTP Status Code</th>
+      <th class="doc-parameters-required" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">404</th>
+      <td class="doc-parameter-description">Not Found - A station for the given ID could not be found.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+          <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
+            This website is a <a href="https://github.com/GUI/api.data.gov">public GitHub repository</a>. Please help us by adding to it.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="container-fluid">
+      <div id="footer-inner">
+        <div id="footer-menu">
+          <ul class="menu">
+            <li class="first leaf"><a href="http://www.data.gov/about">About</a></li>
+            <li class="leaf"><a href="http://www.data.gov/accessibility">Accessibility</a></li>
+            <li class="leaf"><a href="http://www.data.gov/contact-us">Contact Us</a></li>
+            <li class="leaf"><a href="http://www.data.gov/data-policy">Data Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/faq">FAQ</a></li>
+            <li class="leaf"><a href="http://www.data.gov/privacy-policy">Privacy Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/sitemap" title="">Sitemap</a></li>
+            <li class="last leaf"><a href="http://www.usa.gov" title="">USA.gov</a></li>
+          </ul>
+        </div>
+        <div id="footer-logo"><img src="/images/gsa/datagov-footer-logo-cb3085c5b9a.png" alt="Data.gov" /></div>
+      </div>
+    </div>
+  </body>
+</html>

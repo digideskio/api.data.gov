@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Solar Resource Data</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="en" name="language">
+    <meta content="width=1015,maximum-scale=1.0" name="viewport">
+    <meta name="generator" content="nanoc 3.6.4"> 
+
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-fa44f066e1914b3090823a20902161b7.css" />
+    <!--[if IE]>
+      <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/static/assets/ie_lt_9-592d2b1bfdec04e5ce3219e54a1a7316.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/assets/application-fcc9a5d9994aeef74fd27431c769c9fd.js"></script>
+  </head>
+  <body>
+    <div id="preheader">
+  <div id="preheader-inner" class="container-fluid">
+    <div class="row-fluid">
+      <div id="whitehouse"><p><img src="/images/gsa/usaflag-cb0d50f585d.gif" alt="USA Flag" /> <em>An Official Website of the United States Government</em></p></div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container-fluid">
+      <div class="corner-ribbon-wrapper right">
+        <div class="corner-ribbon">
+          <span>BETA</span>
+        </div>
+      </div>
+
+      <div id="main" class="row-fluid">
+        <header>
+          <div id="logo"><a class="logo" href="#" title="Home">Data.gov</a></div>
+        </header>
+        <nav class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li class="nav-home "><a href="/">Home</a></li>
+      <li class="nav-documentation active"><a href="/docs">Documentation</a></li>
+      <li class="nav-community "><a href="/community">Community</a></li>
+    </ul>
+  </div>
+</nav>
+                                                                                                                                       
+
+
+        
+  <ul class="breadcrumb">
+    
+    
+      
+        
+          <li>
+            <a href="/">Home</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/">Documentation</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/">National Renewable Energy Laboratory</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/solar/">Solar</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="active">Solar Resource Data</li>
+        
+      
+    
+  </ul>
+
+
+
+        <div id="content">
+          <h1>Solar Resource Data</h1>
+
+<p>Returns various types of solar data for a location. The service currently returns data for average Direct Normal Irradiance, average Global Horizontal Irradiance, and average Tilt at Latitude.</p>
+
+<h2>Request URL</h2>
+
+<pre>GET http://api.data.gov/nrel/solar/solar_resource/v1<em>.format?parameters</em></pre>
+
+<h2>Request Parameters</h2>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Parameter</th>
+      <th class="doc-parameters-required" scope="col">Required</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">format</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Options:</strong> <em>json</em>, <em>xml</em>
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>The output response format.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">api_key</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Your developer API key. See <a href="/doc/api-key">API keys</a> for more information.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">address</th>
+      <td class="doc-parameter-required">Depends</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+        <div class="doc-parameter-value-field"></div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>The address to use (lat/lon returned by Google's geocoding service). Required if lat/lon not specified.</p>
+      </td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">lat</th>
+      <td class="doc-parameter-required">Depends</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> decimal
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Range:</strong> <i>-90 to 90</i>
+        </div>
+      </td>
+      <td class="doc-parameter-description">The latitude for the location to use. Required if address not specified.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">lon</th>
+      <td class="doc-parameter-required">Depends</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> decimal
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Range:</strong> <i>-180 to 180</i>
+        </div>
+      </td>
+      <td class="doc-parameter-description">The longitude for the location to use. Required if address not specified.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Response Fields</h2>
+
+<p>The response is composed of service-related informational fields and the results of the data query.</p>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Field</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">inputs</th>
+      <td class="doc-parameter-value"><strong>Type:</strong> collection</td>
+      <td class="doc-parameter-description">The input parameters received in the request.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">version</th>
+      <td class="doc-parameter-value"><strong>Type:</strong> string</td>
+      <td class="doc-parameter-description">The current version of the web service.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">errors</th>
+      <td class="doc-parameter-value"><strong>Type:</strong> array of strings</td>
+      <td class="doc-parameter-description">Any error messages resulting from the request.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">warnings</th>
+      <td class="doc-parameter-value"><strong>Type:</strong> array of strings</td>
+      <td class="doc-parameter-description">Any warning messages resulting from the request.</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">metadata</th>
+      <td class="doc-parameter-value"><strong>Type:</strong> collection</td>
+      <td class="doc-parameter-description">Any metadata associated with the request (sources, etc)</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">outputs</th>
+      <td class="doc-parameter-value"><strong>Type:</strong> collection</td>
+      <td class="doc-parameter-description">The data outputs from the request. (see <a href="#output-fields">output fields</a> for more detail)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Output Fields</h3>
+
+<p><span>The output fields contain the following solar data.</span>
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Field</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">avg_dni</th>
+      <td class="doc-parameter-value">
+        <p><strong>Type:</strong></p>
+        <p>decimal (annual),</p>
+        <p>collection of decimals (monthly)</p>
+      </td>
+      <td class="doc-parameter-description"><strong>Average Direct Normal Irradiance</strong>: This data provides monthly average and annual average daily total solar resource averaged over surface cells of 0.1 degrees in both latitude and longitude, or about 10 km in size. The values returned are kWh/m<sup>2</sup>/day (kilowatt hours per square meter per day). The insolation values represent the resource available to concentrating systems that track the sun throughout the day. The data are created using the SUNY Satellite Solar Radiation model (Perez, et.al., 2002). The data are averaged from hourly model output over 12 years (1998-2009). This model uses hourly radiance images from geostationary weather satellites, daily snow cover data, and monthly averages of atmospheric water vapor, trace gases, and the amount of aerosols in the atmosphere to calculate the hourly total insolation (sun and sky) falling on a horizontal surface. The direct beam radiation is then calculated using the atmospheric water vapor, trace gases, and aerosols, which are derived from a variety of sources. Where possible, existing ground measurement stations are used to validate the data. (see <a href="http://www.nrel.gov/gis" target="_blank">http://www.nrel.gov/gis</a>)</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">avg_ghi</th>
+      <td class="doc-parameter-value">
+        <p><strong>Type:</strong></p>
+        <p>decimal (annual),</p>
+        <p>collection of decimals (monthly)</p>
+      </td>
+      <td class="doc-parameter-description"><strong>Average Global Horizontal Irradiance</strong>: This data provides monthly average and annual average daily total solar resource averaged over surface cells of 0.1 degrees in both latitude and longitude, or about 10 km in size. The values returned are kWh/m<sup>2</sup>/day (kilowatt hours per square meter per day). The insolation values represent the global horizontal resource - the geometric sum of direct normal and diffuse irradiance components, representing total energy available on a planar surface. The data are created using the SUNY Satellite Solar Radiation model (Perez, et.al., 2002). The data are averaged from hourly model output over 12 years (1998-2009). This model uses hourly radiance images from geostationary weather satellites, daily snow cover data, and monthly averages of atmospheric water vapor, trace gases, and the amount of aerosols in the atmosphere to calculate the hourly total insolation (sun and sky) falling on a horizontal surface. The direct beam radiation is then calculated using the atmospheric water vapor, trace gases, and aerosols, which are derived from a variety of sources. Where possible, existing ground measurement stations are used to validate the data. (see <a href="http://www.nrel.gov/gis" target="_blank">http://www.nrel.gov/gis</a>)</td>
+    </tr>
+    <tr>
+      <th class="doc-parameter-name" scope="row">avg_lat_tilt</th>
+      <td class="doc-parameter-value">
+        <p><strong>Type:</strong></p>
+        <p>decimal (annual),</p>
+        <p>collection of decimals (monthly)</p>
+      </td>
+      <td class="doc-parameter-description"><strong>Average Tilt at Latitude</strong>: This data provides monthly average and annual average daily total solar resource averaged over surface cells of 0.1 degrees in both latitude and longitude, or about 10 km in size. The values returned are kWh/m<sup>2</sup>/day (kilowatt hours per square meter per day). The insolation values represent the resource available to fixed flat plate system tilted towards the equator at an angle equal to the latitude. The data are created using the SUNY Satellite Solar Radiation model (Perez, et.al., 2002). The data are averaged from hourly model output over 12 years (1998-2009). This model uses hourly radiance images from geostationary weather satellites, daily snow cover data, and monthly averages of atmospheric water vapor, trace gases, and the amount of aerosols in the atmosphere to calculate the hourly total insolation (sun and sky) falling on a horizontal surface. The direct beam radiation is then calculated using the atmospheric water vapor, trace gases, and aerosols, which are derived from a variety of sources. Where possible, existing ground measurement stations are used to validate the data. (see <a href="http://www.nrel.gov/gis" target="_blank">http://www.nrel.gov/gis</a>)</td>
+    </tr>
+  </tbody>
+</table></p>
+
+<h2>Examples</h2>
+
+<h3>JSON Output Format</h3>
+
+<pre>GET <a href="http://api.data.gov/nrel/solar/solar_resource/v1.json?api_key=DEMO_KEY&amp;lat=40&amp;lon=-105">http://api.data.gov/nrel/solar/solar_resource/v1.json?api_key=DEMO_KEY&amp;lat=40&amp;lon=-105</a></pre>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="err">version:</span> <span class="nt">&quot;1.0.0&quot;</span><span class="p">,</span>
+  <span class="err">warnings:</span> <span class="err">[</span> <span class="err">],</span>
+  <span class="err">errors:</span> <span class="err">[</span> <span class="err">],</span>
+  <span class="err">metadata:</span> <span class="err">{</span>
+    <span class="err">sources:</span> <span class="err">[</span>
+      <span class="nt">&quot;Perez-SUNY/NREL, 2012&quot;</span>
+    <span class="err">]</span>
+  <span class="p">}</span><span class="err">,</span>
+  <span class="err">inputs:</span> <span class="p">{</span>
+    <span class="err">api_key:</span> <span class="nt">&quot;DEMO_KEY&quot;</span><span class="p">,</span>
+    <span class="err">lat:</span> <span class="nt">&quot;40&quot;</span><span class="p">,</span>
+    <span class="err">lon:</span> <span class="nt">&quot;-105&quot;</span>
+  <span class="p">}</span><span class="err">,</span>
+  <span class="err">outputs:</span> <span class="p">{</span>
+    <span class="err">avg_dni:</span> <span class="err">{</span>
+      <span class="err">annual:</span> <span class="err">6.06,</span>
+      <span class="err">monthly:</span> <span class="err">{</span>
+        <span class="err">jan:</span> <span class="err">5,</span>
+        <span class="err">feb:</span> <span class="err">5.34,</span>
+        <span class="err">mar:</span> <span class="err">5.94,</span>
+        <span class="err">apr:</span> <span class="err">6.11,</span>
+        <span class="err">may:</span> <span class="err">6.36,</span>
+        <span class="err">jun:</span> <span class="err">7.43,</span>
+        <span class="err">jul:</span> <span class="err">7.48,</span>
+        <span class="err">aug:</span> <span class="err">6.65,</span>
+        <span class="err">sep:</span> <span class="err">6.81,</span>
+        <span class="err">oct:</span> <span class="err">5.82,</span>
+        <span class="err">nov:</span> <span class="err">5.11,</span>
+        <span class="err">dec:</span> <span class="err">4.67</span>
+      <span class="p">}</span>
+    <span class="err">},</span>
+    <span class="err">avg_ghi:</span> <span class="p">{</span>
+      <span class="err">annual:</span> <span class="err">4.81,</span>
+      <span class="err">monthly:</span> <span class="err">{</span>
+        <span class="err">jan:</span> <span class="err">2.5,</span>
+        <span class="err">feb:</span> <span class="err">3.43,</span>
+        <span class="err">mar:</span> <span class="err">4.69,</span>
+        <span class="err">apr:</span> <span class="err">5.69,</span>
+        <span class="err">may:</span> <span class="err">6.6,</span>
+        <span class="err">jun:</span> <span class="err">7.25,</span>
+        <span class="err">jul:</span> <span class="err">7.14,</span>
+        <span class="err">aug:</span> <span class="err">6.24,</span>
+        <span class="err">sep:</span> <span class="err">5.35,</span>
+        <span class="err">oct:</span> <span class="err">3.85,</span>
+        <span class="err">nov:</span> <span class="err">2.75,</span>
+        <span class="err">dec:</span> <span class="err">2.19</span>
+      <span class="p">}</span>
+    <span class="err">},</span>
+    <span class="err">avg_lat_tilt:</span> <span class="p">{</span>
+      <span class="err">annual:</span> <span class="err">5.82,</span>
+      <span class="err">monthly:</span> <span class="err">{</span>
+        <span class="err">jan:</span> <span class="err">4.79,</span>
+        <span class="err">feb:</span> <span class="err">5.4,</span>
+        <span class="err">mar:</span> <span class="err">6.07,</span>
+        <span class="err">apr:</span> <span class="err">6.11,</span>
+        <span class="err">may:</span> <span class="err">6.25,</span>
+        <span class="err">jun:</span> <span class="err">6.47,</span>
+        <span class="err">jul:</span> <span class="err">6.58,</span>
+        <span class="err">aug:</span> <span class="err">6.44,</span>
+        <span class="err">sep:</span> <span class="err">6.53,</span>
+        <span class="err">oct:</span> <span class="err">5.71,</span>
+        <span class="err">nov:</span> <span class="err">4.99,</span>
+        <span class="err">dec:</span> <span class="err">4.47</span>
+      <span class="p">}</span>
+    <span class="err">}</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+</pre></div>
+<h3>XML Output Format</h3>
+
+<pre>GET <a href="http://api.data.gov/nrel/solar/solar_resource/v1.xml?api_key=DEMO_KEY&amp;lat=40&amp;lon=-105">http://api.data.gov/nrel/solar/solar_resource/v1.xml?api_key=DEMO_KEY&amp;lat=40&amp;lon=-105</a></pre>
+<div class="highlight"><pre><span class="nt">&lt;response&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.0.0<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;warnings</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;errors</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;metadata&gt;</span>
+    <span class="nt">&lt;sources</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;source&gt;</span>Perez-SUNY/NREL, 2012<span class="nt">&lt;/source&gt;</span>
+    <span class="nt">&lt;/sources&gt;</span>
+  <span class="nt">&lt;/metadata&gt;</span>
+  <span class="nt">&lt;inputs&gt;</span>
+    <span class="nt">&lt;api-key&gt;</span>DEMO_KEY<span class="nt">&lt;/api-key&gt;</span>
+    <span class="nt">&lt;lat&gt;</span>40<span class="nt">&lt;/lat&gt;</span>
+    <span class="nt">&lt;lon&gt;</span>-105<span class="nt">&lt;/lon&gt;</span>
+  <span class="nt">&lt;/inputs&gt;</span>
+  <span class="nt">&lt;outputs&gt;</span>
+    <span class="nt">&lt;avg-dni&gt;</span>
+      <span class="nt">&lt;annual</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>6.06<span class="nt">&lt;/annual&gt;</span>
+      <span class="nt">&lt;monthly&gt;</span>
+        <span class="nt">&lt;jan</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>5.0<span class="nt">&lt;/jan&gt;</span>
+        <span class="nt">&lt;feb</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>5.34<span class="nt">&lt;/feb&gt;</span>
+        <span class="nt">&lt;mar</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>5.94<span class="nt">&lt;/mar&gt;</span>
+        <span class="nt">&lt;apr</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>6.11<span class="nt">&lt;/apr&gt;</span>
+        <span class="nt">&lt;may</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>6.36<span class="nt">&lt;/may&gt;</span>
+        <span class="nt">&lt;jun</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>7.43<span class="nt">&lt;/jun&gt;</span>
+        <span class="nt">&lt;jul</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>7.48<span class="nt">&lt;/jul&gt;</span>
+        <span class="nt">&lt;aug</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>6.65<span class="nt">&lt;/aug&gt;</span>
+        <span class="nt">&lt;sep</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>6.81<span class="nt">&lt;/sep&gt;</span>
+        <span class="nt">&lt;oct</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>5.82<span class="nt">&lt;/oct&gt;</span>
+        <span class="nt">&lt;nov</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>5.11<span class="nt">&lt;/nov&gt;</span>
+        <span class="nt">&lt;dec</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>4.67<span class="nt">&lt;/dec&gt;</span>
+      <span class="nt">&lt;/monthly&gt;</span>
+    <span class="nt">&lt;/avg-dni&gt;</span>
+    <span class="nt">&lt;avg-ghi&gt;</span>
+      <span class="nt">&lt;annual</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>4.81<span class="nt">&lt;/annual&gt;</span>
+      <span class="nt">&lt;monthly&gt;</span>
+        <span class="nt">&lt;jan</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>2.5<span class="nt">&lt;/jan&gt;</span>
+        <span class="nt">&lt;feb</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>3.43<span class="nt">&lt;/feb&gt;</span>
+        <span class="nt">&lt;mar</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>4.69<span class="nt">&lt;/mar&gt;</span>
+        <span class="nt">&lt;apr</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>5.69<span class="nt">&lt;/apr&gt;</span>
+        <span class="nt">&lt;may</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>6.6<span class="nt">&lt;/may&gt;</span>
+        <span class="nt">&lt;jun</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>7.25<span class="nt">&lt;/jun&gt;</span>
+        <span class="nt">&lt;jul</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>7.14<span class="nt">&lt;/jul&gt;</span>
+        <span class="nt">&lt;aug</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>6.24<span class="nt">&lt;/aug&gt;</span>
+        <span class="nt">&lt;sep</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>5.35<span class="nt">&lt;/sep&gt;</span>
+        <span class="nt">&lt;oct</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>3.85<span class="nt">&lt;/oct&gt;</span>
+        <span class="nt">&lt;nov</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>2.75<span class="nt">&lt;/nov&gt;</span>
+        <span class="nt">&lt;dec</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>2.19<span class="nt">&lt;/dec&gt;</span>
+      <span class="nt">&lt;/monthly&gt;</span>
+    <span class="nt">&lt;/avg-ghi&gt;</span>
+    <span class="nt">&lt;avg-lat-tilt&gt;</span>
+      <span class="nt">&lt;annual</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>5.82<span class="nt">&lt;/annual&gt;</span>
+      <span class="nt">&lt;monthly&gt;</span>
+        <span class="nt">&lt;jan</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>4.79<span class="nt">&lt;/jan&gt;</span>
+        <span class="nt">&lt;feb</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>5.4<span class="nt">&lt;/feb&gt;</span>
+        <span class="nt">&lt;mar</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>6.07<span class="nt">&lt;/mar&gt;</span>
+        <span class="nt">&lt;apr</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>6.11<span class="nt">&lt;/apr&gt;</span>
+        <span class="nt">&lt;may</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>6.25<span class="nt">&lt;/may&gt;</span>
+        <span class="nt">&lt;jun</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>6.47<span class="nt">&lt;/jun&gt;</span>
+        <span class="nt">&lt;jul</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>6.58<span class="nt">&lt;/jul&gt;</span>
+        <span class="nt">&lt;aug</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>6.44<span class="nt">&lt;/aug&gt;</span>
+        <span class="nt">&lt;sep</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>6.53<span class="nt">&lt;/sep&gt;</span>
+        <span class="nt">&lt;oct</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>5.71<span class="nt">&lt;/oct&gt;</span>
+        <span class="nt">&lt;nov</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>4.99<span class="nt">&lt;/nov&gt;</span>
+        <span class="nt">&lt;dec</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>4.47<span class="nt">&lt;/dec&gt;</span>
+      <span class="nt">&lt;/monthly&gt;</span>
+    <span class="nt">&lt;/avg-lat-tilt&gt;</span>
+  <span class="nt">&lt;/outputs&gt;</span>
+<span class="nt">&lt;/response&gt;</span>
+</pre></div>
+<h2>Rate Limits</h2>
+
+<p><a href="/docs/rate-limits">Standard rate limits</a> apply. No more than 1,000 requests may be made in any hour. No more than 10,000 requests may be made in any day.</p>
+
+<h2>Errors</h2>
+
+<p><a href="/docs/errors">Standard errors</a> may be returned. In addition, the following service-specific errors may be returned:</p>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col"><span>HTTP Status Code</span></th>
+      <th class="doc-parameters-required" scope="col"><span>Description</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row"><span>422</span></th>
+      <td class="doc-parameter-description"><span>Unprocessable Entity - <span>One or more parameters did not pass validation, or a parameter may be missing. Check the errors section of the response to see how the request should be modified to address the error.</span></span></td>
+    </tr>
+  </tbody>
+</table>
+
+
+          <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
+            This website is a <a href="https://github.com/GUI/api.data.gov">public GitHub repository</a>. Please help us by adding to it.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="container-fluid">
+      <div id="footer-inner">
+        <div id="footer-menu">
+          <ul class="menu">
+            <li class="first leaf"><a href="http://www.data.gov/about">About</a></li>
+            <li class="leaf"><a href="http://www.data.gov/accessibility">Accessibility</a></li>
+            <li class="leaf"><a href="http://www.data.gov/contact-us">Contact Us</a></li>
+            <li class="leaf"><a href="http://www.data.gov/data-policy">Data Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/faq">FAQ</a></li>
+            <li class="leaf"><a href="http://www.data.gov/privacy-policy">Privacy Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/sitemap" title="">Sitemap</a></li>
+            <li class="last leaf"><a href="http://www.usa.gov" title="">USA.gov</a></li>
+          </ul>
+        </div>
+        <div id="footer-logo"><img src="/images/gsa/datagov-footer-logo-cb3085c5b9a.png" alt="Data.gov" /></div>
+      </div>
+    </div>
+  </body>
+</html>
