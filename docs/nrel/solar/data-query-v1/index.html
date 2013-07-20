@@ -7,7 +7,7 @@
     <meta content="width=1015,maximum-scale=1.0" name="viewport">
     <meta name="generator" content="nanoc 3.6.4"> 
 
-    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-b1a2424927abdb92b0c1cae278c22522.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-be79a7772452de9216409fad385e5bdf.css" />
     <!--[if IE]>
       <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
     <![endif]-->
@@ -16,7 +16,7 @@
       <script type="text/javascript" src="/static/assets/ie_lt_9-592d2b1bfdec04e5ce3219e54a1a7316.js"></script>
     <![endif]-->
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/assets/application-fcc9a5d9994aeef74fd27431c769c9fd.js"></script>
+    <script type="text/javascript" src="/static/assets/application-1e1f8e576c1114611679bb897df8a2ee.js"></script>
   </head>
   <body class="">
     <div id="preheader">
@@ -110,28 +110,26 @@
 
 
         <div id="content">
-          <h1>Solar Dataset Query</h1>
+          <h1 id="solar-dataset-query">Solar Dataset Query</h1>
 
 <p>Returns information on the closest climate data for a location.</p>
 
-<h2>Request URL</h2>
+<ul id="toc"></ul><h2 id="request-url">Request URL</h2>
 
 <pre>GET http://api.data.gov/nrel/solar/data_query/v1<em>.format?parameters</em></pre>
 
-<h2>Request Parameters</h2>
+<h2 id="request-parameters">Request Parameters</h2>
 
 <table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
-  <thead>
-    <tr>
-      <th class="doc-parameters-name" scope="col">Parameter</th>
+<thead><tr>
+<th class="doc-parameters-name" scope="col">Parameter</th>
       <th class="doc-parameters-required" scope="col">Required</th>
       <th class="doc-parameters-value" scope="col">Value</th>
       <th class="doc-parameters-description" scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="doc-parameter-name" scope="row">format</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th class="doc-parameter-name" scope="row">format</th>
       <td class="doc-parameter-required">Yes</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -148,8 +146,8 @@
         <p>The output response format.</p>
       </td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">api_key</th>
+<tr>
+<th class="doc-parameter-name" scope="row">api_key</th>
       <td class="doc-parameter-required">Yes</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -163,8 +161,8 @@
         <p>Your developer API key. See <a href="/doc/api-key">API keys</a> for more information.</p>
       </td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">address</th>
+<tr>
+<th class="doc-parameter-name" scope="row">address</th>
       <td class="doc-parameter-required">Depends</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -176,8 +174,8 @@
       </td>
       <td class="doc-parameter-description">The address to use (lat/lon returned by Google's geocoding service). Required if lat/lon not specified.</td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">lat</th>
+<tr>
+<th class="doc-parameter-name" scope="row">lat</th>
       <td class="doc-parameter-required">Depends</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -192,8 +190,8 @@
       </td>
       <td class="doc-parameter-description">The latitude for the location to use. Required if address not specified.</td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">lon</th>
+<tr>
+<th class="doc-parameter-name" scope="row">lon</th>
       <td class="doc-parameter-required">Depends</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -208,202 +206,204 @@
       </td>
       <td class="doc-parameter-description">The longitude for the location to use. Required if address not specified.</td>
     </tr>
-  </tbody>
-</table>
-
-<h2>Response Fields</h2>
+</tbody>
+</table><h2 id="response-fields">Response Fields</h2>
 
 <p>The response is composed of service-related informational fields and information about the closest climate data files.</p>
 
 <table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
-  <thead>
-    <tr>
-      <th class="doc-parameters-name" scope="col">Field</th>
+<thead><tr>
+<th class="doc-parameters-name" scope="col">Field</th>
       <th class="doc-parameters-value" scope="col">Value</th>
       <th class="doc-parameters-description" scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="doc-parameter-name" scope="row">inputs</th>
-      <td class="doc-parameter-value"><strong>Type:</strong> collection</td>
+    </tr></thead>
+<tbody>
+<tr>
+<th class="doc-parameter-name" scope="row">inputs</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> collection</td>
       <td class="doc-parameter-description">The input parameters received in the request.</td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">errors</th>
-      <td class="doc-parameter-value"><strong>Type:</strong> array of strings</td>
+<tr>
+<th class="doc-parameter-name" scope="row">errors</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> array of strings</td>
       <td class="doc-parameter-description">Any error messages resulting from the request.</td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">warnings</th>
-      <td class="doc-parameter-value"><strong>Type:</strong> array of strings</td>
+<tr>
+<th class="doc-parameter-name" scope="row">warnings</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> array of strings</td>
       <td class="doc-parameter-description">Any warning messages resulting from the request. This includes messages regarding data not being found for one or more datasets.</td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">version</th>
-      <td class="doc-parameter-value"><strong>Type:</strong> string</td>
+<tr>
+<th class="doc-parameter-name" scope="row">version</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> string</td>
       <td class="doc-parameter-description">The current version of the web service.</td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">metadata</th>
-      <td class="doc-parameter-value"><strong>Type:</strong> collection</td>
+<tr>
+<th class="doc-parameter-name" scope="row">metadata</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> collection</td>
       <td class="doc-parameter-description">Any metadata associated with the request (sources, etc)</td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">outputs</th>
-      <td class="doc-parameter-value"><strong>Type:</strong> collection</td>
+<tr>
+<th class="doc-parameter-name" scope="row">outputs</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> collection</td>
       <td class="doc-parameter-description">
         <p>Information about the closest climate data files for each supported dataset. (see <a href="#output-fields">output fields</a> for more detail)</p>
         <table border="0" cellpadding="0" cellspacing="0" class="doc-parameter-options">
-          <thead>
-            <tr>
-              <th scope="col">Dataset</th>
+<thead><tr>
+<th scope="col">Dataset</th>
               <th scope="col">Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">perez</th>
+            </tr></thead>
+<tbody>
+<tr>
+<th scope="row">perez</th>
               <td>Perez Satellite Solar Resource Data Set</td>
             </tr>
-            <tr>
-              <th scope="row">tmy2</th>
+<tr>
+<th scope="row">tmy2</th>
               <td>TMY2 station data (see <a href="http://rredc.nrel.gov/solar/old_data/nsrdb/1961-1990/tmy2/State.html" target="_blank">Typical Meteorological Year, version 2</a>)</td>
             </tr>
-            <tr>
-              <th scope="row">tmy3</th>
+<tr>
+<th scope="row">tmy3</th>
               <td>TMY3 station data (see <a href="http://rredc.nrel.gov/solar/old_data/nsrdb/1991-2005/tmy3/by_USAFN.html">Typical Meteorological Year version 3</a>)</td>
             </tr>
-            <tr>
-              <th scope="row">intl</th>
+<tr>
+<th scope="row">intl</th>
               <td>International station data</td>
             </tr>
-          </tbody>
-        </table>
-      </td>
-    </tr>
-  </tbody>
+</tbody>
 </table>
-
-<h3>Output Fields</h3>
+</td>
+    </tr>
+</tbody>
+</table><h3 id="output-fields">Output Fields</h3>
 
 <p>The output fields contain the following information regarding climate data files from each supported dataset. If no data is found for a specific dataset, the service will return null for it in the outputs, and return a message in the warnings.</p>
 
 <table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
-  <thead>
-    <tr>
-      <th class="doc-parameters-name" scope="col">Field</th>
+<thead><tr>
+<th class="doc-parameters-name" scope="col">Field</th>
       <th class="doc-parameters-value" scope="col">Value</th>
       <th class="doc-parameters-description" scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="doc-parameter-name" scope="row">id</th>
-      <td class="doc-parameter-value"><strong>Type:</strong> string</td>
+    </tr></thead>
+<tbody>
+<tr>
+<th class="doc-parameter-name" scope="row">id</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> string</td>
       <td class="doc-parameter-description">An identifier for that climate data within the dataset.</td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">lat</th>
-      <td class="doc-parameter-value"><strong>Type:</strong> decimal</td>
+<tr>
+<th class="doc-parameter-name" scope="row">lat</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> decimal</td>
       <td class="doc-parameter-description">The latitude of the station (tmy2/tmy3) or grid cell (perez).</td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">lon</th>
-      <td class="doc-parameter-value"><strong>Type:</strong> decimal</td>
+<tr>
+<th class="doc-parameter-name" scope="row">lon</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> decimal</td>
       <td class="doc-parameter-description">The longitude of the station (tmy2/tmy3) or grid cell (perez).</td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">city</th>
-      <td class="doc-parameter-value"><strong>Type:</strong> string</td>
+<tr>
+<th class="doc-parameter-name" scope="row">city</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> string</td>
       <td class="doc-parameter-description">The city where the station is located (for perez it will say "satellite data").</td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">state</th>
-      <td class="doc-parameter-value"><strong>Type:</strong> array of decimal</td>
+<tr>
+<th class="doc-parameter-name" scope="row">state</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> array of decimal</td>
       <td class="doc-parameter-description">The state where the station is located (for perez it will be an empty string).</td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">timezone</th>
-      <td class="doc-parameter-value"><strong>Type:</strong> integer</td>
+<tr>
+<th class="doc-parameter-name" scope="row">timezone</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> integer</td>
       <td class="doc-parameter-description">The timezone of the station or grid cell, relative to GMT.</td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">elevation</th>
-      <td class="doc-parameter-value"><strong>Type:</strong> integer</td>
+<tr>
+<th class="doc-parameter-name" scope="row">elevation</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> integer</td>
       <td class="doc-parameter-description">The elevation of the station or grid cell in meters.</td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">distance</th>
-      <td class="doc-parameter-value"><strong>Type:</strong> integer</td>
+<tr>
+<th class="doc-parameter-name" scope="row">distance</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> integer</td>
       <td class="doc-parameter-description">The distance in meters from the input location to the station or grid cell.</td>
     </tr>
-  </tbody>
-</table>
+</tbody>
+</table><h2 id="examples">Examples</h2>
 
-<h2>Examples</h2>
-
-<h3>JSON Output Format</h3>
+<h3 id="json-output-format">JSON Output Format</h3>
 
 <pre>GET <a href="http://api.data.gov/nrel/solar/data_query/v1.json?api_key=DEMO_KEY&amp;lat=40&amp;lon=-105">http://api.data.gov/nrel/solar/data_query/v1.json?api_key=DEMO_KEY&amp;lat=40&amp;lon=-105</a></pre>
 <div class="highlight"><pre><span class="p">{</span>
-    <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">"metadata"</span><span class="p">:</span> <span class="p">{</span>
 
     <span class="p">},</span>
-    <span class="nt">&quot;errors&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nt">"errors"</span><span class="p">:</span> <span class="p">[</span>
 
     <span class="p">],</span>
-    <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.9&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;inputs&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;lon&quot;</span><span class="p">:</span> <span class="s2">&quot;-105&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;lat&quot;</span><span class="p">:</span> <span class="s2">&quot;40&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;api_key&quot;</span><span class="p">:</span> <span class="s2">&quot;DEMO_KEY&quot;</span>
+    <span class="nt">"version"</span><span class="p">:</span> <span class="s2">"0.0.9"</span><span class="p">,</span>
+    <span class="nt">"inputs"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">"lon"</span><span class="p">:</span> <span class="s2">"-105"</span><span class="p">,</span>
+        <span class="nt">"lat"</span><span class="p">:</span> <span class="s2">"40"</span><span class="p">,</span>
+        <span class="nt">"api_key"</span><span class="p">:</span> <span class="s2">"DEMO_KEY"</span>
     <span class="p">},</span>
-    <span class="nt">&quot;warnings&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nt">"warnings"</span><span class="p">:</span> <span class="p">[</span>
 
     <span class="p">],</span>
-    <span class="nt">&quot;outputs&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;perez&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;lon&quot;</span><span class="p">:</span> <span class="mf">-105.3</span><span class="p">,</span>
-            <span class="nt">&quot;elevation&quot;</span><span class="p">:</span> <span class="mi">1555</span><span class="p">,</span>
-            <span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;satellite data&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;0-10440-105054005&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;timezone&quot;</span><span class="p">:</span> <span class="mi">-7</span><span class="p">,</span>
-            <span class="nt">&quot;distance&quot;</span><span class="p">:</span> <span class="mi">42089</span><span class="p">,</span>
-            <span class="nt">&quot;lat&quot;</span><span class="p">:</span> <span class="mf">40.3</span>
+    <span class="nt">"outputs"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">"perez"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">"lon"</span><span class="p">:</span> <span class="mf">-105.3</span><span class="p">,</span>
+            <span class="nt">"elevation"</span><span class="p">:</span> <span class="mi">1555</span><span class="p">,</span>
+            <span class="nt">"city"</span><span class="p">:</span> <span class="s2">"satellite data"</span><span class="p">,</span>
+            <span class="nt">"state"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+            <span class="nt">"id"</span><span class="p">:</span> <span class="s2">"0-10440-105054005"</span><span class="p">,</span>
+            <span class="nt">"timezone"</span><span class="p">:</span> <span class="mi">-7</span><span class="p">,</span>
+            <span class="nt">"distance"</span><span class="p">:</span> <span class="mi">42089</span><span class="p">,</span>
+            <span class="nt">"lat"</span><span class="p">:</span> <span class="mf">40.3</span>
         <span class="p">},</span>
-        <span class="nt">&quot;tmy2&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;lon&quot;</span><span class="p">:</span> <span class="mf">-105.15</span><span class="p">,</span>
-            <span class="nt">&quot;elevation&quot;</span><span class="p">:</span> <span class="mi">1634</span><span class="p">,</span>
-            <span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;BOULDER&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;CO&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;1-94018&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;timezone&quot;</span><span class="p">:</span> <span class="mi">-7</span><span class="p">,</span>
-            <span class="nt">&quot;distance&quot;</span><span class="p">:</span> <span class="mi">16924</span><span class="p">,</span>
-            <span class="nt">&quot;lat&quot;</span><span class="p">:</span> <span class="mf">40.1</span>
+        <span class="nt">"tmy2"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">"lon"</span><span class="p">:</span> <span class="mf">-105.15</span><span class="p">,</span>
+            <span class="nt">"elevation"</span><span class="p">:</span> <span class="mi">1634</span><span class="p">,</span>
+            <span class="nt">"city"</span><span class="p">:</span> <span class="s2">"BOULDER"</span><span class="p">,</span>
+            <span class="nt">"state"</span><span class="p">:</span> <span class="s2">"CO"</span><span class="p">,</span>
+            <span class="nt">"id"</span><span class="p">:</span> <span class="s2">"1-94018"</span><span class="p">,</span>
+            <span class="nt">"timezone"</span><span class="p">:</span> <span class="mi">-7</span><span class="p">,</span>
+            <span class="nt">"distance"</span><span class="p">:</span> <span class="mi">16924</span><span class="p">,</span>
+            <span class="nt">"lat"</span><span class="p">:</span> <span class="mf">40.1</span>
         <span class="p">},</span>
-        <span class="nt">&quot;tmy3&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;lon&quot;</span><span class="p">:</span> <span class="mf">-105.24</span><span class="p">,</span>
-            <span class="nt">&quot;elevation&quot;</span><span class="p">:</span> <span class="mi">1689</span><span class="p">,</span>
-            <span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;BROOMFIELD/JEFFCO [BOULDER - SURFRAD]&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;CO&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2-724699&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;timezone&quot;</span><span class="p">:</span> <span class="mi">-7</span><span class="p">,</span>
-            <span class="nt">&quot;distance&quot;</span><span class="p">:</span> <span class="mi">24977</span><span class="p">,</span>
-            <span class="nt">&quot;lat&quot;</span><span class="p">:</span> <span class="mf">40.13</span>
+        <span class="nt">"tmy3"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">"lon"</span><span class="p">:</span> <span class="mf">-105.24</span><span class="p">,</span>
+            <span class="nt">"elevation"</span><span class="p">:</span> <span class="mi">1689</span><span class="p">,</span>
+            <span class="nt">"city"</span><span class="p">:</span> <span class="s2">"BROOMFIELD/JEFFCO [BOULDER - SURFRAD]"</span><span class="p">,</span>
+            <span class="nt">"state"</span><span class="p">:</span> <span class="s2">"CO"</span><span class="p">,</span>
+            <span class="nt">"id"</span><span class="p">:</span> <span class="s2">"2-724699"</span><span class="p">,</span>
+            <span class="nt">"timezone"</span><span class="p">:</span> <span class="mi">-7</span><span class="p">,</span>
+            <span class="nt">"distance"</span><span class="p">:</span> <span class="mi">24977</span><span class="p">,</span>
+            <span class="nt">"lat"</span><span class="p">:</span> <span class="mf">40.13</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-<h3>XML Output Format</h3>
+<h3 id="xml-output-format">XML Output Format</h3>
 
 <pre>GET <a href="http://api.data.gov/nrel/solar/data_query/v1.xml?api_key=DEMO_KEY&amp;lat=40&amp;lon=-105">http://api.data.gov/nrel/solar/data_query/v1.xml?api_key=DEMO_KEY&amp;lat=40&amp;lon=-105</a></pre>
-<div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<div class="highlight"><pre><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;response&gt;</span>
   <span class="nt">&lt;version&gt;</span>0.0.9<span class="nt">&lt;/version&gt;</span>
-  <span class="nt">&lt;warnings</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;errors</span> <span class="na">type=</span><span class="s">&quot;array&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;warnings</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;errors</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;metadata&gt;</span>
   <span class="nt">&lt;/metadata&gt;</span>
   <span class="nt">&lt;inputs&gt;</span>
@@ -416,58 +416,70 @@
       <span class="nt">&lt;id&gt;</span>0-10440-105054005<span class="nt">&lt;/id&gt;</span>
       <span class="nt">&lt;city&gt;</span>satellite data<span class="nt">&lt;/city&gt;</span>
       <span class="nt">&lt;state&gt;&lt;/state&gt;</span>
-      <span class="nt">&lt;timezone</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>-7<span class="nt">&lt;/timezone&gt;</span>
-      <span class="nt">&lt;lat</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>40.3<span class="nt">&lt;/lat&gt;</span>
-      <span class="nt">&lt;lon</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>-105.3<span class="nt">&lt;/lon&gt;</span>
-      <span class="nt">&lt;elevation</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>1555<span class="nt">&lt;/elevation&gt;</span>
-      <span class="nt">&lt;distance</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>42089<span class="nt">&lt;/distance&gt;</span>
+      <span class="nt">&lt;timezone</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>-7<span class="nt">&lt;/timezone&gt;</span>
+      <span class="nt">&lt;lat</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>40.3<span class="nt">&lt;/lat&gt;</span>
+      <span class="nt">&lt;lon</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>-105.3<span class="nt">&lt;/lon&gt;</span>
+      <span class="nt">&lt;elevation</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>1555<span class="nt">&lt;/elevation&gt;</span>
+      <span class="nt">&lt;distance</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>42089<span class="nt">&lt;/distance&gt;</span>
     <span class="nt">&lt;/perez&gt;</span>
     <span class="nt">&lt;tmy2&gt;</span>
       <span class="nt">&lt;id&gt;</span>1-94018<span class="nt">&lt;/id&gt;</span>
       <span class="nt">&lt;city&gt;</span>BOULDER<span class="nt">&lt;/city&gt;</span>
       <span class="nt">&lt;state&gt;</span>CO<span class="nt">&lt;/state&gt;</span>
-      <span class="nt">&lt;timezone</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>-7<span class="nt">&lt;/timezone&gt;</span>
-      <span class="nt">&lt;lat</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>40.1<span class="nt">&lt;/lat&gt;</span>
-      <span class="nt">&lt;lon</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>-105.15<span class="nt">&lt;/lon&gt;</span>
-      <span class="nt">&lt;elevation</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>1634<span class="nt">&lt;/elevation&gt;</span>
-      <span class="nt">&lt;distance</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>16924<span class="nt">&lt;/distance&gt;</span>
+      <span class="nt">&lt;timezone</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>-7<span class="nt">&lt;/timezone&gt;</span>
+      <span class="nt">&lt;lat</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>40.1<span class="nt">&lt;/lat&gt;</span>
+      <span class="nt">&lt;lon</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>-105.15<span class="nt">&lt;/lon&gt;</span>
+      <span class="nt">&lt;elevation</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>1634<span class="nt">&lt;/elevation&gt;</span>
+      <span class="nt">&lt;distance</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>16924<span class="nt">&lt;/distance&gt;</span>
     <span class="nt">&lt;/tmy2&gt;</span>
     <span class="nt">&lt;tmy3&gt;</span>
       <span class="nt">&lt;id&gt;</span>2-724699<span class="nt">&lt;/id&gt;</span>
       <span class="nt">&lt;city&gt;</span>BROOMFIELD/JEFFCO [BOULDER - SURFRAD]<span class="nt">&lt;/city&gt;</span>
       <span class="nt">&lt;state&gt;</span>CO<span class="nt">&lt;/state&gt;</span>
-      <span class="nt">&lt;timezone</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>-7<span class="nt">&lt;/timezone&gt;</span>
-      <span class="nt">&lt;lat</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>40.13<span class="nt">&lt;/lat&gt;</span>
-      <span class="nt">&lt;lon</span> <span class="na">type=</span><span class="s">&quot;float&quot;</span><span class="nt">&gt;</span>-105.24<span class="nt">&lt;/lon&gt;</span>
-      <span class="nt">&lt;elevation</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>1689<span class="nt">&lt;/elevation&gt;</span>
-      <span class="nt">&lt;distance</span> <span class="na">type=</span><span class="s">&quot;integer&quot;</span><span class="nt">&gt;</span>24977<span class="nt">&lt;/distance&gt;</span>
+      <span class="nt">&lt;timezone</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>-7<span class="nt">&lt;/timezone&gt;</span>
+      <span class="nt">&lt;lat</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>40.13<span class="nt">&lt;/lat&gt;</span>
+      <span class="nt">&lt;lon</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>-105.24<span class="nt">&lt;/lon&gt;</span>
+      <span class="nt">&lt;elevation</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>1689<span class="nt">&lt;/elevation&gt;</span>
+      <span class="nt">&lt;distance</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>24977<span class="nt">&lt;/distance&gt;</span>
     <span class="nt">&lt;/tmy3&gt;</span>
   <span class="nt">&lt;/outputs&gt;</span>
 <span class="nt">&lt;/response&gt;</span>
 </pre></div>
-<h2>Rate Limits</h2>
+<h2 id="rate-limits">Rate Limits</h2>
 
 <p><a href="/docs/rate-limits">Standard rate limits</a> apply. No more than 1,000 requests may be made in any hour. No more than 10,000 requests may be made in any day.</p>
 
-<h2>Errors</h2>
+<h2 id="errors">Errors</h2>
 
 <p><a href="/docs/errors">Standard errors</a> may be returned. In addition, the following service-specific errors may be returned:</p>
 
 <table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
-  <thead>
-    <tr>
-      <th class="doc-parameters-name" scope="col">HTTP Status Code</th>
+<thead><tr>
+<th class="doc-parameters-name" scope="col">HTTP Status Code</th>
       <th class="doc-parameters-required" scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="doc-parameter-name" scope="row">422</th>
+    </tr></thead>
+<tbody><tr>
+<th class="doc-parameter-name" scope="row">422</th>
       <td class="doc-parameter-description">Unprocessable Entity - One or more parameters did not pass validation, or a parameter may be missing. Check the errors section of the response to see how the request should be modified to address the error.</td>
-    </tr>
-  </tbody>
+    </tr></tbody>
 </table>
 
+          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'apidatagov'; // required: replace example with your forum shortname
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          
 
           <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
             <a href="https://github.com/GUI/api.data.gov/blob/master/content/docs/nrel/solar/data-query-v1.md">Help Improve this Content</a>

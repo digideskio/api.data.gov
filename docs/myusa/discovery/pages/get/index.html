@@ -7,7 +7,7 @@
     <meta content="width=1015,maximum-scale=1.0" name="viewport">
     <meta name="generator" content="nanoc 3.6.4"> 
 
-    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-b1a2424927abdb92b0c1cae278c22522.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-be79a7772452de9216409fad385e5bdf.css" />
     <!--[if IE]>
       <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
     <![endif]-->
@@ -16,7 +16,7 @@
       <script type="text/javascript" src="/static/assets/ie_lt_9-592d2b1bfdec04e5ce3219e54a1a7316.js"></script>
     <![endif]-->
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/assets/application-fcc9a5d9994aeef74fd27431c769c9fd.js"></script>
+    <script type="text/javascript" src="/static/assets/application-1e1f8e576c1114611679bb897df8a2ee.js"></script>
   </head>
   <body class="">
     <div id="preheader">
@@ -121,28 +121,26 @@
 
 
         <div id="content">
-          <h1>Get a page by ID</h1>
+          <h1 id="get-a-page-by-id">Get a page by ID</h1>
 
 <p>Retrieve a page by its ID</p>
 
-<h2>Request URL</h2>
+<ul id="toc"></ul><h2 id="request-url">Request URL</h2>
 
 <pre>http://api.data.gov/myusa/discovery/pages/:id<em>?parameters</em></pre>
 
-<h2>Request Parameters</h2>
+<h2 id="request-parameters">Request Parameters</h2>
 
 <table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
-  <thead>
-    <tr>
-      <th class="doc-parameters-name" scope="col">Parameter</th>
+<thead><tr>
+<th class="doc-parameters-name" scope="col">Parameter</th>
       <th class="doc-parameters-required" scope="col">Required</th>
       <th class="doc-parameters-value" scope="col">Value</th>
       <th class="doc-parameters-description" scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="doc-parameter-name" scope="row">api_key</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th class="doc-parameter-name" scope="row">api_key</th>
       <td class="doc-parameter-required">Yes</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -156,8 +154,8 @@
         <p>Your developer API key. See <a href="/doc/api-key">API key usage</a> for more information.</p>
       </td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">id</th>
+<tr>
+<th class="doc-parameter-name" scope="row">id</th>
       <td class="doc-parameter-required">Yes</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -171,8 +169,8 @@
         The Page ID
       </td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">related</th>
+<tr>
+<th class="doc-parameter-name" scope="row">related</th>
       <td class="doc-parameter-required">No</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -186,8 +184,8 @@
         Number of related pages to return, must be between 0 and 25.
       </td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">callback</th>
+<tr>
+<th class="doc-parameter-name" scope="row">callback</th>
       <td class="doc-parameter-required">No</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -201,69 +199,83 @@
         Optional JSONP callback with which to wrap the response
       </td>
     </tr>
-  </tbody>
-</table>
+</tbody>
+</table><h2 id="examples">Examples</h2>
 
-<h2>Examples</h2>
-
-<h3>JSON Output Format</h3>
+<h3 id="json-output-format">JSON Output Format</h3>
 
 <pre>GET <a href="/myusa/discovery/pages/9.json?api_key=DEMO_KEY">/myusa/discovery/pages/9.json?api_key=DEMO_KEY</a></pre>
 <div class="highlight"><pre><span class="p">{</span>
-   <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span>
-   <span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="s2">&quot;http://foo.gov&quot;</span><span class="p">,</span>
-   <span class="nt">&quot;domain&quot;</span><span class="p">:{</span>
-      <span class="nt">&quot;hostname&quot;</span><span class="p">:</span><span class="s2">&quot;foo.gov&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;hostname_hash&quot;</span><span class="p">:</span><span class="s2">&quot;421aa90e079fa326b6494f812ad13e79&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">6</span>
+   <span class="nt">"id"</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span>
+   <span class="nt">"url"</span><span class="p">:</span><span class="s2">"http://foo.gov"</span><span class="p">,</span>
+   <span class="nt">"domain"</span><span class="p">:{</span>
+      <span class="nt">"hostname"</span><span class="p">:</span><span class="s2">"foo.gov"</span><span class="p">,</span>
+      <span class="nt">"hostname_hash"</span><span class="p">:</span><span class="s2">"421aa90e079fa326b6494f812ad13e79"</span><span class="p">,</span>
+      <span class="nt">"id"</span><span class="p">:</span><span class="mi">6</span>
    <span class="p">},</span>
-   <span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
-   <span class="nt">&quot;tags&quot;</span><span class="p">:[</span>
+   <span class="nt">"path"</span><span class="p">:</span><span class="s2">"/"</span><span class="p">,</span>
+   <span class="nt">"tags"</span><span class="p">:[</span>
       <span class="p">{</span>
-         <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">23</span><span class="p">,</span>
-         <span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;web&quot;</span>
+         <span class="nt">"id"</span><span class="p">:</span><span class="mi">23</span><span class="p">,</span>
+         <span class="nt">"name"</span><span class="p">:</span><span class="s2">"web"</span>
       <span class="p">},</span>
       <span class="p">{</span>
-         <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">108</span><span class="p">,</span>
-         <span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;server&quot;</span>
+         <span class="nt">"id"</span><span class="p">:</span><span class="mi">108</span><span class="p">,</span>
+         <span class="nt">"name"</span><span class="p">:</span><span class="s2">"server"</span>
       <span class="p">}</span>
    <span class="p">],</span>
-   <span class="nt">&quot;tag_list&quot;</span><span class="p">:</span><span class="s2">&quot;web, server&quot;</span><span class="p">,</span>
-   <span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;An example page&quot;</span><span class="p">,</span>
-   <span class="nt">&quot;related&quot;</span><span class="p">:[</span>
+   <span class="nt">"tag_list"</span><span class="p">:</span><span class="s2">"web, server"</span><span class="p">,</span>
+   <span class="nt">"title"</span><span class="p">:</span><span class="s2">"An example page"</span><span class="p">,</span>
+   <span class="nt">"related"</span><span class="p">:[</span>
       <span class="p">{</span>
-         <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
-         <span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="s2">&quot;http://www.usa.gov/&quot;</span><span class="p">,</span>
-         <span class="nt">&quot;domain&quot;</span><span class="p">:{</span>
-            <span class="nt">&quot;hostname&quot;</span><span class="p">:</span><span class="s2">&quot;www.usa.gov&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;hostname_hash&quot;</span><span class="p">:</span><span class="s2">&quot;ae77be06046330003e995de10534d79f&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">2</span>
+         <span class="nt">"id"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+         <span class="nt">"url"</span><span class="p">:</span><span class="s2">"http://www.usa.gov/"</span><span class="p">,</span>
+         <span class="nt">"domain"</span><span class="p">:{</span>
+            <span class="nt">"hostname"</span><span class="p">:</span><span class="s2">"www.usa.gov"</span><span class="p">,</span>
+            <span class="nt">"hostname_hash"</span><span class="p">:</span><span class="s2">"ae77be06046330003e995de10534d79f"</span><span class="p">,</span>
+            <span class="nt">"id"</span><span class="p">:</span><span class="mi">2</span>
          <span class="p">},</span>
-         <span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
-         <span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;USA.gov: The U.S. Government&#39;s Official Web Portal&quot;</span>
+         <span class="nt">"path"</span><span class="p">:</span><span class="s2">"/"</span><span class="p">,</span>
+         <span class="nt">"title"</span><span class="p">:</span><span class="s2">"USA.gov: The U.S. Government's Official Web Portal"</span>
       <span class="p">},</span>
       <span class="p">{</span>
-         <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">19</span><span class="p">,</span>
-         <span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="s2">&quot;http://www.usa.gov/index.shtml&quot;</span><span class="p">,</span>
-         <span class="nt">&quot;domain&quot;</span><span class="p">:{</span>
-            <span class="nt">&quot;hostname&quot;</span><span class="p">:</span><span class="s2">&quot;www.usa.gov&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;hostname_hash&quot;</span><span class="p">:</span><span class="s2">&quot;ae77be06046330003e995de10534d79f&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">2</span>
+         <span class="nt">"id"</span><span class="p">:</span><span class="mi">19</span><span class="p">,</span>
+         <span class="nt">"url"</span><span class="p">:</span><span class="s2">"http://www.usa.gov/index.shtml"</span><span class="p">,</span>
+         <span class="nt">"domain"</span><span class="p">:{</span>
+            <span class="nt">"hostname"</span><span class="p">:</span><span class="s2">"www.usa.gov"</span><span class="p">,</span>
+            <span class="nt">"hostname_hash"</span><span class="p">:</span><span class="s2">"ae77be06046330003e995de10534d79f"</span><span class="p">,</span>
+            <span class="nt">"id"</span><span class="p">:</span><span class="mi">2</span>
          <span class="p">},</span>
-         <span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="s2">&quot;/index.shtml&quot;</span><span class="p">,</span>
-         <span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;USA.gov: The U.S. Government&#39;s Official Web Portal&quot;</span>
+         <span class="nt">"path"</span><span class="p">:</span><span class="s2">"/index.shtml"</span><span class="p">,</span>
+         <span class="nt">"title"</span><span class="p">:</span><span class="s2">"USA.gov: The U.S. Government's Official Web Portal"</span>
       <span class="p">}</span>
    <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
-<h2>Rate Limits</h2>
+<h2 id="rate-limits">Rate Limits</h2>
 
 <p><a href="/docs/rate-limits">Standard rate limits</a> apply. No more than 1,000 requests may be made in any hour. No more than 10,000 requests may be made in any day.</p>
 
-<h2>Errors</h2>
+<h2 id="errors">Errors</h2>
 
 <p><a href="/docs/errors">Standard errors</a> may be returned.</p>
 
+          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'apidatagov'; // required: replace example with your forum shortname
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          
 
           <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
             <a href="https://github.com/GUI/api.data.gov/blob/master/content/docs/myusa/discovery/pages/get.md">Help Improve this Content</a>

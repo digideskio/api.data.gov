@@ -7,7 +7,7 @@
     <meta content="width=1015,maximum-scale=1.0" name="viewport">
     <meta name="generator" content="nanoc 3.6.4"> 
 
-    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-b1a2424927abdb92b0c1cae278c22522.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-be79a7772452de9216409fad385e5bdf.css" />
     <!--[if IE]>
       <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
     <![endif]-->
@@ -16,7 +16,7 @@
       <script type="text/javascript" src="/static/assets/ie_lt_9-592d2b1bfdec04e5ce3219e54a1a7316.js"></script>
     <![endif]-->
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/assets/application-fcc9a5d9994aeef74fd27431c769c9fd.js"></script>
+    <script type="text/javascript" src="/static/assets/application-1e1f8e576c1114611679bb897df8a2ee.js"></script>
   </head>
   <body class="">
     <div id="preheader">
@@ -121,28 +121,26 @@
 
 
         <div id="content">
-          <h1>Commercial Building Vocabularies</h1>
+          <h1 id="commercial-building-vocabularies">Commercial Building Vocabularies</h1>
 
 <p>A list of terms for a given vocabulary in the Commercial Buildings Resource Database.  Useful for advanced search integration.</p>
 
-<h2>Request URL</h2>
+<ul id="toc"></ul><h2 id="request-url">Request URL</h2>
 
 <pre>GET http://api.data.gov/nrel/v1/vocabulary-name<em>.format?parameters</em></pre>
 
-<h2>Request Parameters</h2>
+<h2 id="request-parameters">Request Parameters</h2>
 
 <table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
-  <thead>
-    <tr>
-      <th class="doc-parameters-name" scope="col">Parameter</th>
+<thead><tr>
+<th class="doc-parameters-name" scope="col">Parameter</th>
       <th class="doc-parameters-required" scope="col">Required</th>
       <th class="doc-parameters-value" scope="col">Value</th>
       <th class="doc-parameters-description" scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="doc-parameter-name" scope="row">vocabulary-name</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th class="doc-parameter-name" scope="row">vocabulary-name</th>
       <td class="doc-parameter-required">Yes</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -159,8 +157,8 @@
         <p>The vocabulary to retrieve terms for. If "terms" is used, this will return terms from all vocabularies. Otherwise this will return only terms from the specified vocabulary.</p>
       </td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">format</th>
+<tr>
+<th class="doc-parameter-name" scope="row">format</th>
       <td class="doc-parameter-required">Yes</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -177,8 +175,8 @@
         <p>The output response format.</p>
       </td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">api_key</th>
+<tr>
+<th class="doc-parameter-name" scope="row">api_key</th>
       <td class="doc-parameter-required">Yes</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -192,22 +190,17 @@
         <p>Your developer API key. See <a href="/doc/api-key">API keys</a> for more information.</p>
       </td>
     </tr>
-  </tbody>
-</table>
-
-<h2>Response Fields</h2>
+</tbody>
+</table><h2 id="response-fields">Response Fields</h2>
 
 <table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
-  <thead>
-    <tr>
-      <th class="doc-parameters-name" scope="col">Field</th>
+<thead><tr>
+<th class="doc-parameters-name" scope="col">Field</th>
       <th class="doc-parameters-value" scope="col">Value</th>
       <th class="doc-parameters-description" scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="doc-parameter-name" scope="row">result</th>
+    </tr></thead>
+<tbody><tr>
+<th class="doc-parameter-name" scope="row">result</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <strong>Type:</strong> Array
@@ -217,25 +210,20 @@
       <td class="doc-parameter-description">
         <p>Array of terms from the requested vocabulary, listed in no specific order. See term fields for details.</p>
       </td>
-    </tr>
-  </tbody>
-</table>
-
-<h3>Term Fields</h3>
+    </tr></tbody>
+</table><h3 id="term-fields">Term Fields</h3>
 
 <p>Fields returned with each result.</p>
 
 <table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
-  <thead>
-    <tr>
-      <th class="doc-parameters-name" scope="col">Parameter</th>
+<thead><tr>
+<th class="doc-parameters-name" scope="col">Parameter</th>
       <th class="doc-parameters-value" scope="col">Value</th>
       <th class="doc-parameters-description" scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="doc-parameter-name" scope="row">tid</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th class="doc-parameter-name" scope="row">tid</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <strong>Type:</strong> integer
@@ -245,8 +233,8 @@
         <p>The unique id of the term.</p>
       </td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">vid</th>
+<tr>
+<th class="doc-parameter-name" scope="row">vid</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <strong>Type: integer</strong>
@@ -256,8 +244,8 @@
         <p>Version id of the term.</p>
       </td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">name</th>
+<tr>
+<th class="doc-parameter-name" scope="row">name</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <span><b>Type: String</b></span>
@@ -267,8 +255,8 @@
         <p>Display name of term.</p>
       </td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">description</th>
+<tr>
+<th class="doc-parameter-name" scope="row">description</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <span><b>Type: String</b></span>
@@ -278,8 +266,8 @@
         <p>Display name of term.</p>
       </td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">format</th>
+<tr>
+<th class="doc-parameter-name" scope="row">format</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <span><b>Type: String</b></span>
@@ -289,8 +277,8 @@
         <p>Format of term.</p>
       </td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">weight</th>
+<tr>
+<th class="doc-parameter-name" scope="row">weight</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <span><b>Type: String</b></span>
@@ -300,8 +288,8 @@
         <p>Display order for term.</p>
       </td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">vocabulary_machine_name</th>
+<tr>
+<th class="doc-parameter-name" scope="row">vocabulary_machine_name</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <span><b>Type: String</b></span>
@@ -311,8 +299,8 @@
         <p>Unique id for vocabulary. Unless input "vocabulary_name" = "terms" was used to select terms from all vocabularies, this field will be the same for all results.</p>
       </td>
     </tr>
-    <tr>
-      <th class="doc-parameter-name" scope="row">rdf_mapping</th>
+<tr>
+<th class="doc-parameter-name" scope="row">rdf_mapping</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <span><b>Type: Object</b></span>
@@ -322,50 +310,48 @@
         <p>Resource Description Framework (RDF) metadata.</p>
       </td>
     </tr>
-  </tbody>
-</table>
+</tbody>
+</table><h2 id="examples">Examples</h2>
 
-<h2>Examples</h2>
-
-<h3>JSON Output Format</h3>
+<h3 id="json-output-format">JSON Output Format</h3>
 
 <pre>GET <a href="http://api.data.gov/nrel/commercial-building-resources/v1/building-types.json?api_key=DEMO_KEY">http://api.data.gov/nrel/commercial-building-resources/building-types.json?api_key=DEMO_KEY</a></pre>
 <div class="highlight"><pre><span class="p">{</span>
-    <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nt">"result"</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
-            <span class="nt">&quot;tid&quot;</span><span class="p">:</span> <span class="s2">&quot;51&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;vid&quot;</span><span class="p">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Datacenter&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="nt">&quot;weight&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;vocabulary_machine_name&quot;</span><span class="p">:</span> <span class="s2">&quot;building_types&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;rdf_mapping&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;rdftype&quot;</span><span class="p">:</span> <span class="p">[</span>
-                    <span class="s2">&quot;skos:Concept&quot;</span>
+            <span class="nt">"tid"</span><span class="p">:</span> <span class="s2">"51"</span><span class="p">,</span>
+            <span class="nt">"vid"</span><span class="p">:</span> <span class="s2">"9"</span><span class="p">,</span>
+            <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"Datacenter"</span><span class="p">,</span>
+            <span class="nt">"description"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">"format"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="nt">"weight"</span><span class="p">:</span> <span class="s2">"0"</span><span class="p">,</span>
+            <span class="nt">"vocabulary_machine_name"</span><span class="p">:</span> <span class="s2">"building_types"</span><span class="p">,</span>
+            <span class="nt">"rdf_mapping"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">"rdftype"</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">"skos:Concept"</span>
                 <span class="p">],</span>
-                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">&quot;predicates&quot;</span><span class="p">:</span> <span class="p">[</span>
-                        <span class="s2">&quot;rdfs:label&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;skos:prefLabel&quot;</span>
+                <span class="nt">"name"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">"predicates"</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">"rdfs:label"</span><span class="p">,</span>
+                        <span class="s2">"skos:prefLabel"</span>
                     <span class="p">]</span>
                 <span class="p">},</span>
-                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">&quot;predicates&quot;</span><span class="p">:</span> <span class="p">[</span>
-                        <span class="s2">&quot;skos:definition&quot;</span>
+                <span class="nt">"description"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">"predicates"</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">"skos:definition"</span>
                     <span class="p">]</span>
                 <span class="p">},</span>
-                <span class="nt">&quot;vid&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">&quot;predicates&quot;</span><span class="p">:</span> <span class="p">[</span>
-                        <span class="s2">&quot;skos:inScheme&quot;</span>
+                <span class="nt">"vid"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">"predicates"</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">"skos:inScheme"</span>
                     <span class="p">],</span>
-                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;rel&quot;</span>
+                    <span class="nt">"type"</span><span class="p">:</span> <span class="s2">"rel"</span>
                 <span class="p">},</span>
-                <span class="nt">&quot;parent&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">&quot;predicates&quot;</span><span class="p">:</span> <span class="p">[</span>
-                        <span class="s2">&quot;skos:broader&quot;</span>
+                <span class="nt">"parent"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">"predicates"</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">"skos:broader"</span>
                     <span class="p">],</span>
-                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;rel&quot;</span>
+                    <span class="nt">"type"</span><span class="p">:</span> <span class="s2">"rel"</span>
                 <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">},</span>
@@ -373,11 +359,11 @@
     <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
-<h3>XML Output Format</h3>
+<h3 id="xml-output-format">XML Output Format</h3>
 
 <pre>GET <a href="http://api.data.gov/nrel/commercial-building-resources/v1/building-types.xml?api_key=DEMO_KEY">http://api.data.gov/nrel/commercial-building-resources/v1/service.xml?api_key=DEMO_KEY</a></pre>
-<div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;result</span> <span class="na">is_array=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;result</span> <span class="na">is_array=</span><span class="s">"true"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;item&gt;</span>
     <span class="nt">&lt;tid&gt;</span>51<span class="nt">&lt;/tid&gt;</span>
     <span class="nt">&lt;vid&gt;</span>9<span class="nt">&lt;/vid&gt;</span>
@@ -387,27 +373,27 @@
     <span class="nt">&lt;weight&gt;</span>0<span class="nt">&lt;/weight&gt;</span>
     <span class="nt">&lt;vocabulary_machine_name&gt;</span>building_types<span class="nt">&lt;/vocabulary_machine_name&gt;</span>
     <span class="nt">&lt;rdf_mapping&gt;</span>
-      <span class="nt">&lt;rdftype</span> <span class="na">is_array=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;rdftype</span> <span class="na">is_array=</span><span class="s">"true"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;item&gt;</span>skos:Concept<span class="nt">&lt;/item&gt;</span>
       <span class="nt">&lt;/rdftype&gt;</span>
       <span class="nt">&lt;name&gt;</span>
-        <span class="nt">&lt;predicates</span> <span class="na">is_array=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;predicates</span> <span class="na">is_array=</span><span class="s">"true"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;item&gt;</span>rdfs:label<span class="nt">&lt;/item&gt;</span>
           <span class="nt">&lt;item&gt;</span>skos:prefLabel<span class="nt">&lt;/item&gt;</span>
         <span class="nt">&lt;/predicates&gt;&lt;/name&gt;</span>
       <span class="nt">&lt;description&gt;</span>
-        <span class="nt">&lt;predicates</span> <span class="na">is_array=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;predicates</span> <span class="na">is_array=</span><span class="s">"true"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;item&gt;</span>skos:definition<span class="nt">&lt;/item&gt;</span>
         <span class="nt">&lt;/predicates&gt;</span>
       <span class="nt">&lt;/description&gt;</span>
       <span class="nt">&lt;vid&gt;</span>
-        <span class="nt">&lt;predicates</span> <span class="na">is_array=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;predicates</span> <span class="na">is_array=</span><span class="s">"true"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;item&gt;</span>skos:inScheme<span class="nt">&lt;/item&gt;</span>
         <span class="nt">&lt;/predicates&gt;</span>
         <span class="nt">&lt;type&gt;</span>rel<span class="nt">&lt;/type&gt;</span>
       <span class="nt">&lt;/vid&gt;</span>
       <span class="nt">&lt;parent&gt;</span>
-        <span class="nt">&lt;predicates</span> <span class="na">is_array=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;predicates</span> <span class="na">is_array=</span><span class="s">"true"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;item&gt;</span>skos:broader<span class="nt">&lt;/item&gt;</span>
         <span class="nt">&lt;/predicates&gt;</span>
         <span class="nt">&lt;type&gt;</span>rel<span class="nt">&lt;/type&gt;</span>
@@ -415,14 +401,30 @@
     <span class="nt">&lt;/rdf_mapping&gt;</span>
   <span class="nt">&lt;/item&gt;</span> ... <span class="nt">&lt;/result&gt;</span>
 </pre></div>
-<h2>Rate Limits</h2>
+<h2 id="rate-limits">Rate Limits</h2>
 
 <p><a href="/docs/rate-limits">Standard rate limits</a> apply. No more than 1,000 requests may be made in any hour. No more than 10,000 requests may be made in any day.</p>
 
-<h2>Errors</h2>
+<h2 id="errors">Errors</h2>
 
 <p><a href="/docs/errors">Standard errors</a> may be returned.</p>
 
+          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'apidatagov'; // required: replace example with your forum shortname
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          
 
           <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
             <a href="https://github.com/GUI/api.data.gov/blob/master/content/docs/nrel/buildings/commercial-building-resource-database/vocabulary-name.md">Help Improve this Content</a>

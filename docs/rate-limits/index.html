@@ -7,7 +7,7 @@
     <meta content="width=1015,maximum-scale=1.0" name="viewport">
     <meta name="generator" content="nanoc 3.6.4"> 
 
-    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-b1a2424927abdb92b0c1cae278c22522.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-be79a7772452de9216409fad385e5bdf.css" />
     <!--[if IE]>
       <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
     <![endif]-->
@@ -16,7 +16,7 @@
       <script type="text/javascript" src="/static/assets/ie_lt_9-592d2b1bfdec04e5ce3219e54a1a7316.js"></script>
     <![endif]-->
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/assets/application-fcc9a5d9994aeef74fd27431c769c9fd.js"></script>
+    <script type="text/javascript" src="/static/assets/application-1e1f8e576c1114611679bb897df8a2ee.js"></script>
   </head>
   <body class="">
     <div id="preheader">
@@ -88,46 +88,47 @@
 
 
         <div id="content">
-          <h1>Web Service Rate Limits</h1>
+          <h1 id="web-service-rate-limits">Web Service Rate Limits</h1>
 
 <p>Limits are placed on the number of Data.gov Web service requests you may make using your API key.</p>
 
 <ul>
-<li><strong>Hourly Limit:</strong> 1,000 requests per hour</li>
-<li><strong>Daily Limit:</strong> 10,000 requests per calendar day</li>
-</ul>
+<li>
+<strong>Hourly Limit:</strong> 1,000 requests per hour</li>
+<li>
+<strong>Daily Limit:</strong> 10,000 requests per calendar day</li>
+</ul><p>For each API key, these limits are applied across all Data.gov Web services requests. Exceeding these limits will lead to your API key being temporarily blocked from making further requests. Depending on the limit exceeded, the block will be lifted automatically by waiting until the next hour or calendar day.</p>
 
-<p>For each API key, these limits are applied across all Data.gov Web services requests. Exceeding these limits will lead to your API key being temporarily blocked from making further requests. Depending on the limit exceeded, the block will be lifted automatically by waiting until the next hour or calendar day.</p>
+<h2 id="understanding-rate-limit-time-periods">Understanding Rate Limit Time Periods</h2>
 
-<h2>Understanding Rate Limit Time Periods</h2>
-
-<h3>Hourly Limit</h3>
+<h3 id="hourly-limit">Hourly Limit</h3>
 
 <p>The hourly counters for your API key reset at the beginning of every hour.</p>
 
-<p><em>Example:</em> If you started making requests at 10:00AM and made your 1,000th request of the hour at 10:40AM, your API key would become temporarily blocked. This temporary block of your API key would be lifted at 11:00AM, at which point you could make more web service requests (assuming you hadn&#39;t also exceeded your daily limit).</p>
+<p><em>Example:</em> If you started making requests at 10:00AM and made your 1,000th request of the hour at 10:40AM, your API key would become temporarily blocked. This temporary block of your API key would be lifted at 11:00AM, at which point you could make more web service requests (assuming you hadn't also exceeded your daily limit).</p>
 
-<h3>Daily Limit</h3>
+<h3 id="daily-limit">Daily Limit</h3>
 
 <p>The daily counters for your API key reset at midnight <a href="http://en.wikipedia.org/wiki/Coordinated_Universal_Time">UTC</a>.</p>
 
 <p><em>Example:</em> If you started making requests at 00:00:00 UTC and made your 10,000th request of the day at 16:00:00 UTC, your API key would become temporarily blocked. This temporary block of your API key would be lifted at 00:00:00 UTC of the following day, at which point you could make more web service requests.</p>
 
-<h2>Rate Limit Error Response</h2>
+<h2 id="rate-limit-error-response">Rate Limit Error Response</h2>
 
-<p>If your API key exceeds the rate limits, you will receive a response with an HTTP status code of 503, Service Unavailable. The response body will contain an error message reading &quot;503 Service Unavailable (Rate Limit Exceeded).&quot; For example, a JSON request that has exceed the rate limits would respond with:</p>
+<p>If your API key exceeds the rate limits, you will receive a response with an HTTP status code of 503, Service Unavailable. The response body will contain an error message reading "503 Service Unavailable (Rate Limit Exceeded)." For example, a JSON request that has exceed the rate limits would respond with:</p>
 <div class="highlight"><pre><span class="p">{</span>
-  <span class="nt">&quot;errors&quot;</span><span class="p">:[</span>
-    <span class="s2">&quot;503 Service Unavailable (Rate Limit Exceeded)&quot;</span>
+  <span class="nt">"errors"</span><span class="p">:[</span>
+    <span class="s2">"503 Service Unavailable (Rate Limit Exceeded)"</span>
   <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 <p>For more details on how errors are returned, see the <a href="/docs/errors">general Web service errors</a>.</p>
 
-<h2>Need Higher Limits?</h2>
+<h2 id="need-higher-limits">Need Higher Limits?</h2>
 
-<p>If you&#39;re building an application that needs higher rate limits, we&#39;d be happy to work with you. <a href="/contact">Contact us</a> for more details.</p>
+<p>If you're building an application that needs higher rate limits, we'd be happy to work with you. <a href="/contact">Contact us</a> for more details.</p>
 
+          
 
           <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
             <a href="https://github.com/GUI/api.data.gov/blob/master/content/docs/rate-limits.md">Help Improve this Content</a>
