@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sites Metadata</title>
+    <title>
+      
+        Sites Metadata
+        
+          API
+        
+        |
+      
+      api.data.gov
+    </title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta content="en" name="language">
     <meta content="width=1015,maximum-scale=1.0" name="viewport">
-    <meta name="generator" content="nanoc 3.6.4"> 
+    <meta name="generator" content="nanoc 3.6.5"> 
 
-    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-be79a7772452de9216409fad385e5bdf.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-d934871e8ee91606cd372c8eae8f9c33.css" />
     <!--[if IE]>
       <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
     <![endif]-->
@@ -20,8 +29,8 @@
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-42542568-1', 'data.gov');
@@ -131,13 +140,13 @@
 
 
         <div id="content">
-          <h1 id="sites-metadata">Sites Metadata</h1>
-
+          <h1 id="sites-metadata-get-api-pvdaq-v3-sites">Sites Metadata <span class="url">(GET /api/pvdaq/v3/sites)</span>
+</h1>
 <p>Fetch metadata for PVDAQ sites.</p>
 
 <ul id="toc"></ul><h2 id="request-url">Request URL</h2>
 
-<pre>GET https://api.data.gov/nrel/pvdaq/v3/sites<em>.format?parameters</em></pre>
+<pre>GET /api/pvdaq/v3/sites<em>.format?parameters</em></pre>
 
 <h2 id="http-basic-authentication">HTTP Basic Authentication</h2>
 
@@ -183,7 +192,7 @@
         </div>
       </td>
       <td class="doc-parameter-description">
-        <p>Your developer API key. See <a href="/doc/api-key">API keys</a> for more information.</p>
+        <p>Your developer API key. See <a href="/docs/api-key/">API keys</a> for more information.</p>
       </td>
     </tr>
 <tr>
@@ -296,97 +305,115 @@
 
 <h3 id="json-output-format">JSON Output Format</h3>
 
-<pre>GET <a href="https://api.data.gov/nrel/pvdaq/v3/sites.json?api_key=DEMO_KEY&amp;system_id=2">https://api.data.gov/nrel/pvdaq/v3/sites.json?api_key=DEMO_KEY&amp;system_id=2</a></pre>
-<div class="highlight"><pre><span class="p">{</span>
-  <span class="nt">"errors"</span><span class="p">:</span> <span class="p">[],</span>
-  <span class="nt">"infos"</span><span class="p">:</span> <span class="p">[],</span>
-  <span class="nt">"inputs"</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">"api_key"</span><span class="p">:</span> <span class="s2">"DEMO_KEY"</span><span class="p">,</span>
-    <span class="nt">"system_id"</span><span class="p">:</span> <span class="s2">"2"</span>
-  <span class="p">},</span>
-  <span class="nt">"outputs"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="nt">"available_years"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="mi">2011</span><span class="p">,</span>
-        <span class="mi">2012</span><span class="p">,</span>
-        <span class="mi">2013</span><span class="p">,</span>
-        <span class="mi">2010</span>
-      <span class="p">],</span>
-      <span class="nt">"comments"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"confidential"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nt">"inverter_mfg"</span><span class="p">:</span> <span class="s2">"Fronius"</span><span class="p">,</span>
-      <span class="nt">"inverter_mfg_hide"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nt">"inverter_model"</span><span class="p">:</span> <span class="s2">"IG 4000"</span><span class="p">,</span>
-      <span class="nt">"inverter_model_hide"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nt">"module_mfg"</span><span class="p">:</span> <span class="s2">"Sharp"</span><span class="p">,</span>
-      <span class="nt">"module_mfg_hide"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nt">"module_model"</span><span class="p">:</span> <span class="s2">"ND-208U1"</span><span class="p">,</span>
-      <span class="nt">"module_model_hide"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nt">"site_power"</span><span class="p">:</span> <span class="mi">2912</span><span class="p">,</span>
-      <span class="nt">"site_power_hide"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nt">"module_tech"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-      <span class="nt">"name_private"</span><span class="p">:</span> <span class="s2">"Nelson Home, Golden, CO, Array 1"</span><span class="p">,</span>
-      <span class="nt">"name_public"</span><span class="p">:</span> <span class="s2">"[2] Residential 1a"</span><span class="p">,</span>
-      <span class="nt">"site_area"</span><span class="p">:</span> <span class="mf">22.82</span><span class="p">,</span>
-      <span class="nt">"site_azimuth"</span><span class="p">:</span> <span class="mf">181.2</span><span class="p">,</span>
-      <span class="nt">"site_elevation"</span><span class="p">:</span> <span class="mi">1675</span><span class="p">,</span>
-      <span class="nt">"site_latitude"</span><span class="p">:</span> <span class="mf">39.7214</span><span class="p">,</span>
-      <span class="nt">"site_longitude"</span><span class="p">:</span> <span class="mf">105.0972</span><span class="p">,</span>
-      <span class="nt">"site_tilt"</span><span class="p">:</span> <span class="mf">18.5</span><span class="p">,</span>
-      <span class="nt">"system_id"</span><span class="p">:</span> <span class="mi">2</span>
-    <span class="p">}</span>
-  <span class="p">],</span>
-  <span class="nt">"version"</span><span class="p">:</span> <span class="s2">"3.0.1"</span><span class="p">,</span>
-  <span class="nt">"warnings"</span><span class="p">:</span> <span class="p">[]</span>
-<span class="p">}</span>
+<pre>GET <a href="https://api.data.gov/nrel/pvdaq/v3/sites.json?api_key=DEMO_KEY&amp;system_id=2">/api/pvdaq/v3/sites.json?api_key=DEMO_KEY&amp;system_id=2</a></pre>
+
+<div>
+<div class="CodeRay">
+  <div class="code"><pre>{
+  <span class="key"><span class="delimiter">"</span><span class="content">errors</span><span class="delimiter">"</span></span>: [
+
+  ],
+  <span class="key"><span class="delimiter">"</span><span class="content">infos</span><span class="delimiter">"</span></span>: [
+
+  ],
+  <span class="key"><span class="delimiter">"</span><span class="content">inputs</span><span class="delimiter">"</span></span>: {
+    <span class="key"><span class="delimiter">"</span><span class="content">api_key</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">DEMO_KEY</span><span class="delimiter">"</span></span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">system_id</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">2</span><span class="delimiter">"</span></span>
+  },
+  <span class="key"><span class="delimiter">"</span><span class="content">outputs</span><span class="delimiter">"</span></span>: [
+    {
+      <span class="key"><span class="delimiter">"</span><span class="content">available_years</span><span class="delimiter">"</span></span>: [
+        <span class="integer">2011</span>,
+        <span class="integer">2012</span>,
+        <span class="integer">2013</span>,
+        <span class="integer">2010</span>
+      ],
+      <span class="key"><span class="delimiter">"</span><span class="content">comments</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">confidential</span><span class="delimiter">"</span></span>: <span class="value">false</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">inverter_mfg</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Fronius</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">inverter_mfg_hide</span><span class="delimiter">"</span></span>: <span class="value">false</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">inverter_model</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">IG 4000</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">inverter_model_hide</span><span class="delimiter">"</span></span>: <span class="value">false</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">module_mfg</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Sharp</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">module_mfg_hide</span><span class="delimiter">"</span></span>: <span class="value">false</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">module_model</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">ND-208U1</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">module_model_hide</span><span class="delimiter">"</span></span>: <span class="value">false</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">site_power</span><span class="delimiter">"</span></span>: <span class="integer">2912</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">site_power_hide</span><span class="delimiter">"</span></span>: <span class="value">false</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">module_tech</span><span class="delimiter">"</span></span>: <span class="integer">2</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">name_private</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Nelson Home, Golden, CO, Array 1</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">name_public</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">[2] Residential 1a</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">site_area</span><span class="delimiter">"</span></span>: <span class="float">22.82</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">site_azimuth</span><span class="delimiter">"</span></span>: <span class="float">181.2</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">site_elevation</span><span class="delimiter">"</span></span>: <span class="integer">1675</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">site_latitude</span><span class="delimiter">"</span></span>: <span class="float">39.7214</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">site_longitude</span><span class="delimiter">"</span></span>: <span class="float">105.0972</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">site_tilt</span><span class="delimiter">"</span></span>: <span class="float">18.5</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">system_id</span><span class="delimiter">"</span></span>: <span class="integer">2</span>
+    }
+  ],
+  <span class="key"><span class="delimiter">"</span><span class="content">version</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">3.0.1</span><span class="delimiter">"</span></span>,
+  <span class="key"><span class="delimiter">"</span><span class="content">warnings</span><span class="delimiter">"</span></span>: [
+
+  ]
+}
 </pre></div>
+</div>
+</div>
+
 <h3 id="xml-output-format">XML Output Format</h3>
 
-<pre>GET <a href="https://api.data.gov/nrel/pvdaq/v3/sites.xml?system_id=2&amp;api_key=DEMO_KEY">https://api.data.gov/nrel/pvdaq/v3/sites.xml?system_id=2&amp;api_key=DEMO_KEY</a></pre>
-<div class="highlight"><pre><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="nt">&lt;response&gt;</span>
-  <span class="nt">&lt;errors</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;outputs</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;output&gt;</span>
-      <span class="nt">&lt;available-years</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;available-year</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/available-year&gt;</span>
-        <span class="nt">&lt;available-year</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>2012<span class="nt">&lt;/available-year&gt;</span>
-        <span class="nt">&lt;available-year</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>2013<span class="nt">&lt;/available-year&gt;</span>
-        <span class="nt">&lt;available-year</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>2010<span class="nt">&lt;/available-year&gt;</span>
-      <span class="nt">&lt;/available-years&gt;</span>
-      <span class="nt">&lt;comments</span> <span class="na">nil=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
-      <span class="nt">&lt;confidential</span> <span class="na">type=</span><span class="s">"boolean"</span><span class="nt">&gt;</span>false<span class="nt">&lt;/confidential&gt;</span>
-      <span class="nt">&lt;inverter-mfg&gt;</span>Fronius<span class="nt">&lt;/inverter-mfg&gt;</span>
-      <span class="nt">&lt;inverter-mfg-hide</span> <span class="na">type=</span><span class="s">"boolean"</span><span class="nt">&gt;</span>false<span class="nt">&lt;/inverter-mfg-hide&gt;</span>
-      <span class="nt">&lt;inverter-model&gt;</span>IG 4000<span class="nt">&lt;/inverter-model&gt;</span>
-      <span class="nt">&lt;inverter-model-hide</span> <span class="na">type=</span><span class="s">"boolean"</span><span class="nt">&gt;</span>false<span class="nt">&lt;/inverter-model-hide&gt;</span>
-      <span class="nt">&lt;module-mfg&gt;</span>Sharp<span class="nt">&lt;/module-mfg&gt;</span>
-      <span class="nt">&lt;module-mfg-hide</span> <span class="na">type=</span><span class="s">"boolean"</span><span class="nt">&gt;</span>false<span class="nt">&lt;/module-mfg-hide&gt;</span>
-      <span class="nt">&lt;module-model&gt;</span>ND-208U1<span class="nt">&lt;/module-model&gt;</span>
-      <span class="nt">&lt;module-model-hide</span> <span class="na">type=</span><span class="s">"boolean"</span><span class="nt">&gt;</span>false<span class="nt">&lt;/module-model-hide&gt;</span>
-      <span class="nt">&lt;site-power</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>2912.0<span class="nt">&lt;/site-power&gt;</span>
-      <span class="nt">&lt;site-power-hide</span> <span class="na">type=</span><span class="s">"boolean"</span><span class="nt">&gt;</span>false<span class="nt">&lt;/site-power-hide&gt;</span>
-      <span class="nt">&lt;module-tech</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/module-tech&gt;</span>
-      <span class="nt">&lt;name-private&gt;</span>Nelson Home, Golden, CO, Array 1<span class="nt">&lt;/name-private&gt;</span>
-      <span class="nt">&lt;name-public&gt;</span>[2] Residential 1a<span class="nt">&lt;/name-public&gt;</span>
-      <span class="nt">&lt;site-area</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>22.82<span class="nt">&lt;/site-area&gt;</span>
-      <span class="nt">&lt;site-azimuth</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>181.2<span class="nt">&lt;/site-azimuth&gt;</span>
-      <span class="nt">&lt;site-elevation</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>1675.0<span class="nt">&lt;/site-elevation&gt;</span>
-      <span class="nt">&lt;site-latitude</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>39.7214<span class="nt">&lt;/site-latitude&gt;</span>
-      <span class="nt">&lt;site-longitude</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>105.0972<span class="nt">&lt;/site-longitude&gt;</span>
-      <span class="nt">&lt;site-tilt</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>18.5<span class="nt">&lt;/site-tilt&gt;</span>
-      <span class="nt">&lt;system-id</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/system-id&gt;</span>
-    <span class="nt">&lt;/output&gt;</span>
-  <span class="nt">&lt;/outputs&gt;</span>
-  <span class="nt">&lt;warnings</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;infos</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;inputs&gt;</span>
-    <span class="nt">&lt;system-id&gt;</span>2<span class="nt">&lt;/system-id&gt;</span>
-    <span class="nt">&lt;api-key&gt;</span>DEMO_KEY<span class="nt">&lt;/api-key&gt;</span>
-  <span class="nt">&lt;/inputs&gt;</span>
-  <span class="nt">&lt;version&gt;</span>3.0.1<span class="nt">&lt;/version&gt;</span>
-<span class="nt">&lt;/response&gt;</span>
+<pre>GET <a href="https://api.data.gov/nrel/pvdaq/v3/sites.xml?system_id=2&amp;api_key=DEMO_KEY">/api/pvdaq/v3/sites.xml?system_id=2&amp;api_key=DEMO_KEY</a></pre>
+
+<div>
+<div class="CodeRay">
+  <div class="code"><pre><span class="preprocessor">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="tag">&lt;response&gt;</span>
+  <span class="tag">&lt;errors</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;outputs</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;output&gt;</span>
+      <span class="tag">&lt;available-years</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
+        <span class="tag">&lt;available-year</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">integer</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>2011<span class="tag">&lt;/available-year&gt;</span>
+        <span class="tag">&lt;available-year</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">integer</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>2012<span class="tag">&lt;/available-year&gt;</span>
+        <span class="tag">&lt;available-year</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">integer</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>2013<span class="tag">&lt;/available-year&gt;</span>
+        <span class="tag">&lt;available-year</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">integer</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>2010<span class="tag">&lt;/available-year&gt;</span>
+      <span class="tag">&lt;/available-years&gt;</span>
+      <span class="tag">&lt;comments</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;confidential</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">boolean</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>false<span class="tag">&lt;/confidential&gt;</span>
+      <span class="tag">&lt;inverter-mfg&gt;</span>Fronius<span class="tag">&lt;/inverter-mfg&gt;</span>
+      <span class="tag">&lt;inverter-mfg-hide</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">boolean</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>false<span class="tag">&lt;/inverter-mfg-hide&gt;</span>
+      <span class="tag">&lt;inverter-model&gt;</span>IG 4000<span class="tag">&lt;/inverter-model&gt;</span>
+      <span class="tag">&lt;inverter-model-hide</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">boolean</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>false<span class="tag">&lt;/inverter-model-hide&gt;</span>
+      <span class="tag">&lt;module-mfg&gt;</span>Sharp<span class="tag">&lt;/module-mfg&gt;</span>
+      <span class="tag">&lt;module-mfg-hide</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">boolean</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>false<span class="tag">&lt;/module-mfg-hide&gt;</span>
+      <span class="tag">&lt;module-model&gt;</span>ND-208U1<span class="tag">&lt;/module-model&gt;</span>
+      <span class="tag">&lt;module-model-hide</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">boolean</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>false<span class="tag">&lt;/module-model-hide&gt;</span>
+      <span class="tag">&lt;site-power</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>2912.0<span class="tag">&lt;/site-power&gt;</span>
+      <span class="tag">&lt;site-power-hide</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">boolean</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>false<span class="tag">&lt;/site-power-hide&gt;</span>
+      <span class="tag">&lt;module-tech</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">integer</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>2<span class="tag">&lt;/module-tech&gt;</span>
+      <span class="tag">&lt;name-private&gt;</span>Nelson Home, Golden, CO, Array 1<span class="tag">&lt;/name-private&gt;</span>
+      <span class="tag">&lt;name-public&gt;</span>[2] Residential 1a<span class="tag">&lt;/name-public&gt;</span>
+      <span class="tag">&lt;site-area</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>22.82<span class="tag">&lt;/site-area&gt;</span>
+      <span class="tag">&lt;site-azimuth</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>181.2<span class="tag">&lt;/site-azimuth&gt;</span>
+      <span class="tag">&lt;site-elevation</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>1675.0<span class="tag">&lt;/site-elevation&gt;</span>
+      <span class="tag">&lt;site-latitude</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>39.7214<span class="tag">&lt;/site-latitude&gt;</span>
+      <span class="tag">&lt;site-longitude</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>105.0972<span class="tag">&lt;/site-longitude&gt;</span>
+      <span class="tag">&lt;site-tilt</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>18.5<span class="tag">&lt;/site-tilt&gt;</span>
+      <span class="tag">&lt;system-id</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">integer</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>2<span class="tag">&lt;/system-id&gt;</span>
+    <span class="tag">&lt;/output&gt;</span>
+  <span class="tag">&lt;/outputs&gt;</span>
+  <span class="tag">&lt;warnings</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;infos</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;inputs&gt;</span>
+    <span class="tag">&lt;system-id&gt;</span>2<span class="tag">&lt;/system-id&gt;</span>
+    <span class="tag">&lt;api-key&gt;</span>DEMO_KEY<span class="tag">&lt;/api-key&gt;</span>
+  <span class="tag">&lt;/inputs&gt;</span>
+  <span class="tag">&lt;version&gt;</span>3.0.1<span class="tag">&lt;/version&gt;</span>
+<span class="tag">&lt;/response&gt;</span>
 </pre></div>
+</div>
+</div>
+
 <h2 id="rate-limits">Rate Limits</h2>
 
 <p><a href="/docs/rate-limits">Standard rate limits</a> apply. No more than 1,000 requests may be made in any hour. No more than 10,000 requests may be made in any day.</p>
@@ -402,7 +429,9 @@
     </tr></thead>
 <tbody><tr>
 <th class="doc-parameter-name" scope="row">401</th>
-      <td class="doc-parameter-description">Unauthorized - For PVDAQ services, you must also provide a username and password for your PVDAQ account via <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic Authentication</a>. For login credentials, contact <a href="mailto:ryan.smith@nrel.gov">Ryan Smith</a>.</td>
+      <td class="doc-parameter-description">
+        Unauthorized - For PVDAQ services, you must also provide a username and password for your PVDAQ account via <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic Authentication</a>. For login credentials, contact <a href="mailto:ryan.smith@nrel.gov">Ryan Smith</a>.
+      </td>
     </tr></tbody>
 <tbody><tr>
 <th class="doc-parameter-name" scope="row">422</th>

@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      
+        Incentives (Deprecated)
+        
+          API
+        
+        |
+      
+      api.data.gov
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="en" name="language">
+    <meta content="width=1015,maximum-scale=1.0" name="viewport">
+    <meta name="generator" content="nanoc 3.6.5"> 
+
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-d934871e8ee91606cd372c8eae8f9c33.css" />
+    <!--[if IE]>
+      <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/static/assets/ie_lt_9-592d2b1bfdec04e5ce3219e54a1a7316.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/assets/application-1e1f8e576c1114611679bb897df8a2ee.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-42542568-1', 'data.gov');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body class="">
+    <div id="preheader">
+  <div id="preheader-inner" class="container-fluid">
+    <div class="row-fluid">
+      <div id="whitehouse"><p><img src="/images/gsa/usaflag-cb0d50f585d.gif" alt="USA Flag" /> <em>An Official Website of the United States Government</em></p></div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container-fluid">
+      <div class="corner-ribbon-wrapper right">
+        <div class="corner-ribbon">
+          <span>BETA</span>
+        </div>
+      </div>
+
+      <div id="main" class="row-fluid">
+        <header>
+          <div id="logo"><a class="logo" href="#" title="Home">Data.gov</a></div>
+        </header>
+        <nav class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li class="nav-home "><a href="/">Home</a></li>
+      <li class="nav-documentation active"><a href="/docs">Documentation</a></li>
+      <li class="nav-community "><a href="/community">Community</a></li>
+    </ul>
+  </div>
+</nav>
+                                                                                                                                       
+
+
+        
+  <ul class="breadcrumb">
+    
+    
+      
+        
+          <li>
+            <a href="/">Home</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/">Documentation</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/">National Renewable Energy Laboratory</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/electricity/">Electricity</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="active">Incentives (Deprecated)</li>
+        
+      
+    
+  </ul>
+
+
+
+        <div id="content">
+          <h1 id="incentives-deprecated-get-api-georeserv-service-incentives">Incentives (Deprecated) <span class="url">(GET /api/georeserv/service/incentives)</span>
+</h1>
+<p>Deprecated: We encourage you to migrate to <a href="/docs/electricity/energy-incentives-v1/">the new energy incentives API</a>.</p>
+
+<p>This service lists the incentives found in the <a href="http://www.dsireusa.org/">DSIRE</a> quantitative spreadsheet by location.</p>
+
+<p>These data are updated often, but as the DSIRE data is continuously updated there is the possibility of their being slightly outdated.</p>
+
+<ul id="toc"></ul><h2 id="request-url">Request URL</h2>
+
+<pre>GET /api/georeserv/service/incentives/<em>tech_type.format</em><em>?parameters</em></pre>
+
+<h2 id="request-parameters">Request Parameters</h2>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+<thead><tr>
+<th class="doc-parameters-name" scope="col">Parameter</th>
+      <th class="doc-parameters-required" scope="col">Required</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th class="doc-parameter-name" scope="row">format</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Options:</strong> <em>json</em>, <em>xml</em>, <em>csv</em>
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>The output response format. Given in the URL as the file extension.</p>
+      </td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">api_key</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Your developer API key. See <a href="/docs/api-key/">API keys</a> for more information.</p>
+      </td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">lat</th>
+      <td class="doc-parameter-required">Depends</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> decimal
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">Latitude, required if address not given.</td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">lon</th>
+      <td class="doc-parameter-required">Depends</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> decimal
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">Longitude, required if address not given.</td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">address</th>
+      <td class="doc-parameter-required">Depends</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">Address to use, lat/lon returned by Google's geocoding service.</td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">tech_type</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Options:</strong> <em>csp, biomass, lfg, pool, pv, ssh, swh, waste_to_energy, wind</em>
+        </div>
+      </td>
+      <td class="doc-parameter-description">The type of technology to apply the incentives to.</td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">system_size</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> decimal
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">Nameplate capacity (kW).</td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">system_cost</th>
+      <td class="doc-parameter-required">No</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> decimal
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">Cost of the system.</td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">type</th>
+      <td class="doc-parameter-required">No</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> res
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Options:</strong> <em>res, com</em>
+        </div>
+      </td>
+      <td class="doc-parameter-description">Type of installation (residential or commercial).</td>
+    </tr>
+</tbody>
+</table><h2 id="examples">Examples</h2>
+
+<h3 id="json-output-format">JSON Output Format</h3>
+
+<pre>GET <a href="http://api.data.gov/nrel/georeserv/service/incentives/pv.json?api_key=DEMO_KEY&amp;address=Boulder,+CO&amp;system_size=4.0">/api/georeserv/service/incentives/pv.json?api_key=DEMO_KEY&amp;address=Boulder,+CO&amp;system_size=4.0</a></pre>
+
+<div>
+<div class="CodeRay">
+  <div class="code"><pre>{
+  <span class="key"><span class="delimiter">"</span><span class="content">errors</span><span class="delimiter">"</span></span>: [
+    {
+    }
+  ],
+  <span class="key"><span class="delimiter">"</span><span class="content">infos</span><span class="delimiter">"</span></span>: [
+
+  ],
+  <span class="key"><span class="delimiter">"</span><span class="content">inputs</span><span class="delimiter">"</span></span>: {
+    <span class="key"><span class="delimiter">"</span><span class="content">address</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Boulder, CO</span><span class="delimiter">"</span></span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">system_size</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">4.0</span><span class="delimiter">"</span></span>
+  },
+  <span class="key"><span class="delimiter">"</span><span class="content">outputs</span><span class="delimiter">"</span></span>: {
+    <span class="key"><span class="delimiter">"</span><span class="content">cost</span><span class="delimiter">"</span></span>: <span class="float">32676.591578681568</span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">incentives</span><span class="delimiter">"</span></span>: {
+      <span class="key"><span class="delimiter">"</span><span class="content">all</span><span class="delimiter">"</span></span>: [
+        {
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Res. Max. Rebate $</span><span class="delimiter">"</span></span>: <span class="integer">4500</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Res. Rebate $/kW</span><span class="delimiter">"</span></span>: <span class="integer">2500</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">code</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">CO175F</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">gid</span><span class="delimiter">"</span></span>: <span class="integer">106</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">memo</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">2/11/11 Rebate has been changed. Now, higher rebates are available for wind and PV if they're installed in a local partners' territory. BL 4/20/10 added new program based on website BL</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">notes</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">PV incentive amounts may be up to $2.50/W if installed in a partners' territory. Wind incentive amounts may be up to $3/W if installed in a partners' territory. max amounts are indicated. Xcel and Black Hills customers not eligible for this incentive.</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">program_name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Colorado - Residential Renewable Energy Rebate Program</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">sector</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">S</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Colorado</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state_abbr</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">CO</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">type</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">State Rebate Program</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">web_active</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">1</span><span class="delimiter">"</span></span>
+        },
+        {
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Com. Max. Rebate $</span><span class="delimiter">"</span></span>: <span class="integer">25000</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Com. Rebate $/kW</span><span class="delimiter">"</span></span>: <span class="integer">2500</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Com. Rebate Max. Size (kW)</span><span class="delimiter">"</span></span>: <span class="integer">25</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV NP/Govt Max. Rebate $</span><span class="delimiter">"</span></span>: <span class="integer">25000</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV NP/Govt Rebate $/kW</span><span class="delimiter">"</span></span>: <span class="integer">2500</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">code</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">CO176F</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">gid</span><span class="delimiter">"</span></span>: <span class="integer">107</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">memo</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">2/18/11 Wind incentives have increased from $1/W to $2 or $3/W depending on local government's partnership status. PV incentive has been restructured, too. BL 4/22/10 added based on website and info provided by Jennifer Hampton BL</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">notes</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">The per-watt rebate rate specified below may be less if local incentives are available.</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">program_name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Colorado - Commercial Renewable Energy Rebate Program</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">sector</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">S</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Colorado</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state_abbr</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">CO</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">type</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">State Rebate Program</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">web_active</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">1</span><span class="delimiter">"</span></span>
+        },
+        {
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Com. PBI $/kWh</span><span class="delimiter">"</span></span>: <span class="float">0.15</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Com. PBI/FIT Max. Size (kW)</span><span class="delimiter">"</span></span>: <span class="integer">100</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Com. PBI/FIT Min. Size (kW)</span><span class="delimiter">"</span></span>: <span class="float">10.01</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Com. Rebate Min. Size (kW)</span><span class="delimiter">"</span></span>: <span class="float">0.5</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV NP/Govt PBI $/kWh</span><span class="delimiter">"</span></span>: <span class="float">0.15</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV PBI/FIT Duration (Years)</span><span class="delimiter">"</span></span>: <span class="integer">20</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV PBI/FIT Max. Size for $ Calc. (kW)</span><span class="delimiter">"</span></span>: <span class="integer">100</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Rating Basis (AC/DC/PTC)</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">DC</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Res. Max. Rebate $</span><span class="delimiter">"</span></span>: <span class="integer">17500</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Res. PBI $/kWh</span><span class="delimiter">"</span></span>: <span class="float">0.04</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Res. Rebate $/kW</span><span class="delimiter">"</span></span>: <span class="integer">1750</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Res. Rebate Max. Size (kW)</span><span class="delimiter">"</span></span>: <span class="integer">10</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Res. Rebate Min. Size (kW)</span><span class="delimiter">"</span></span>: <span class="float">0.5</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">code</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">CO12F</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">gid</span><span class="delimiter">"</span></span>: <span class="integer">108</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">memo</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">3/23/11 Program has been reopened under a slightly new design. Small residential systems no longer get an upfront payment for RECs, instead they get the upfront rebate, plus a PBI for RECs. All larger systems get just the PBI. BL 2/18/11 Xcel received 3 MW of applications under the new terms and has suspended the</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">notes</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Commercial PBI shown represents REC payments for medium-sized systems (10.001 kW-100 kW). REC payments for systems sized 100.01 kW-500 kW not entered, this amount is $0.15/kWh as well. Rebate and REC payments for systems above 500 kW determined through RFP.</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">organization</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Xcel Energy</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">program_name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Xcel Energy - Solar*Rewards Program</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">sector</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">U</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Colorado</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state_abbr</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">CO</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">type</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Utility Rebate Program</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">web_active</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">1</span><span class="delimiter">"</span></span>
+        },
+        {
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Com. Tax Credit % Cost</span><span class="delimiter">"</span></span>: <span class="float">0.3</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">code</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">US02F</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">gid</span><span class="delimiter">"</span></span>: <span class="integer">132</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">memo</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">12/20/10 Changed reference to grant expiration to 12/31/11 BL 12/3/10 Added to note info about grant expiration date of 12/31/10. AH 6/9/10 Reviewed statute -- no substantive changes. Removed history section: The federal Energy Policy Act of 2005 (EPAct 2005) expanded the existing federal business energy tax c</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">notes</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">The American Recovery and Reinvestment Act of 2009 allows taxpayers eligible for the federal renewable electricity production tax credit (PTC) to take the federal business energy investment tax credit (ITC) or to receive a grant from the U.S. Treasury Dept. instead of taking the PTC for new installations. The new law also allows taxpayers eligible for the business ITC to receive a grant from the U.S. Treasury Dept. instead of taking the business ITC for new installations.</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">organization</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">U.S. Internal Revenue Service</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">program_name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Business Energy Investment Tax Credit (ITC)</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">sector</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">F</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Federal</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state_abbr</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">US</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">type</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Corporate Tax Credit</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">web_active</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">1</span><span class="delimiter">"</span></span>
+        },
+        {
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Com. Rebate % Cost Max.</span><span class="delimiter">"</span></span>: <span class="float">0.25</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">code</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">US05F</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">gid</span><span class="delimiter">"</span></span>: <span class="integer">134</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">memo</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">NC contact = David Thigpen/ david.thigpen@nc.usda.gov 5/4/10 New NOSA issued 4/26/10. Added info about that, apps are due 6/30/10. There is a total of $99.34 million available for all REAP programs in FY2010 and it looks like approx $87 million will be available for RE and EE grants and loan guarantees. Adjusted %</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">notes</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Eligibility is restricted to agricultural producers and rural small businesses. Data entered in </span><span class="char">\"</span><span class="content">Com.</span><span class="char">\"</span><span class="content"> fields. Implementation rules pending. The USDA will announce the availability of funding through a Notice of Funds Availability. Updates at http://www.usda.gov/farmbill</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">organization</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">U.S. Department of Agriculture</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">program_name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">USDA - Rural Energy for America Program (REAP) Grants</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">sector</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">F</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Federal</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state_abbr</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">US</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">type</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Federal Grant Program</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">web_active</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">1</span><span class="delimiter">"</span></span>
+        },
+        {
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Com. Rebate % Cost Max.</span><span class="delimiter">"</span></span>: <span class="float">0.3</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">code</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">US53F</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">gid</span><span class="delimiter">"</span></span>: <span class="integer">135</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">memo</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">12/17/10 HR 4853 signed today, changed dates to reflect extension of grant by one year. Changed application date deadline from 10/1/11 to 10/1/12. AH 12/3/10 Added info about expiration date to note. AH 9/2/10 Added note about new form that recipients must fill out to avoid recapture. AH 7/12/10 Updated contact info</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">organization</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">U.S. Department of Treasury</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">program_name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">U.S. Department of Treasury - Renewable Energy Grants</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">sector</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">F</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Federal</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state_abbr</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">US</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">type</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Federal Grant Program</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">web_active</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">1</span><span class="delimiter">"</span></span>
+        },
+        {
+          <span class="key"><span class="delimiter">"</span><span class="content">PV NP/Govt PBI $/kWh</span><span class="delimiter">"</span></span>: <span class="float">0.022</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">PV PBI/FIT Duration (Years)</span><span class="delimiter">"</span></span>: <span class="integer">10</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">code</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">US33F</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">gid</span><span class="delimiter">"</span></span>: <span class="integer">136</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">memo</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">01/18/11 reviewed and updated with no changes. Funding a question mark as always. JB 03/01/10 no funding requested for 2011, but Congress could authorize anyway so left up for now. JB 01/21/10 updated contact information per Bill Prymak e-mail, seeking info on appropriation status. JB 3/19/09 Updated record per stat</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">notes</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Eligible electric production facilities: not-for-profit electrical cooperatives, public utilities, state governments, Commonwealths, territories, possessions of the United States, the District of Columbia, Indian tribal governments, or a political subdivision thereof and Native Corporations. Data entered in the </span><span class="char">\"</span><span class="content">NProfit/Gov't</span><span class="char">\"</span><span class="content"> fields. The production payment applies only to the electricity sold to another entity. Incentive payments are subject to the availability of annual appropriations in each federal fiscal year of operation.</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">organization</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">U.S. Department of Energy</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">program_name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Renewable Energy Production Incentive (REPI)</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">sector</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">F</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Federal</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state_abbr</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">US</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">type</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Performance-Based Incentive</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">web_active</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">1</span><span class="delimiter">"</span></span>
+        },
+        {
+          <span class="key"><span class="delimiter">"</span><span class="content">PV Res. Tax Credit % Cost</span><span class="delimiter">"</span></span>: <span class="float">0.3</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">code</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">US37F</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">gid</span><span class="delimiter">"</span></span>: <span class="integer">137</span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">memo</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">3/14/11 Removed dead links to SEIA fact sheet. 2/3/11 Updated record based on review of current statute and notes in L/N. No changes. JRH 2/18/10 Updated record based on review of current statute and notes in L/N. No changes. JRH 6/5/09 Added info about carryforward provisions - unused credit can be carried forward</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">notes</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">v</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">organization</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">U.S. Internal Revenue Service</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">program_name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Residential Renewable Energy Tax Credit</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">sector</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">F</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Federal</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">state_abbr</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">US</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">type</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Personal Tax Credit</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">web_active</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">1</span><span class="delimiter">"</span></span>
+        }
+      ],
+      <span class="key"><span class="delimiter">"</span><span class="content">cbi</span><span class="delimiter">"</span></span>: {
+        <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: [
+          {
+            <span class="key"><span class="delimiter">"</span><span class="content">amount</span><span class="delimiter">"</span></span>: <span class="integer">4500</span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">max_cost</span><span class="delimiter">"</span></span>: <span class="integer">4500</span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">max_percent</span><span class="delimiter">"</span></span>: <span class="integer">100</span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Colorado - Residential Renewable Energy Rebate Program</span><span class="delimiter">"</span></span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">notes</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">PV incentive amounts may be up to $2.50/W if installed in a partners' territory. Wind incentive amounts may be up to $3/W if installed in a partners' territory. max amounts are indicated. Xcel and Black Hills customers not eligible for this incentive.</span><span class="delimiter">"</span></span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Colorado</span><span class="delimiter">"</span></span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">type</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">State Rebate Program</span><span class="delimiter">"</span></span>
+          }
+        ],
+        <span class="key"><span class="delimiter">"</span><span class="content">utility</span><span class="delimiter">"</span></span>: [
+          {
+            <span class="key"><span class="delimiter">"</span><span class="content">amount</span><span class="delimiter">"</span></span>: <span class="integer">17500</span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">max_cost</span><span class="delimiter">"</span></span>: <span class="integer">17500</span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">max_percent</span><span class="delimiter">"</span></span>: <span class="integer">100</span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">max_size</span><span class="delimiter">"</span></span>: <span class="integer">10</span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">min_size</span><span class="delimiter">"</span></span>: <span class="float">0.5</span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Xcel Energy - Solar*Rewards Program</span><span class="delimiter">"</span></span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">notes</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Commercial PBI shown represents REC payments for medium-sized systems (10.001 kW-100 kW). REC payments for systems sized 100.01 kW-500 kW not entered, this amount is $0.15/kWh as well. Rebate and REC payments for systems above 500 kW determined through RFP.</span><span class="delimiter">"</span></span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Colorado</span><span class="delimiter">"</span></span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">type</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Utility Rebate Program</span><span class="delimiter">"</span></span>
+          }
+        ]
+      },
+      <span class="key"><span class="delimiter">"</span><span class="content">ibi</span><span class="delimiter">"</span></span>: {
+      },
+      <span class="key"><span class="delimiter">"</span><span class="content">pbi</span><span class="delimiter">"</span></span>: {
+        <span class="key"><span class="delimiter">"</span><span class="content">utility</span><span class="delimiter">"</span></span>: [
+          {
+            <span class="key"><span class="delimiter">"</span><span class="content">amount</span><span class="delimiter">"</span></span>: <span class="float">0.04</span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">max_percent</span><span class="delimiter">"</span></span>: <span class="integer">100</span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Xcel Energy - Solar*Rewards Program</span><span class="delimiter">"</span></span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Colorado</span><span class="delimiter">"</span></span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">type</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Utility Rebate Program</span><span class="delimiter">"</span></span>
+          }
+        ]
+      }
+    },
+    <span class="key"><span class="delimiter">"</span><span class="content">taxcredits</span><span class="delimiter">"</span></span>: {
+      <span class="key"><span class="delimiter">"</span><span class="content">itc</span><span class="delimiter">"</span></span>: {
+        <span class="key"><span class="delimiter">"</span><span class="content">federal</span><span class="delimiter">"</span></span>: [
+          {
+            <span class="key"><span class="delimiter">"</span><span class="content">amount</span><span class="delimiter">"</span></span>: <span class="float">3202.97747360447</span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">notes</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">v</span><span class="delimiter">"</span></span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">percent_cost</span><span class="delimiter">"</span></span>: <span class="float">0.3</span>,
+            <span class="key"><span class="delimiter">"</span><span class="content">program_name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Residential Renewable Energy Tax Credit</span><span class="delimiter">"</span></span>
+          }
+        ]
+      }
+    },
+    <span class="key"><span class="delimiter">"</span><span class="content">totals</span><span class="delimiter">"</span></span>: {
+      <span class="key"><span class="delimiter">"</span><span class="content">cbi</span><span class="delimiter">"</span></span>: [
+        {
+          <span class="key"><span class="delimiter">"</span><span class="content">name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Colorado - Residential Renewable Energy Rebate Program</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">value</span><span class="delimiter">"</span></span>: <span class="integer">4500</span>
+        },
+        {
+          <span class="key"><span class="delimiter">"</span><span class="content">name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Xcel Energy - Solar*Rewards Program</span><span class="delimiter">"</span></span>,
+          <span class="key"><span class="delimiter">"</span><span class="content">value</span><span class="delimiter">"</span></span>: <span class="integer">17500</span>
+        }
+      ],
+      <span class="key"><span class="delimiter">"</span><span class="content">sum</span><span class="delimiter">"</span></span>: <span class="float">25202.98</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">tax_credit</span><span class="delimiter">"</span></span>: <span class="float">3202.98</span>
+    }
+  },
+  <span class="key"><span class="delimiter">"</span><span class="content">version</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">2.1.6</span><span class="delimiter">"</span></span>,
+  <span class="key"><span class="delimiter">"</span><span class="content">warnings</span><span class="delimiter">"</span></span>: [
+
+  ]
+}
+</pre></div>
+</div>
+</div>
+
+<h3 id="xml-output-format">XML Output Format</h3>
+
+<pre>GET <a href="http://api.data.gov/nrel/georeserv/service/incentives/pv.xml?api_key=DEMO_KEY&amp;address=Boulder,+CO&amp;system_size=4.0">/api/georeserv/service/incentives/pv.xml?api_key=DEMO_KEY&amp;address=Boulder,+CO&amp;system_size=4.0</a></pre>
+
+<div>
+<div class="CodeRay">
+  <div class="code"><pre><span class="preprocessor">&lt;?xml version="1.0"?&gt;</span>
+<span class="tag">&lt;params&gt;</span>
+  <span class="tag">&lt;param&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;array&gt;</span>
+        <span class="tag">&lt;data</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/array&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;string&gt;</span>errors<span class="tag">&lt;/string&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;array&gt;</span>
+        <span class="tag">&lt;data</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/array&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;struct</span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+  <span class="tag">&lt;/param&gt;</span>
+  <span class="tag">&lt;param&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;array&gt;</span>
+        <span class="tag">&lt;data</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/array&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;string&gt;</span>infos<span class="tag">&lt;/string&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;array&gt;</span>
+        <span class="tag">&lt;data</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/array&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+  <span class="tag">&lt;/param&gt;</span>
+  <span class="tag">&lt;param&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;array&gt;</span>
+        <span class="tag">&lt;data</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/array&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;string&gt;</span>inputs<span class="tag">&lt;/string&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;struct&gt;</span>
+        <span class="tag">&lt;member&gt;</span>
+          <span class="tag">&lt;name&gt;</span>system_size<span class="tag">&lt;/name&gt;</span>
+        <span class="tag">&lt;/member&gt;</span>
+      <span class="tag">&lt;/struct&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;string&gt;</span>4.0<span class="tag">&lt;/string&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>address<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Boulder, CO<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+  <span class="tag">&lt;/param&gt;</span>
+  <span class="tag">&lt;param&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;array&gt;</span>
+        <span class="tag">&lt;data</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/array&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;string&gt;</span>outputs<span class="tag">&lt;/string&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;struct&gt;</span>
+        <span class="tag">&lt;member&gt;</span>
+          <span class="tag">&lt;name&gt;</span>cost<span class="tag">&lt;/name&gt;</span>
+        <span class="tag">&lt;/member&gt;</span>
+      <span class="tag">&lt;/struct&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;double&gt;</span>32676.591578681568<span class="tag">&lt;/double&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>incentives<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;struct</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>ibi<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;struct</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>all<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;array&gt;</span>
+          <span class="tag">&lt;data</span><span class="tag">/&gt;</span>
+        <span class="tag">&lt;/array&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;struct</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>sector<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>S<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Res. Max. Rebate $<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>4500.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>code<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>CO175F<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>notes<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>PV incentive amounts may be up to .50/W if installed in a partners' territory. Wind incentive amounts may be up to /W if installed in a partners' territory. max amounts are indicated. Xcel and Black Hills customers not eligible for this incentive.<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Res. Rebate $/kW<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>2500.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>web_active<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>1<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Colorado<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>gid<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;int&gt;</span>106<span class="tag">&lt;/int&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state_abbr<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>CO<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>program_name<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Colorado - Residential Renewable Energy Rebate Program<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>type<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>State Rebate Program<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>memo<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>2/11/11 Rebate has been changed. Now, higher rebates are available for wind and PV if they're installed in a local partners' territory. BL 4/20/10 added new program based on website BL<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;struct&gt;</span>
+        <span class="tag">&lt;member&gt;</span>
+          <span class="tag">&lt;name&gt;</span>sector<span class="tag">&lt;/name&gt;</span>
+        <span class="tag">&lt;/member&gt;</span>
+      <span class="tag">&lt;/struct&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;string&gt;</span>S<span class="tag">&lt;/string&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>code<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>CO176F<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Com. Rebate Max. Size (kW)<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>25.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV NP/Govt Max. Rebate $<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>25000.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>memo<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>2/18/11 Wind incentives have increased from /W to  or /W depending on local government's partnership status. PV incentive has been restructured, too. BL 4/22/10 added based on website and info provided by Jennifer Hampton BL<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>web_active<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>1<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Com. Rebate $/kW<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>2500.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Com. Max. Rebate $<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>25000.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Colorado<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>gid<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;int&gt;</span>107<span class="tag">&lt;/int&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state_abbr<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>CO<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>program_name<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Colorado - Commercial Renewable Energy Rebate Program<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>type<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>State Rebate Program<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>notes<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>The per-watt rebate rate specified below may be less if local incentives are available.<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV NP/Govt Rebate $/kW<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>2500.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;struct&gt;</span>
+        <span class="tag">&lt;member&gt;</span>
+          <span class="tag">&lt;name&gt;</span>PV Com. PBI/FIT Min. Size (kW)<span class="tag">&lt;/name&gt;</span>
+        <span class="tag">&lt;/member&gt;</span>
+      <span class="tag">&lt;/struct&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;double&gt;</span>10.01<span class="tag">&lt;/double&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>sector<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>U<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV PBI/FIT Max. Size for $ Calc. (kW)<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>100.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV PBI/FIT Duration (Years)<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>20.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Colorado<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>memo<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>3/23/11 Program has been reopened under a slightly new design. Small residential systems no longer get an upfront payment for RECs, instead they get the upfront rebate, plus a PBI for RECs. All larger systems get just the PBI. BL 2/18/11 Xcel received 3 MW of applications under the new terms and has suspended the<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Res. Rebate $/kW<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>1750.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV NP/Govt PBI $/kWh<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>0.14999999999999999<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>code<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>CO12F<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state_abbr<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>CO<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Res. Rebate Min. Size (kW)<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>0.5<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>program_name<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Xcel Energy - Solar*Rewards Program<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Res. Max. Rebate $<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>17500.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Rating Basis (AC/DC/PTC)<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>DC<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Com. PBI $/kWh<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>0.14999999999999999<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Res. PBI $/kWh<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>0.040000000000000001<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Com. Rebate Min. Size (kW)<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>0.5<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>web_active<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>1<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Res. Rebate Max. Size (kW)<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>10.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>gid<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;int&gt;</span>108<span class="tag">&lt;/int&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>organization<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Xcel Energy<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>type<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Utility Rebate Program<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>notes<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Commercial PBI shown represents REC payments for medium-sized systems (10.001 kW-100 kW). REC payments for systems sized 100.01 kW-500 kW not entered, this amount is sh.15/kWh as well. Rebate and REC payments for systems above 500 kW determined through RFP.<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Com. PBI/FIT Max. Size (kW)<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>100.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;struct&gt;</span>
+        <span class="tag">&lt;member&gt;</span>
+          <span class="tag">&lt;name&gt;</span>sector<span class="tag">&lt;/name&gt;</span>
+        <span class="tag">&lt;/member&gt;</span>
+      <span class="tag">&lt;/struct&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;string&gt;</span>F<span class="tag">&lt;/string&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>code<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>US02F<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>notes<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>The American Recovery and Reinvestment Act of 2009 allows taxpayers eligible for the federal renewable electricity production tax credit (PTC) to take the federal business energy investment tax credit (ITC) or to receive a grant from the U.S. Treasury Dept. instead of taking the PTC for new installations. The new law also allows taxpayers eligible for the business ITC to receive a grant from the U.S. Treasury Dept. instead of taking the business ITC for new installations.<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>web_active<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>1<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Federal<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>gid<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;int&gt;</span>132<span class="tag">&lt;/int&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state_abbr<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>US<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Com. Tax Credit % Cost<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>0.29999999999999999<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>organization<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>U.S. Internal Revenue Service<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>program_name<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Business Energy Investment Tax Credit (ITC)<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>type<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Corporate Tax Credit<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>memo<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>12/20/10 Changed reference to grant expiration to 12/31/11 BL 12/3/10 Added to note info about grant expiration date of 12/31/10. AH 6/9/10 Reviewed statute -- no substantive changes. Removed history section: The federal Energy Policy Act of 2005 (EPAct 2005) expanded the existing federal business energy tax c<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;struct&gt;</span>
+        <span class="tag">&lt;member&gt;</span>
+          <span class="tag">&lt;name&gt;</span>PV Com. Rebate % Cost Max.<span class="tag">&lt;/name&gt;</span>
+        <span class="tag">&lt;/member&gt;</span>
+      <span class="tag">&lt;/struct&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;double&gt;</span>0.25<span class="tag">&lt;/double&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>sector<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>F<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>code<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>US05F<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>notes<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Eligibility is restricted to agricultural producers and rural small businesses. Data entered in "Com." fields. Implementation rules pending. The USDA will announce the availability of funding through a Notice of Funds Availability. Updates at http://www.usda.gov/farmbill<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>web_active<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>1<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Federal<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>gid<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;int&gt;</span>134<span class="tag">&lt;/int&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state_abbr<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>US<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>organization<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>U.S. Department of Agriculture<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>program_name<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>USDA - Rural Energy for America Program (REAP) Grants<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>type<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Federal Grant Program<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>memo<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>NC contact = David Thigpen/ david.thigpen@nc.usda.gov 5/4/10 New NOSA issued 4/26/10. Added info about that, apps are due 6/30/10. There is a total of 9.34 million available for all REAP programs in FY2010 and it looks like approx 7 million will be available for RE and EE grants and loan guarantees. Adjusted %<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;struct&gt;</span>
+        <span class="tag">&lt;member&gt;</span>
+          <span class="tag">&lt;name&gt;</span>PV Com. Rebate % Cost Max.<span class="tag">&lt;/name&gt;</span>
+        <span class="tag">&lt;/member&gt;</span>
+      <span class="tag">&lt;/struct&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;double&gt;</span>0.29999999999999999<span class="tag">&lt;/double&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>sector<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>F<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>code<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>US53F<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>memo<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>12/17/10 HR 4853 signed today, changed dates to reflect extension of grant by one year. Changed application date deadline from 10/1/11 to 10/1/12. AH 12/3/10 Added info about expiration date to note. AH 9/2/10 Added note about new form that recipients must fill out to avoid recapture. AH 7/12/10 Updated contact info<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>web_active<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>1<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Federal<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>gid<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;int&gt;</span>135<span class="tag">&lt;/int&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state_abbr<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>US<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>organization<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>U.S. Department of Treasury<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>program_name<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>U.S. Department of Treasury - Renewable Energy Grants<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>type<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Federal Grant Program<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;struct&gt;</span>
+        <span class="tag">&lt;member&gt;</span>
+          <span class="tag">&lt;name&gt;</span>sector<span class="tag">&lt;/name&gt;</span>
+        <span class="tag">&lt;/member&gt;</span>
+      <span class="tag">&lt;/struct&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;string&gt;</span>F<span class="tag">&lt;/string&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV PBI/FIT Duration (Years)<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>10.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>notes<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Eligible electric production facilities: not-for-profit electrical cooperatives, public utilities, state governments, Commonwealths, territories, possessions of the United States, the District of Columbia, Indian tribal governments, or a political subdivision thereof and Native Corporations. Data entered in the "NProfit/Gov't" fields. The production payment applies only to the electricity sold to another entity. Incentive payments are subject to the availability of annual appropriations in each federal fiscal year of operation.<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>web_active<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>1<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV NP/Govt PBI $/kWh<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>0.021999999999999999<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Federal<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>code<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>US33F<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state_abbr<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>US<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>organization<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>U.S. Department of Energy<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>gid<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;int&gt;</span>136<span class="tag">&lt;/int&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>program_name<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Renewable Energy Production Incentive (REPI)<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>type<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Performance-Based Incentive<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>memo<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>01/18/11 reviewed and updated with no changes. Funding a question mark as always. JB 03/01/10 no funding requested for 2011, but Congress could authorize anyway so left up for now. JB 01/21/10 updated contact information per Bill Prymak e-mail, seeking info on appropriation status. JB 3/19/09 Updated record per stat<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;struct&gt;</span>
+        <span class="tag">&lt;member&gt;</span>
+          <span class="tag">&lt;name&gt;</span>sector<span class="tag">&lt;/name&gt;</span>
+        <span class="tag">&lt;/member&gt;</span>
+      <span class="tag">&lt;/struct&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;string&gt;</span>F<span class="tag">&lt;/string&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>code<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>US37F<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>PV Res. Tax Credit % Cost<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>0.29999999999999999<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>notes<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>v<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>web_active<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>1<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Federal<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>gid<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;int&gt;</span>137<span class="tag">&lt;/int&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state_abbr<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>US<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>organization<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>U.S. Internal Revenue Service<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>program_name<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Residential Renewable Energy Tax Credit<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>type<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Personal Tax Credit<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>memo<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>3/14/11 Removed dead links to SEIA fact sheet. 2/3/11 Updated record based on review of current statute and notes in L/N. No changes. JRH 2/18/10 Updated record based on review of current statute and notes in L/N. No changes. JRH 6/5/09 Added info about carryforward provisions - unused credit can be carried forward<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>cbi<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;struct</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;array&gt;</span>
+          <span class="tag">&lt;data</span><span class="tag">/&gt;</span>
+        <span class="tag">&lt;/array&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;struct</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>name<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Colorado - Residential Renewable Energy Rebate Program<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>max_cost<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>4500.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>notes<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>PV incentive amounts may be up to .50/W if installed in a partners' territory. Wind incentive amounts may be up to /W if installed in a partners' territory. max amounts are indicated. Xcel and Black Hills customers not eligible for this incentive.<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Colorado<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>amount<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>4500.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>max_percent<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>100.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>type<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>State Rebate Program<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>utility<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;array&gt;</span>
+          <span class="tag">&lt;data</span><span class="tag">/&gt;</span>
+        <span class="tag">&lt;/array&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;struct</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>name<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Xcel Energy - Solar*Rewards Program<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>max_cost<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>17500.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>notes<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Commercial PBI shown represents REC payments for medium-sized systems (10.001 kW-100 kW). REC payments for systems sized 100.01 kW-500 kW not entered, this amount is sh.15/kWh as well. Rebate and REC payments for systems above 500 kW determined through RFP.<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Colorado<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>min_size<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>0.5<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>amount<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>17500.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>max_percent<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>100.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>type<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Utility Rebate Program<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>max_size<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>10.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>pbi<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;struct</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>utility<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;array&gt;</span>
+          <span class="tag">&lt;data</span><span class="tag">/&gt;</span>
+        <span class="tag">&lt;/array&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;struct</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>amount<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>0.040000000000000001<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>state<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Colorado<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>max_percent<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>100.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>type<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Utility Rebate Program<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>name<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Xcel Energy - Solar*Rewards Program<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>taxcredits<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;struct</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>itc<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;struct</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>federal<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;array&gt;</span>
+          <span class="tag">&lt;data</span><span class="tag">/&gt;</span>
+        <span class="tag">&lt;/array&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;struct</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>amount<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>3202.9774736044701<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>notes<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>v<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>program_name<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Residential Renewable Energy Tax Credit<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>percent_cost<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>0.29999999999999999<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>totals<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;struct</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>sum<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>25202.98<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>cbi<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;array&gt;</span>
+          <span class="tag">&lt;data</span><span class="tag">/&gt;</span>
+        <span class="tag">&lt;/array&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;struct</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>name<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;string&gt;</span>Colorado - Residential Renewable Energy Rebate Program<span class="tag">&lt;/string&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>value<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>4500.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;struct&gt;</span>
+        <span class="tag">&lt;member&gt;</span>
+          <span class="tag">&lt;name&gt;</span>name<span class="tag">&lt;/name&gt;</span>
+        <span class="tag">&lt;/member&gt;</span>
+      <span class="tag">&lt;/struct&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;string&gt;</span>Xcel Energy - Solar*Rewards Program<span class="tag">&lt;/string&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>value<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>17500.0<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+    <span class="tag">&lt;member&gt;</span>
+      <span class="tag">&lt;name&gt;</span>tax_credit<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;value&gt;</span>
+        <span class="tag">&lt;double&gt;</span>3202.98<span class="tag">&lt;/double&gt;</span>
+      <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/member&gt;</span>
+  <span class="tag">&lt;/param&gt;</span>
+  <span class="tag">&lt;param&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;array&gt;</span>
+        <span class="tag">&lt;data</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/array&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;string&gt;</span>version<span class="tag">&lt;/string&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;string&gt;</span>2.1.6<span class="tag">&lt;/string&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+  <span class="tag">&lt;/param&gt;</span>
+  <span class="tag">&lt;param&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;array&gt;</span>
+        <span class="tag">&lt;data</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/array&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;string&gt;</span>warnings<span class="tag">&lt;/string&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;value&gt;</span>
+      <span class="tag">&lt;array&gt;</span>
+        <span class="tag">&lt;data</span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;/array&gt;</span>
+    <span class="tag">&lt;/value&gt;</span>
+  <span class="tag">&lt;/param&gt;</span>
+<span class="tag">&lt;/params&gt;</span>
+</pre></div>
+</div>
+</div>
+
+<h2 id="rate-limits">Rate Limits</h2>
+
+<p><a href="/docs/rate-limits">Standard rate limits</a> apply. No more than 1,000 requests may be made in any hour. No more than 10,000 requests may be made in any day.</p>
+
+<h2 id="errors">Errors</h2>
+
+<p><a href="/docs/errors">Standard errors</a> may be returned. In addition, the following service-specific errors may be returned:</p>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+<thead><tr>
+<th class="doc-parameters-name" scope="col">HTTP Status Code</th>
+      <th class="doc-parameters-required" scope="col">Description</th>
+    </tr></thead>
+<tbody><tr>
+<th class="doc-parameter-name" scope="row">400</th>
+      <td class="doc-parameter-description">Invalid Request - One or more parameters did not pass validation, or a parameter may be missing. Check the <em>error</em> section of the response to see how the request url should be modified to address the error.</td>
+    </tr></tbody>
+</table>
+
+          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'apidatagov'; // required: replace example with your forum shortname
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          
+
+          <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
+            <a href="https://github.com/GSA-OCSIT/api.data.gov/blob/master/content/docs/nrel/electricity/incentives.md">Help Improve this Content</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="container-fluid">
+      <div id="footer-inner">
+        <div id="footer-menu">
+          <ul class="menu">
+            <li class="first leaf"><a href="http://www.data.gov/about">About</a></li>
+            <li class="leaf"><a href="http://www.data.gov/accessibility">Accessibility</a></li>
+            <li class="leaf"><a href="http://www.data.gov/contact-us">Contact Us</a></li>
+            <li class="leaf"><a href="http://www.data.gov/data-policy">Data Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/faq">FAQ</a></li>
+            <li class="leaf"><a href="http://www.data.gov/privacy-policy">Privacy Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/sitemap" title="">Sitemap</a></li>
+            <li class="last leaf"><a href="http://www.usa.gov" title="">USA.gov</a></li>
+          </ul>
+        </div>
+        <div id="footer-logo"><img src="/images/gsa/datagov-footer-logo-cb3085c5b9a.png" alt="Data.gov" /></div>
+      </div>
+    </div>
+  </body>
+</html>

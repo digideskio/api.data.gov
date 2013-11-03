@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Web Service Rate Limits</title>
+    <title>
+      
+        Web Service Rate Limits
+        
+        |
+      
+      api.data.gov
+    </title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta content="en" name="language">
     <meta content="width=1015,maximum-scale=1.0" name="viewport">
-    <meta name="generator" content="nanoc 3.6.4"> 
+    <meta name="generator" content="nanoc 3.6.5"> 
 
-    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-be79a7772452de9216409fad385e5bdf.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-d934871e8ee91606cd372c8eae8f9c33.css" />
     <!--[if IE]>
       <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
     <![endif]-->
@@ -20,8 +27,8 @@
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-42542568-1', 'data.gov');
@@ -105,7 +112,7 @@
 <ul>
 <li>
 <strong>Hourly Limit:</strong> 1,000 requests per hour</li>
-<li>
+  <li>
 <strong>Daily Limit:</strong> 10,000 requests per calendar day</li>
 </ul><p>For each API key, these limits are applied across all Data.gov Web services requests. Exceeding these limits will lead to your API key being temporarily blocked from making further requests. Depending on the limit exceeded, the block will be lifted automatically by waiting until the next hour or calendar day.</p>
 
@@ -126,12 +133,18 @@
 <h2 id="rate-limit-error-response">Rate Limit Error Response</h2>
 
 <p>If your API key exceeds the rate limits, you will receive a response with an HTTP status code of 503, Service Unavailable. The response body will contain an error message reading "503 Service Unavailable (Rate Limit Exceeded)." For example, a JSON request that has exceed the rate limits would respond with:</p>
-<div class="highlight"><pre><span class="p">{</span>
-  <span class="nt">"errors"</span><span class="p">:[</span>
-    <span class="s2">"503 Service Unavailable (Rate Limit Exceeded)"</span>
-  <span class="p">]</span>
-<span class="p">}</span>
+
+<div>
+<div class="CodeRay">
+  <div class="code"><pre>{
+  <span class="key"><span class="delimiter">"</span><span class="content">errors</span><span class="delimiter">"</span></span>:[
+    <span class="string"><span class="delimiter">"</span><span class="content">503 Service Unavailable (Rate Limit Exceeded)</span><span class="delimiter">"</span></span>
+  ]
+}
 </pre></div>
+</div>
+</div>
+
 <p>For more details on how errors are returned, see the <a href="/docs/errors">general Web service errors</a>.</p>
 
 <h2 id="need-higher-limits">Need Higher Limits?</h2>

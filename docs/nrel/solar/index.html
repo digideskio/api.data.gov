@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Solar</title>
+    <title>
+      
+        Solar
+        
+          API
+        
+        |
+      
+      api.data.gov
+    </title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta content="en" name="language">
     <meta content="width=1015,maximum-scale=1.0" name="viewport">
-    <meta name="generator" content="nanoc 3.6.4"> 
+    <meta name="generator" content="nanoc 3.6.5"> 
 
-    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-be79a7772452de9216409fad385e5bdf.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-d934871e8ee91606cd372c8eae8f9c33.css" />
     <!--[if IE]>
       <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
     <![endif]-->
@@ -20,8 +29,8 @@
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-42542568-1', 'data.gov');
@@ -110,24 +119,68 @@
 
         <div id="content">
           <h1 id="solar">Solar</h1>
-
 <p>Access data and analysis services that provide access to solar resource data and NREL models.</p>
 
-<h2 id="pvdaq-pv-data-acquisition"><a href="/docs/nrel/solar/pvdaq-v3/">PVDAQ (PV Data Acquisition)</a></h2>
+<h3 class="doc" id="pvdaq-pv-data-acquisition">
+<a href="/docs/nrel/solar/pvdaq-v3/">PVDAQ (PV Data Acquisition)</a>
+
+</h3>
 
 <p>Provides access to photovoltaic performance data collected by NREL for systems throughout the country.</p>
 
-<h2 id="pvwatts"><a href="/docs/nrel/solar/pvwatts-v4/">PVWatts</a></h2>
+<h3 class="doc" id="pvwatts-version-4-get-api-pvwatts-v4">
+<a href="/docs/nrel/solar/pvwatts-v4/">PVWatts (Version 4)</a>
 
-<p>NREL's PVWatts calculates the energy production and cost savings of grid-connected photovoltaic (PV) energy systems. This service estimates the performance of hypothetical residential and small commercial PV installations.</p>
+<span class="url">(GET /api/pvwatts/v4)</span>
 
-<h2 id="solar-dataset-query"><a href="/docs/nrel/solar/data-query-v1/">Solar Dataset Query</a></h2>
+</h3>
+
+<p>NREL's PVWatts calculates the energy production of grid-connected photovoltaic (PV) energy systems. This service estimates the performance of hypothetical residential and small commercial PV installations.</p>
+
+<h3 class="doc" id="solar-dataset-query-get-api-solar-data_query-v1">
+<a href="/docs/nrel/solar/data-query-v1/">Solar Dataset Query</a>
+
+<span class="url">(GET /api/solar/data_query/v1)</span>
+
+</h3>
 
 <p>Returns information on the closest climate data for a location.</p>
 
-<h2 id="solar-resource-data"><a href="/docs/nrel/solar/solar-resource-v1/">Solar Resource Data</a></h2>
+<h3 class="doc" id="solar-resource-data-get-api-solar-solar_resource-v1">
+<a href="/docs/nrel/solar/solar-resource-v1/">Solar Resource Data</a>
+
+<span class="url">(GET /api/solar/solar_resource/v1)</span>
+
+</h3>
 
 <p>Returns various types of solar data for a location. The service currently returns data for average Direct Normal Irradiance, average Global Horizontal Irradiance, and average Tilt at Latitude.</p>
+
+<hr><h2 id="deprecated">Deprecated</h2>
+
+<h3 class="doc" id="direct-normal-irradiance-deprecated-get-api-georeserv-service-solar-dni">
+<a href="/docs/nrel/solar/dni/">Direct Normal Irradiance (Deprecated)</a>
+
+<span class="url">(GET /api/georeserv/service/solar/dni)</span>
+
+</h3>
+
+<p>Deprecated: We encourage you to migrate the new <a href="/docs/solar/solar-resource-v1/">Solar Resource web service</a>.</p>
+
+<h3 class="doc" id="pvdaq-version-2-deprecated">
+<a href="/docs/nrel/solar/pvdaq-v2/">PVDAQ (Version 2 - Deprecated)</a>
+
+</h3>
+
+<p>Deprecated: We encourage you to migrate to <a href="/docs/solar/pvdaq-v3/">version 3</a> of the PVDAQ API.</p>
+
+<h3 class="doc" id="pvwatts-version-2-deprecated-get-api-georeserv-app-sam-pvwatts">
+<a href="/docs/nrel/solar/pvwatts-v2/">PVWatts (Version 2 - Deprecated)</a>
+
+<span class="url">(GET /api/georeserv/app/sam/pvwatts)</span>
+
+</h3>
+
+<p>Deprecated: We encourage you to migrate to <a href="/docs/solar/pvwatts-v4/">version 4</a> of the PVWatts API.</p>
 
           
 

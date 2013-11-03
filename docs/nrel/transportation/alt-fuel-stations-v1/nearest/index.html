@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Nearest Stations</title>
+    <title>
+      
+        Nearest Stations
+        
+          API
+        
+        |
+      
+      api.data.gov
+    </title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta content="en" name="language">
     <meta content="width=1015,maximum-scale=1.0" name="viewport">
-    <meta name="generator" content="nanoc 3.6.4"> 
+    <meta name="generator" content="nanoc 3.6.5"> 
 
-    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-be79a7772452de9216409fad385e5bdf.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-d934871e8ee91606cd372c8eae8f9c33.css" />
     <!--[if IE]>
       <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
     <![endif]-->
@@ -20,8 +29,8 @@
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-42542568-1', 'data.gov');
@@ -131,13 +140,13 @@
 
 
         <div id="content">
-          <h1 id="nearest-stations">Nearest Stations</h1>
-
+          <h1 id="nearest-stations-get-api-alt-fuel-stations-v1-nearest">Nearest Stations <span class="url">(GET /api/alt-fuel-stations/v1/nearest)</span>
+</h1>
 <p>Return the nearest alternative fuel stations within a distance of a given location.</p>
 
 <ul id="toc"></ul><h2 id="request-url">Request URL</h2>
 
-<pre>GET http://api.data.gov/nrel/alt-fuel-stations/v1/nearest<em>.format?parameters</em></pre>
+<pre>GET /api/alt-fuel-stations/v1/nearest<em>.format?parameters</em></pre>
 
 <h2 id="request-parameters">Request Parameters</h2>
 
@@ -181,7 +190,7 @@
         </div>
       </td>
       <td class="doc-parameter-description">
-        <p>Your developer API key. See <a href="/doc/api-key">API key usage</a> for more information.</p>
+        <p>Your developer API key. See <a href="/docs/api-key/">API key usage</a> for more information.</p>
       </td>
     </tr>
 <tr>
@@ -817,7 +826,9 @@
 <th class="doc-parameter-name" scope="row">precision</th>
       <td class="doc-parameter-value">
 <strong>Type:</strong> record</td>
-      <td class="doc-parameter-description">Details on the precision of the geocoded "location" parameter (if given). See <a href="#precision-record-fields">precision record fields</a> for response details.</td>
+      <td class="doc-parameter-description">
+        Details on the precision of the geocoded "location" parameter (if given). See <a href="#precision-record-fields">precision record fields</a> for response details.
+      </td>
     </tr>
 <tr>
 <th class="doc-parameter-name" scope="row">fuel_stations</th>
@@ -826,7 +837,9 @@
           <strong>Type:</strong> array
         </div>
       </td>
-      <td class="doc-parameter-description">An array of matching fuel station records returned in order of ascending distance from the given location. See <a href="#fuel-station-record-fields">fuel station record fields</a> for response details.</td>
+      <td class="doc-parameter-description">
+        An array of matching fuel station records returned in order of ascending distance from the given location. See <a href="#fuel-station-record-fields">fuel station record fields</a> for response details.
+      </td>
     </tr>
 </tbody>
 </table><h3 id="fuel-station-record-fields">Fuel Station Record Fields</h3>
@@ -1134,7 +1147,9 @@
           <strong>Type:</strong> record
         </div>
       </td>
-      <td class="doc-parameter-description">If the station is owned by a federal agency, a record for the federal agency that owns this station. See <a href="#federal-agency-record-fields">federal agency record fields</a> for response details.</td>
+      <td class="doc-parameter-description">
+        If the station is owned by a federal agency, a record for the federal agency that owns this station. See <a href="#federal-agency-record-fields">federal agency record fields</a> for response details.
+      </td>
     </tr>
 <tr>
 <th class="doc-parameter-name" scope="row">bd_blends</th>
@@ -1461,7 +1476,9 @@
           <strong>Type:</strong> datetime
         </div>
       </td>
-      <td class="doc-parameter-description">The time the station's details were last updated (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format).</td>
+      <td class="doc-parameter-description">
+        The time the station's details were last updated (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format).
+      </td>
     </tr>
 <tr>
 <th class="doc-parameter-name" scope="row">id</th>
@@ -1535,7 +1552,9 @@
           <strong>Type:</strong> integer
         </div>
       </td>
-      <td class="doc-parameter-description">A numeric code for the accuracy of the geocoded location. These generally match the Google Geocoding API V2 <a href="https://developers.google.com/maps/documentation/geocoding/v2/#GeocodingAccuracy">accuracy values</a>.</td>
+      <td class="doc-parameter-description">
+        A numeric code for the accuracy of the geocoded location. These generally match the Google Geocoding API V2 <a href="https://developers.google.com/maps/documentation/geocoding/v2/#GeocodingAccuracy">accuracy values</a>.
+      </td>
     </tr>
 <tr>
 <th class="doc-parameter-name" scope="row">types</th>
@@ -1544,142 +1563,158 @@
           <strong>Type:</strong> array
         </div>
       </td>
-      <td class="doc-parameter-description">An array of strings describing the type of location matched. These refer to the Google Geocoding API V3 <a href="https://developers.google.com/maps/documentation/geocoding/#Types">address component types</a>.</td>
+      <td class="doc-parameter-description">
+        An array of strings describing the type of location matched. These refer to the Google Geocoding API V3 <a href="https://developers.google.com/maps/documentation/geocoding/#Types">address component types</a>.
+      </td>
     </tr>
 </tbody>
 </table><h2 id="examples">Examples</h2>
 
 <h3 id="json-output-format">JSON Output Format</h3>
 
-<pre>GET <a href="/nrel/alt-fuel-stations/v1/nearest.json?api_key=DEMO_KEY&amp;location=1617+Cole+Blvd+Golden+CO&amp;fuel_type=ELEC&amp;limit=1">/nrel/alt-fuel-stations/v1/nearest.json?api_key=DEMO_KEY&amp;location=1617+Cole+Blvd+Golden+CO&amp;fuel_type=ELEC&amp;limit=1</a></pre>
-<div class="highlight"><pre><span class="p">{</span>
-  <span class="nt">"fuel_stations"</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="nt">"access_days_time"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"bd_blends"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"cards_accepted"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"city"</span><span class="p">:</span> <span class="s2">"Golden"</span><span class="p">,</span>
-      <span class="nt">"date_last_confirmed"</span><span class="p">:</span> <span class="s2">"2012-12-31"</span><span class="p">,</span>
-      <span class="nt">"expected_date"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"fuel_type_code"</span><span class="p">:</span> <span class="s2">"ELEC"</span><span class="p">,</span>
-      <span class="nt">"geocode_status"</span><span class="p">:</span> <span class="s2">"200-8"</span><span class="p">,</span>
-      <span class="nt">"groups_with_access_code"</span><span class="p">:</span> <span class="s2">"Private access only"</span><span class="p">,</span>
-      <span class="nt">"hy_status_link"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"intersection_directions"</span><span class="p">:</span> <span class="s2">"Building 17"</span><span class="p">,</span>
-      <span class="nt">"latitude"</span><span class="p">:</span> <span class="mf">39.7408399</span><span class="p">,</span>
-      <span class="nt">"longitude"</span><span class="p">:</span> <span class="mf">-105.1685277</span><span class="p">,</span>
-      <span class="nt">"open_date"</span><span class="p">:</span> <span class="s2">"2011-05-20"</span><span class="p">,</span>
-      <span class="nt">"owner_type_code"</span><span class="p">:</span> <span class="s2">"FG"</span><span class="p">,</span>
-      <span class="nt">"plus4"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"station_name"</span><span class="p">:</span> <span class="s2">"National Renewable Energy Laboratory - Denver West"</span><span class="p">,</span>
-      <span class="nt">"station_phone"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"status_code"</span><span class="p">:</span> <span class="s2">"E"</span><span class="p">,</span>
-      <span class="nt">"street_address"</span><span class="p">:</span> <span class="s2">"15013 Denver West Pkwy"</span><span class="p">,</span>
-      <span class="nt">"zip"</span><span class="p">:</span> <span class="s2">"80401"</span><span class="p">,</span>
-      <span class="nt">"state"</span><span class="p">:</span> <span class="s2">"CO"</span><span class="p">,</span>
-      <span class="nt">"ng_fill_type_code"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"ng_psi"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"ng_vehicle_class"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"e85_blender_pump"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"ev_level1_evse_num"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"ev_level2_evse_num"</span><span class="p">:</span> <span class="mi">38</span><span class="p">,</span>
-      <span class="nt">"ev_dc_fast_num"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"ev_other_evse"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"ev_network"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"ev_network_web"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"lpg_primary"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nt">"id"</span><span class="p">:</span> <span class="mi">39534</span><span class="p">,</span>
-      <span class="nt">"updated_at"</span><span class="p">:</span> <span class="s2">"2013-01-16T16:09:02Z"</span><span class="p">,</span>
-      <span class="nt">"distance"</span><span class="p">:</span> <span class="mf">0.92673</span><span class="p">,</span>
-      <span class="nt">"federal_agency"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">"id"</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
-        <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"U.S. Department of Energy"</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">],</span>
-  <span class="nt">"latitude"</span><span class="p">:</span> <span class="mf">39.744696</span><span class="p">,</span>
-  <span class="nt">"longitude"</span><span class="p">:</span> <span class="mf">-105.15186</span><span class="p">,</span>
-  <span class="nt">"offset"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-  <span class="nt">"precision"</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"address"</span><span class="p">,</span>
-    <span class="nt">"types"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">"street_address"</span>
-    <span class="p">],</span>
-    <span class="nt">"value"</span><span class="p">:</span> <span class="mi">8</span>
-  <span class="p">},</span>
-  <span class="nt">"station_locator_url"</span><span class="p">:</span> <span class="s2">"http://www.afdc.energy.gov/afdc/locator/stations/"</span><span class="p">,</span>
-  <span class="nt">"total_results"</span><span class="p">:</span> <span class="mi">12</span>
-<span class="p">}</span>
+<pre>GET <a href="http://api.data.gov/nrel/alt-fuel-stations/v1/nearest.json?api_key=DEMO_KEY&amp;location=1617+Cole+Blvd+Golden+CO&amp;fuel_type=ELEC&amp;limit=1">/api/alt-fuel-stations/v1/nearest.json?api_key=DEMO_KEY&amp;location=1617+Cole+Blvd+Golden+CO&amp;fuel_type=ELEC&amp;limit=1</a></pre>
+
+<div>
+<div class="CodeRay">
+  <div class="code"><pre>{
+  <span class="key"><span class="delimiter">"</span><span class="content">fuel_stations</span><span class="delimiter">"</span></span>: [
+    {
+      <span class="key"><span class="delimiter">"</span><span class="content">access_days_time</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">bd_blends</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">cards_accepted</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">city</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Golden</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">date_last_confirmed</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">2012-12-31</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">expected_date</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">fuel_type_code</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">ELEC</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">geocode_status</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">200-8</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">groups_with_access_code</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Private access only</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">hy_status_link</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">intersection_directions</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Building 17</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">latitude</span><span class="delimiter">"</span></span>: <span class="float">39.7408399</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">longitude</span><span class="delimiter">"</span></span>: <span class="float">-105.1685277</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">open_date</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">2011-05-20</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">owner_type_code</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">FG</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">plus4</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">station_name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">National Renewable Energy Laboratory - Denver West</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">station_phone</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">status_code</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">E</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">street_address</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">15013 Denver West Pkwy</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">zip</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">80401</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">CO</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">ng_fill_type_code</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">ng_psi</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">ng_vehicle_class</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">e85_blender_pump</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">ev_level1_evse_num</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">ev_level2_evse_num</span><span class="delimiter">"</span></span>: <span class="integer">38</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">ev_dc_fast_num</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">ev_other_evse</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">ev_network</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">ev_network_web</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">lpg_primary</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">id</span><span class="delimiter">"</span></span>: <span class="integer">39534</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">updated_at</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">2013-01-16T16:09:02Z</span><span class="delimiter">"</span></span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">distance</span><span class="delimiter">"</span></span>: <span class="float">0.92673</span>,
+      <span class="key"><span class="delimiter">"</span><span class="content">federal_agency</span><span class="delimiter">"</span></span>: {
+        <span class="key"><span class="delimiter">"</span><span class="content">id</span><span class="delimiter">"</span></span>: <span class="integer">8</span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">U.S. Department of Energy</span><span class="delimiter">"</span></span>
+      }
+    }
+  ],
+  <span class="key"><span class="delimiter">"</span><span class="content">latitude</span><span class="delimiter">"</span></span>: <span class="float">39.744696</span>,
+  <span class="key"><span class="delimiter">"</span><span class="content">longitude</span><span class="delimiter">"</span></span>: <span class="float">-105.15186</span>,
+  <span class="key"><span class="delimiter">"</span><span class="content">offset</span><span class="delimiter">"</span></span>: <span class="integer">0</span>,
+  <span class="key"><span class="delimiter">"</span><span class="content">precision</span><span class="delimiter">"</span></span>: {
+    <span class="key"><span class="delimiter">"</span><span class="content">name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">address</span><span class="delimiter">"</span></span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">types</span><span class="delimiter">"</span></span>: [
+      <span class="string"><span class="delimiter">"</span><span class="content">street_address</span><span class="delimiter">"</span></span>
+    ],
+    <span class="key"><span class="delimiter">"</span><span class="content">value</span><span class="delimiter">"</span></span>: <span class="integer">8</span>
+  },
+  <span class="key"><span class="delimiter">"</span><span class="content">station_locator_url</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">http://www.afdc.energy.gov/afdc/locator/stations/</span><span class="delimiter">"</span></span>,
+  <span class="key"><span class="delimiter">"</span><span class="content">total_results</span><span class="delimiter">"</span></span>: <span class="integer">12</span>
+}
 </pre></div>
+</div>
+</div>
+
 <h3 id="xml-output-format">XML Output Format</h3>
 
-<pre>GET <a href="/nrel/alt-fuel-stations/v1/nearest.xml?api_key=DEMO_KEY&amp;location=1617+Cole+Blvd+Golden+CO&amp;fuel_type=ELEC&amp;limit=1">/nrel/alt-fuel-stations/v1/nearest.xml?api_key=DEMO_KEY&amp;location=1617+Cole+Blvd+Golden+CO&amp;fuel_type=ELEC&amp;limit=1</a></pre>
-<div class="highlight"><pre><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="nt">&lt;response&gt;</span>
-  <span class="nt">&lt;latitude&gt;</span>39.744696<span class="nt">&lt;/latitude&gt;</span>
-  <span class="nt">&lt;longitude&gt;</span>-105.15186<span class="nt">&lt;/longitude&gt;</span>
-  <span class="nt">&lt;precision&gt;</span>
-    <span class="nt">&lt;name&gt;</span>address<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;types</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;type&gt;</span>street_address<span class="nt">&lt;/type&gt;</span>
-    <span class="nt">&lt;/types&gt;</span>
-    <span class="nt">&lt;value</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>8<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/precision&gt;</span>
-  <span class="nt">&lt;station-locator-url&gt;</span>http://www.afdc.energy.gov/afdc/locator/stations/<span class="nt">&lt;/station-locator-url&gt;</span>
-  <span class="nt">&lt;total-results&gt;</span>12<span class="nt">&lt;/total-results&gt;</span>
-  <span class="nt">&lt;offset&gt;</span>0<span class="nt">&lt;/offset&gt;</span>
-  <span class="nt">&lt;fuel-stations</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;fuel-station&gt;</span>
-      <span class="nt">&lt;access-days-time</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;bd-blends</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;cards-accepted</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;city&gt;</span>Golden<span class="nt">&lt;/city&gt;</span>
-      <span class="nt">&lt;date-last-confirmed&gt;</span>2012-12-31<span class="nt">&lt;/date-last-confirmed&gt;</span>
-      <span class="nt">&lt;expected-date</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;fuel-type-code&gt;</span>ELEC<span class="nt">&lt;/fuel-type-code&gt;</span>
-      <span class="nt">&lt;geocode-status&gt;</span>200-8<span class="nt">&lt;/geocode-status&gt;</span>
-      <span class="nt">&lt;groups-with-access-code&gt;</span>Private access only<span class="nt">&lt;/groups-with-access-code&gt;</span>
-      <span class="nt">&lt;hy-status-link</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;intersection-directions&gt;</span>Building 17<span class="nt">&lt;/intersection-directions&gt;</span>
-      <span class="nt">&lt;latitude&gt;</span>39.7408399<span class="nt">&lt;/latitude&gt;</span>
-      <span class="nt">&lt;longitude&gt;</span>-105.1685277<span class="nt">&lt;/longitude&gt;</span>
-      <span class="nt">&lt;open-date&gt;</span>2011-05-20<span class="nt">&lt;/open-date&gt;</span>
-      <span class="nt">&lt;owner-type-code&gt;</span>FG<span class="nt">&lt;/owner-type-code&gt;</span>
-      <span class="nt">&lt;plus4</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;station-name&gt;</span>National Renewable Energy Laboratory - Denver West<span class="nt">&lt;/station-name&gt;</span>
-      <span class="nt">&lt;station-phone</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;status-code&gt;</span>E<span class="nt">&lt;/status-code&gt;</span>
-      <span class="nt">&lt;street-address&gt;</span>15013 Denver West Pkwy<span class="nt">&lt;/street-address&gt;</span>
-      <span class="nt">&lt;zip&gt;</span>80401<span class="nt">&lt;/zip&gt;</span>
-      <span class="nt">&lt;state&gt;</span>CO<span class="nt">&lt;/state&gt;</span>
-      <span class="nt">&lt;ng-fill-type-code</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;ng-psi</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;ng-vehicle-class</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;e85-blender-pump</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;ev-level1-evse-num</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;ev-level2-evse-num&gt;</span>38<span class="nt">&lt;/ev-level2-evse-num&gt;</span>
-      <span class="nt">&lt;ev-dc-fast-num</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;ev-other-evse</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;ev-network</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;ev-network-web</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;lpg-primary</span> <span class="na">nil=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;id&gt;</span>39534<span class="nt">&lt;/id&gt;</span>
-      <span class="nt">&lt;updated-at&gt;</span>2013-01-16T16:09:02Z<span class="nt">&lt;/updated-at&gt;</span>
-      <span class="nt">&lt;distance&gt;</span>0.92673<span class="nt">&lt;/distance&gt;</span>
-      <span class="nt">&lt;federal-agency&gt;</span>
-        <span class="nt">&lt;id</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>8<span class="nt">&lt;/id&gt;</span>
-        <span class="nt">&lt;name&gt;</span>U.S. Department of Energy<span class="nt">&lt;/name&gt;</span>
-      <span class="nt">&lt;/federal-agency&gt;</span>
-    <span class="nt">&lt;/fuel-station&gt;</span>
-  <span class="nt">&lt;/fuel-stations&gt;</span>
-<span class="nt">&lt;/response&gt;</span>
+<pre>GET <a href="http://api.data.gov/nrel/alt-fuel-stations/v1/nearest.xml?api_key=DEMO_KEY&amp;location=1617+Cole+Blvd+Golden+CO&amp;fuel_type=ELEC&amp;limit=1">/api/alt-fuel-stations/v1/nearest.xml?api_key=DEMO_KEY&amp;location=1617+Cole+Blvd+Golden+CO&amp;fuel_type=ELEC&amp;limit=1</a></pre>
+
+<div>
+<div class="CodeRay">
+  <div class="code"><pre><span class="preprocessor">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="tag">&lt;response&gt;</span>
+  <span class="tag">&lt;latitude&gt;</span>39.744696<span class="tag">&lt;/latitude&gt;</span>
+  <span class="tag">&lt;longitude&gt;</span>-105.15186<span class="tag">&lt;/longitude&gt;</span>
+  <span class="tag">&lt;precision&gt;</span>
+    <span class="tag">&lt;name&gt;</span>address<span class="tag">&lt;/name&gt;</span>
+    <span class="tag">&lt;types</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
+      <span class="tag">&lt;type&gt;</span>street_address<span class="tag">&lt;/type&gt;</span>
+    <span class="tag">&lt;/types&gt;</span>
+    <span class="tag">&lt;value</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">integer</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>8<span class="tag">&lt;/value&gt;</span>
+  <span class="tag">&lt;/precision&gt;</span>
+  <span class="tag">&lt;station-locator-url&gt;</span>http://www.afdc.energy.gov/afdc/locator/stations/<span class="tag">&lt;/station-locator-url&gt;</span>
+  <span class="tag">&lt;total-results&gt;</span>12<span class="tag">&lt;/total-results&gt;</span>
+  <span class="tag">&lt;offset&gt;</span>0<span class="tag">&lt;/offset&gt;</span>
+  <span class="tag">&lt;fuel-stations</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;fuel-station&gt;</span>
+      <span class="tag">&lt;access-days-time</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;bd-blends</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;cards-accepted</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;city&gt;</span>Golden<span class="tag">&lt;/city&gt;</span>
+      <span class="tag">&lt;date-last-confirmed&gt;</span>2012-12-31<span class="tag">&lt;/date-last-confirmed&gt;</span>
+      <span class="tag">&lt;expected-date</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;fuel-type-code&gt;</span>ELEC<span class="tag">&lt;/fuel-type-code&gt;</span>
+      <span class="tag">&lt;geocode-status&gt;</span>200-8<span class="tag">&lt;/geocode-status&gt;</span>
+      <span class="tag">&lt;groups-with-access-code&gt;</span>Private access only<span class="tag">&lt;/groups-with-access-code&gt;</span>
+      <span class="tag">&lt;hy-status-link</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;intersection-directions&gt;</span>Building 17<span class="tag">&lt;/intersection-directions&gt;</span>
+      <span class="tag">&lt;latitude&gt;</span>39.7408399<span class="tag">&lt;/latitude&gt;</span>
+      <span class="tag">&lt;longitude&gt;</span>-105.1685277<span class="tag">&lt;/longitude&gt;</span>
+      <span class="tag">&lt;open-date&gt;</span>2011-05-20<span class="tag">&lt;/open-date&gt;</span>
+      <span class="tag">&lt;owner-type-code&gt;</span>FG<span class="tag">&lt;/owner-type-code&gt;</span>
+      <span class="tag">&lt;plus4</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;station-name&gt;</span>National Renewable Energy Laboratory - Denver West<span class="tag">&lt;/station-name&gt;</span>
+      <span class="tag">&lt;station-phone</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;status-code&gt;</span>E<span class="tag">&lt;/status-code&gt;</span>
+      <span class="tag">&lt;street-address&gt;</span>15013 Denver West Pkwy<span class="tag">&lt;/street-address&gt;</span>
+      <span class="tag">&lt;zip&gt;</span>80401<span class="tag">&lt;/zip&gt;</span>
+      <span class="tag">&lt;state&gt;</span>CO<span class="tag">&lt;/state&gt;</span>
+      <span class="tag">&lt;ng-fill-type-code</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;ng-psi</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;ng-vehicle-class</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;e85-blender-pump</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;ev-level1-evse-num</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;ev-level2-evse-num&gt;</span>38<span class="tag">&lt;/ev-level2-evse-num&gt;</span>
+      <span class="tag">&lt;ev-dc-fast-num</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;ev-other-evse</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;ev-network</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;ev-network-web</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;lpg-primary</span> <span class="attribute-name">nil</span>=<span class="string"><span class="delimiter">"</span><span class="content">true</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+      <span class="tag">&lt;id&gt;</span>39534<span class="tag">&lt;/id&gt;</span>
+      <span class="tag">&lt;updated-at&gt;</span>2013-01-16T16:09:02Z<span class="tag">&lt;/updated-at&gt;</span>
+      <span class="tag">&lt;distance&gt;</span>0.92673<span class="tag">&lt;/distance&gt;</span>
+      <span class="tag">&lt;federal-agency&gt;</span>
+        <span class="tag">&lt;id</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">integer</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>8<span class="tag">&lt;/id&gt;</span>
+        <span class="tag">&lt;name&gt;</span>U.S. Department of Energy<span class="tag">&lt;/name&gt;</span>
+      <span class="tag">&lt;/federal-agency&gt;</span>
+    <span class="tag">&lt;/fuel-station&gt;</span>
+  <span class="tag">&lt;/fuel-stations&gt;</span>
+<span class="tag">&lt;/response&gt;</span>
 </pre></div>
+</div>
+</div>
+
 <h3 id="csv-output-format">CSV Output Format</h3>
 
-<pre>GET <a href="/nrel/alt-fuel-stations/v1/nearest.csv?api_key=DEMO_KEY&amp;location=1617+Cole+Blvd+Golden+CO&amp;fuel_type=ELEC&amp;limit=1">/nrel/alt-fuel-stations/v1/nearest.csv?api_key=DEMO_KEY&amp;location=1617+Cole+Blvd+Golden+CO&amp;fuel_type=ELEC&amp;limit=1</a></pre>
-<div class="highlight"><pre><span class="n">Fuel</span> <span class="n">Type</span> <span class="n">Code</span><span class="p">,</span><span class="n">Station</span> <span class="n">Name</span><span class="p">,</span><span class="n">Street</span> <span class="n">Address</span><span class="p">,</span><span class="n">Intersection</span> <span class="n">Directions</span><span class="p">,</span><span class="n">City</span><span class="p">,</span><span class="n">State</span><span class="p">,</span><span class="n">ZIP</span><span class="p">,</span><span class="n">Plus4</span><span class="p">,</span><span class="n">Station</span> <span class="n">Phone</span><span class="p">,</span><span class="n">Status</span> <span class="n">Code</span><span class="p">,</span><span class="n">Expected</span> <span class="n">Date</span><span class="p">,</span><span class="n">Groups</span> <span class="n">With</span> <span class="n">Access</span> <span class="n">Code</span><span class="p">,</span><span class="n">Access</span> <span class="n">Days</span> <span class="n">Time</span><span class="p">,</span><span class="n">Cards</span> <span class="n">Accepted</span><span class="p">,</span><span class="n">BD</span> <span class="n">Blends</span><span class="p">,</span><span class="n">NG</span> <span class="n">Fill</span> <span class="n">Type</span> <span class="n">Code</span><span class="p">,</span><span class="n">NG</span> <span class="n">PSI</span><span class="p">,</span><span class="n">EV</span> <span class="n">Level1</span> <span class="n">EVSE</span> <span class="n">Num</span><span class="p">,</span><span class="n">EV</span> <span class="n">Level2</span> <span class="n">EVSE</span> <span class="n">Num</span><span class="p">,</span><span class="n">EV</span> <span class="n">DC</span> <span class="n">Fast</span> <span class="n">Count</span><span class="p">,</span><span class="n">EV</span> <span class="n">Other</span> <span class="n">Info</span><span class="p">,</span><span class="n">EV</span> <span class="n">Network</span><span class="p">,</span><span class="n">EV</span> <span class="n">Network</span> <span class="n">Web</span><span class="p">,</span><span class="n">Geocode</span> <span class="n">Status</span><span class="p">,</span><span class="n">Latitude</span><span class="p">,</span><span class="n">Longitude</span><span class="p">,</span><span class="n">Date</span> <span class="n">Last</span> <span class="n">Confirmed</span><span class="p">,</span><span class="n">ID</span><span class="p">,</span><span class="n">Distance</span><span class="p">,</span><span class="n">Updated</span> <span class="n">At</span><span class="p">,</span><span class="n">Owner</span> <span class="n">Type</span> <span class="n">Code</span><span class="p">,</span><span class="n">Federal</span> <span class="n">Agency</span> <span class="n">ID</span><span class="p">,</span><span class="n">Federal</span> <span class="n">Agency</span> <span class="n">Name</span><span class="p">,</span><span class="n">Open</span> <span class="n">Date</span><span class="p">,</span><span class="n">Hydrogen</span> <span class="n">Status</span> <span class="n">Link</span><span class="p">,</span><span class="n">NG</span> <span class="n">Vehicle</span> <span class="n">Class</span><span class="p">,</span><span class="n">LPG</span> <span class="n">Primary</span><span class="p">,</span><span class="n">E85</span> <span class="n">Blender</span> <span class="n">Pump</span>
-<span class="n">ELEC</span><span class="p">,</span><span class="n">National</span> <span class="n">Renewable</span> <span class="n">Energy</span> <span class="n">Laboratory</span> <span class="o">-</span> <span class="n">Denver</span> <span class="n">West</span><span class="p">,</span><span class="mi">15013</span> <span class="n">Denver</span> <span class="n">West</span> <span class="n">Pkwy</span><span class="p">,</span><span class="n">Building</span> <span class="mi">17</span><span class="p">,</span><span class="n">Golden</span><span class="p">,</span><span class="n">CO</span><span class="p">,</span><span class="mi">80401</span><span class="p">,,,</span><span class="n">E</span><span class="p">,,</span><span class="n">Private</span> <span class="n">access</span> <span class="n">only</span><span class="p">,,,,,,,</span><span class="mi">38</span><span class="p">,,,,,</span><span class="mi">200</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span><span class="mf">39.7408399</span><span class="p">,</span><span class="o">-</span><span class="mf">105.1685277</span><span class="p">,</span><span class="mi">2012</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">31</span><span class="p">,</span><span class="mi">39534</span><span class="p">,</span><span class="mf">0.92673</span><span class="p">,</span><span class="mi">2013</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mi">16</span> <span class="mi">16</span><span class="o">:</span><span class="mi">09</span><span class="o">:</span><span class="mo">02</span> <span class="n">UTC</span><span class="p">,</span><span class="n">FG</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="n">U</span><span class="p">.</span><span class="n">S</span><span class="p">.</span> <span class="n">Department</span> <span class="n">of</span> <span class="n">Energy</span><span class="p">,</span><span class="mi">2011</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">20</span><span class="p">,,,,</span>
-</pre></div>
+<pre>GET <a href="http://api.data.gov/nrel/alt-fuel-stations/v1/nearest.csv?api_key=DEMO_KEY&amp;location=1617+Cole+Blvd+Golden+CO&amp;fuel_type=ELEC&amp;limit=1">/api/alt-fuel-stations/v1/nearest.csv?api_key=DEMO_KEY&amp;location=1617+Cole+Blvd+Golden+CO&amp;fuel_type=ELEC&amp;limit=1</a></pre>
+
+<pre><code>Fuel Type Code,Station Name,Street Address,Intersection Directions,City,State,ZIP,Plus4,Station Phone,Status Code,Expected Date,Groups With Access Code,Access Days Time,Cards Accepted,BD Blends,NG Fill Type Code,NG PSI,EV Level1 EVSE Num,EV Level2 EVSE Num,EV DC Fast Count,EV Other Info,EV Network,EV Network Web,Geocode Status,Latitude,Longitude,Date Last Confirmed,ID,Distance,Updated At,Owner Type Code,Federal Agency ID,Federal Agency Name,Open Date,Hydrogen Status Link,NG Vehicle Class,LPG Primary,E85 Blender Pump
+ELEC,National Renewable Energy Laboratory - Denver West,15013 Denver West Pkwy,Building 17,Golden,CO,80401,,,E,,Private access only,,,,,,,38,,,,,200-8,39.7408399,-105.1685277,2012-12-31,39534,0.92673,2013-01-16 16:09:02 UTC,FG,8,U.S. Department of Energy,2011-05-20,,,,
+</code></pre>
+
 <h2 id="rate-limits">Rate Limits</h2>
 
 <p><a href="/docs/rate-limits">Standard rate limits</a> apply. No more than 1,000 requests may be made in any hour. No more than 10,000 requests may be made in any day.</p>

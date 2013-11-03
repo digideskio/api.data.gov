@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Domain Query</title>
+    <title>
+      
+        Domain Query
+        
+          API
+        
+        |
+      
+      api.data.gov
+    </title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta content="en" name="language">
     <meta content="width=1015,maximum-scale=1.0" name="viewport">
-    <meta name="generator" content="nanoc 3.6.4"> 
+    <meta name="generator" content="nanoc 3.6.5"> 
 
-    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-be79a7772452de9216409fad385e5bdf.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-d934871e8ee91606cd372c8eae8f9c33.css" />
     <!--[if IE]>
       <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
     <![endif]-->
@@ -20,8 +29,8 @@
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-42542568-1', 'data.gov');
@@ -132,7 +141,6 @@
 
         <div id="content">
           <h1 id="domain-query">Domain Query</h1>
-
 <p>Lookup domains by reverse name</p>
 
 <ul id="toc"></ul><h2 id="request-url">Request URL</h2>
@@ -215,76 +223,82 @@
 <h3 id="json-output-format">JSON Output Format</h3>
 
 <pre>GET <a href="/myusa/discovery/domains?api_key=DEMO_KEY&amp;q=gov.whitehouse.">/myusa/discovery/domains?api_key=DEMO_KEY&amp;q=gov.whitehouse.</a></pre>
-<div class="highlight"><pre><span class="p">[</span>
-    <span class="p">{</span>
-        <span class="nt">"hostname"</span><span class="p">:</span> <span class="s2">"www.whitehouse.gov"</span><span class="p">,</span>
-        <span class="nt">"hostname_hash"</span><span class="p">:</span> <span class="s2">"2bbabfeb3e5af2bd5f8fcd6f494e5482"</span><span class="p">,</span>
-        <span class="nt">"id"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="nt">"pages"</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="nt">"id"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-                <span class="nt">"url"</span><span class="p">:</span> <span class="s2">"http://www.whitehouse.gov/"</span><span class="p">,</span>
-                <span class="nt">"domain"</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">"hostname"</span><span class="p">:</span> <span class="s2">"www.whitehouse.gov"</span><span class="p">,</span>
-                    <span class="nt">"hostname_hash"</span><span class="p">:</span> <span class="s2">"2bbabfeb3e5af2bd5f8fcd6f494e5482"</span><span class="p">,</span>
-                    <span class="nt">"id"</span><span class="p">:</span> <span class="mi">3</span>
-                <span class="p">},</span>
-                <span class="nt">"path"</span><span class="p">:</span> <span class="s2">"/"</span><span class="p">,</span>
-                <span class="nt">"title"</span><span class="p">:</span> <span class="s2">"The White House - President Barack Obama"</span><span class="p">,</span>
-                <span class="nt">"avg_rating"</span><span class="p">:</span> <span class="s2">"3.5"</span><span class="p">,</span>
-                <span class="nt">"num_rating"</span><span class="p">:</span> <span class="mi">4</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="nt">"id"</span><span class="p">:</span> <span class="mi">98</span><span class="p">,</span>
-                <span class="nt">"url"</span><span class="p">:</span> <span class="s2">"http://www.whitehouse.gov/live/president-obama-speaks-fiscal-cliff-0"</span><span class="p">,</span>
-                <span class="nt">"domain"</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">"hostname"</span><span class="p">:</span> <span class="s2">"www.whitehouse.gov"</span><span class="p">,</span>
-                    <span class="nt">"hostname_hash"</span><span class="p">:</span> <span class="s2">"2bbabfeb3e5af2bd5f8fcd6f494e5482"</span><span class="p">,</span>
-                    <span class="nt">"id"</span><span class="p">:</span> <span class="mi">3</span>
-                <span class="p">},</span>
-                <span class="nt">"path"</span><span class="p">:</span> <span class="s2">"/live/president-obama-speaks-fiscal-cliff-0"</span><span class="p">,</span>
-                <span class="nt">"title"</span><span class="p">:</span> <span class="s2">"Featured Videos"</span><span class="p">,</span>
-                <span class="nt">"avg_rating"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="nt">"num_rating"</span><span class="p">:</span> <span class="mi">0</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="nt">"id"</span><span class="p">:</span> <span class="mi">101</span><span class="p">,</span>
-                <span class="nt">"url"</span><span class="p">:</span> <span class="s2">"http://www.whitehouse.gov/about/inside-white-house/west-wing-tour"</span><span class="p">,</span>
-                <span class="nt">"domain"</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">"hostname"</span><span class="p">:</span> <span class="s2">"www.whitehouse.gov"</span><span class="p">,</span>
-                    <span class="nt">"hostname_hash"</span><span class="p">:</span> <span class="s2">"2bbabfeb3e5af2bd5f8fcd6f494e5482"</span><span class="p">,</span>
-                    <span class="nt">"id"</span><span class="p">:</span> <span class="mi">3</span>
-                <span class="p">},</span>
-                <span class="nt">"path"</span><span class="p">:</span> <span class="s2">"/about/inside-white-house/west-wing-tour"</span><span class="p">,</span>
-                <span class="nt">"title"</span><span class="p">:</span> <span class="s2">"West Wing Tour"</span><span class="p">,</span>
-                <span class="nt">"avg_rating"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="nt">"num_rating"</span><span class="p">:</span> <span class="mi">0</span>
-            <span class="p">}</span>
-            <span class="err">...</span>
-        <span class="p">]</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="nt">"hostname"</span><span class="p">:</span> <span class="s2">"whitehouse.gov"</span><span class="p">,</span>
-        <span class="nt">"hostname_hash"</span><span class="p">:</span> <span class="s2">"6e18908ffd4924525ee5e2a4ceb32803"</span><span class="p">,</span>
-        <span class="nt">"id"</span><span class="p">:</span> <span class="mi">96</span><span class="p">,</span>
-        <span class="nt">"pages"</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="nt">"id"</span><span class="p">:</span> <span class="mi">210</span><span class="p">,</span>
-                <span class="nt">"url"</span><span class="p">:</span> <span class="s2">"http://whitehouse.gov/"</span><span class="p">,</span>
-                <span class="nt">"domain"</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">"hostname"</span><span class="p">:</span> <span class="s2">"whitehouse.gov"</span><span class="p">,</span>
-                    <span class="nt">"hostname_hash"</span><span class="p">:</span> <span class="s2">"6e18908ffd4924525ee5e2a4ceb32803"</span><span class="p">,</span>
-                    <span class="nt">"id"</span><span class="p">:</span> <span class="mi">96</span>
-                <span class="p">},</span>
-                <span class="nt">"path"</span><span class="p">:</span> <span class="s2">"/"</span><span class="p">,</span>
-                <span class="nt">"title"</span><span class="p">:</span> <span class="s2">"The White House - President Barack Obama"</span><span class="p">,</span>
-                <span class="nt">"avg_rating"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-                <span class="nt">"num_rating"</span><span class="p">:</span> <span class="mi">0</span>
-            <span class="p">}</span>
-        <span class="p">]</span>
-    <span class="p">}</span>
-<span class="p">]</span>
+
+<div>
+<div class="CodeRay">
+  <div class="code"><pre>[
+    {
+        <span class="key"><span class="delimiter">"</span><span class="content">hostname</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">www.whitehouse.gov</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">hostname_hash</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">2bbabfeb3e5af2bd5f8fcd6f494e5482</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">id</span><span class="delimiter">"</span></span>: <span class="integer">3</span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">pages</span><span class="delimiter">"</span></span>: [
+            {
+                <span class="key"><span class="delimiter">"</span><span class="content">id</span><span class="delimiter">"</span></span>: <span class="integer">3</span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">url</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">http://www.whitehouse.gov/</span><span class="delimiter">"</span></span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">domain</span><span class="delimiter">"</span></span>: {
+                    <span class="key"><span class="delimiter">"</span><span class="content">hostname</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">www.whitehouse.gov</span><span class="delimiter">"</span></span>,
+                    <span class="key"><span class="delimiter">"</span><span class="content">hostname_hash</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">2bbabfeb3e5af2bd5f8fcd6f494e5482</span><span class="delimiter">"</span></span>,
+                    <span class="key"><span class="delimiter">"</span><span class="content">id</span><span class="delimiter">"</span></span>: <span class="integer">3</span>
+                },
+                <span class="key"><span class="delimiter">"</span><span class="content">path</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">/</span><span class="delimiter">"</span></span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">title</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">The White House - President Barack Obama</span><span class="delimiter">"</span></span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">avg_rating</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">3.5</span><span class="delimiter">"</span></span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">num_rating</span><span class="delimiter">"</span></span>: <span class="integer">4</span>
+            },
+            {
+                <span class="key"><span class="delimiter">"</span><span class="content">id</span><span class="delimiter">"</span></span>: <span class="integer">98</span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">url</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">http://www.whitehouse.gov/live/president-obama-speaks-fiscal-cliff-0</span><span class="delimiter">"</span></span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">domain</span><span class="delimiter">"</span></span>: {
+                    <span class="key"><span class="delimiter">"</span><span class="content">hostname</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">www.whitehouse.gov</span><span class="delimiter">"</span></span>,
+                    <span class="key"><span class="delimiter">"</span><span class="content">hostname_hash</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">2bbabfeb3e5af2bd5f8fcd6f494e5482</span><span class="delimiter">"</span></span>,
+                    <span class="key"><span class="delimiter">"</span><span class="content">id</span><span class="delimiter">"</span></span>: <span class="integer">3</span>
+                },
+                <span class="key"><span class="delimiter">"</span><span class="content">path</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">/live/president-obama-speaks-fiscal-cliff-0</span><span class="delimiter">"</span></span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">title</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Featured Videos</span><span class="delimiter">"</span></span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">avg_rating</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">num_rating</span><span class="delimiter">"</span></span>: <span class="integer">0</span>
+            },
+            {
+                <span class="key"><span class="delimiter">"</span><span class="content">id</span><span class="delimiter">"</span></span>: <span class="integer">101</span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">url</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">http://www.whitehouse.gov/about/inside-white-house/west-wing-tour</span><span class="delimiter">"</span></span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">domain</span><span class="delimiter">"</span></span>: {
+                    <span class="key"><span class="delimiter">"</span><span class="content">hostname</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">www.whitehouse.gov</span><span class="delimiter">"</span></span>,
+                    <span class="key"><span class="delimiter">"</span><span class="content">hostname_hash</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">2bbabfeb3e5af2bd5f8fcd6f494e5482</span><span class="delimiter">"</span></span>,
+                    <span class="key"><span class="delimiter">"</span><span class="content">id</span><span class="delimiter">"</span></span>: <span class="integer">3</span>
+                },
+                <span class="key"><span class="delimiter">"</span><span class="content">path</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">/about/inside-white-house/west-wing-tour</span><span class="delimiter">"</span></span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">title</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">West Wing Tour</span><span class="delimiter">"</span></span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">avg_rating</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">num_rating</span><span class="delimiter">"</span></span>: <span class="integer">0</span>
+            }
+            <span class="error">.</span><span class="error">.</span><span class="error">.</span>
+        ]
+    },
+    {
+        <span class="key"><span class="delimiter">"</span><span class="content">hostname</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">whitehouse.gov</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">hostname_hash</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">6e18908ffd4924525ee5e2a4ceb32803</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">id</span><span class="delimiter">"</span></span>: <span class="integer">96</span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">pages</span><span class="delimiter">"</span></span>: [
+            {
+                <span class="key"><span class="delimiter">"</span><span class="content">id</span><span class="delimiter">"</span></span>: <span class="integer">210</span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">url</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">http://whitehouse.gov/</span><span class="delimiter">"</span></span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">domain</span><span class="delimiter">"</span></span>: {
+                    <span class="key"><span class="delimiter">"</span><span class="content">hostname</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">whitehouse.gov</span><span class="delimiter">"</span></span>,
+                    <span class="key"><span class="delimiter">"</span><span class="content">hostname_hash</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">6e18908ffd4924525ee5e2a4ceb32803</span><span class="delimiter">"</span></span>,
+                    <span class="key"><span class="delimiter">"</span><span class="content">id</span><span class="delimiter">"</span></span>: <span class="integer">96</span>
+                },
+                <span class="key"><span class="delimiter">"</span><span class="content">path</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">/</span><span class="delimiter">"</span></span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">title</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">The White House - President Barack Obama</span><span class="delimiter">"</span></span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">avg_rating</span><span class="delimiter">"</span></span>: <span class="value">null</span>,
+                <span class="key"><span class="delimiter">"</span><span class="content">num_rating</span><span class="delimiter">"</span></span>: <span class="integer">0</span>
+            }
+        ]
+    }
+]
 </pre></div>
+</div>
+</div>
+
 <h2 id="rate-limits">Rate Limits</h2>
 
 <p><a href="/docs/rate-limits">Standard rate limits</a> apply. No more than 1,000 requests may be made in any hour. No more than 10,000 requests may be made in any day.</p>

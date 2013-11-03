@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      
+        Energy Incentives
+        
+          API
+        
+        |
+      
+      api.data.gov
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="en" name="language">
+    <meta content="width=1015,maximum-scale=1.0" name="viewport">
+    <meta name="generator" content="nanoc 3.6.5"> 
+
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-d934871e8ee91606cd372c8eae8f9c33.css" />
+    <!--[if IE]>
+      <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/static/assets/ie_lt_9-592d2b1bfdec04e5ce3219e54a1a7316.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/assets/application-1e1f8e576c1114611679bb897df8a2ee.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-42542568-1', 'data.gov');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body class="">
+    <div id="preheader">
+  <div id="preheader-inner" class="container-fluid">
+    <div class="row-fluid">
+      <div id="whitehouse"><p><img src="/images/gsa/usaflag-cb0d50f585d.gif" alt="USA Flag" /> <em>An Official Website of the United States Government</em></p></div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container-fluid">
+      <div class="corner-ribbon-wrapper right">
+        <div class="corner-ribbon">
+          <span>BETA</span>
+        </div>
+      </div>
+
+      <div id="main" class="row-fluid">
+        <header>
+          <div id="logo"><a class="logo" href="#" title="Home">Data.gov</a></div>
+        </header>
+        <nav class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li class="nav-home "><a href="/">Home</a></li>
+      <li class="nav-documentation active"><a href="/docs">Documentation</a></li>
+      <li class="nav-community "><a href="/community">Community</a></li>
+    </ul>
+  </div>
+</nav>
+                                                                                                                                       
+
+
+        
+  <ul class="breadcrumb">
+    
+    
+      
+        
+          <li>
+            <a href="/">Home</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/">Documentation</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/">National Renewable Energy Laboratory</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/nrel/electricity/">Electricity</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="active">Energy Incentives</li>
+        
+      
+    
+  </ul>
+
+
+
+        <div id="content">
+          <h1 id="energy-incentives-get-api-energy-incentives-v1">Energy Incentives <span class="url">(GET /api/energy-incentives/v1)</span>
+</h1>
+<p>This service lists the incentives found in the <a href="http://www.dsireusa.org/">DSIRE</a> quantitative spreadsheet by location.</p>
+
+<p>These data are updated often, but as the DSIRE data is continuously updated there is the possibility of their being slightly outdated.</p>
+
+<p>This is the current version of the energy incentives API. Previous versions have been deprecated and its users are encouraged to migrate to this newly enhanced version.</p>
+
+<ul id="toc"></ul><h2 id="request-url">Request URL</h2>
+
+<pre>GET /api/energy-incentives/v1<em>.format?parameters</em></pre>
+
+<h2 id="request-parameters">Request Parameters</h2>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+<thead><tr>
+<th class="doc-parameters-name" scope="col">Parameter</th>
+      <th class="doc-parameters-required" scope="col">Required</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th class="doc-parameter-name" scope="row">api_key</th>
+      <td class="doc-parameter-required">Yes</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>Your developer API key. See <a href="/docs/api-key/">API keys</a> for more information.</p>
+      </td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">address</th>
+      <td class="doc-parameter-required">Depends</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+        <div class="doc-parameter-value-field"></div>
+      </td>
+      <td class="doc-parameter-description">
+        <p>The address to use (lat/lon returned by Google's geocoding service). Required if lat/lon not provided.</p>
+      </td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">lat</th>
+      <td class="doc-parameter-required">Depends</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> decimal
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Range:</strong> <i>-90 to 90</i>
+        </div>
+      </td>
+      <td class="doc-parameter-description">The latitude for the location to use. Required if address not given.</td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">lon</th>
+      <td class="doc-parameter-required">Depends</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> decimal
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Range:</strong> <i>-180 to 180</i>
+        </div>
+      </td>
+      <td class="doc-parameter-description">The longitude for the location to use. Required if address not given.</td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">incentive_types</th>
+      <td class="doc-parameter-required">No</td>
+      <td class="doc-parameter-value">
+        <div class="doc-parameter-value-field">
+          <strong>Type:</strong> comma delimited string
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Default:</strong> None
+        </div>
+        <div class="doc-parameter-value-field">
+          <strong>Options</strong>: ad_incentives,<br>
+          biomass_incentives,<br>
+          csp_incentives,<br>
+          lfg_incentives,<br>
+          pool_incentives,<br>
+          solar_incentives,<br>
+          ssh_incentives,<br>
+          swh_incentives,<br>
+          wind_incentives,<br>
+          wte_incentives,
+        </div>
+      </td>
+      <td class="doc-parameter-description">The type of incentive to return. Will return all incentive types if no parameter is provided.</td>
+      <td class="doc-parameter-required"></td>
+      <td class="doc-parameter-value"></td>
+      <td class="doc-parameter-description"></td>
+    </tr>
+</tbody>
+</table><h2 id="response-fields">Response Fields</h2>
+
+<p>The response is composed of service-related informational fields and the results of the data query.</p>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+<thead><tr>
+<th class="doc-parameters-name" scope="col">Field</th>
+      <th class="doc-parameters-value" scope="col">Value</th>
+      <th class="doc-parameters-description" scope="col">Description</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th class="doc-parameter-name" scope="row">inputs</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> collection</td>
+      <td class="doc-parameter-description">The input parameters received in the request.</td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">version</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> string</td>
+      <td class="doc-parameter-description">The current version of the web service.</td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">errors</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> array of strings</td>
+      <td class="doc-parameter-description">Any error messages resulting from the request.</td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">warnings</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> array of strings</td>
+      <td class="doc-parameter-description">Any warning messages resulting from the request.</td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">infos</th>
+      <td class="doc-parameter-value">Type: array of strings</td>
+      <td class="doc-parameter-description">Any info messages resulting from the request</td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">metadata</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> collection</td>
+      <td class="doc-parameter-description">Any metadata associated with the request (sources, etc)</td>
+    </tr>
+<tr>
+<th class="doc-parameter-name" scope="row">outputs</th>
+      <td class="doc-parameter-value">
+<strong>Type:</strong> collection</td>
+      <td class="doc-parameter-description">
+        The data outputs from the request. (see <a href="#output-fields">output fields</a> for more detail)
+      </td>
+    </tr>
+</tbody>
+</table><h2 id="examples">Examples</h2>
+
+<h3 id="json-output-format">JSON Output Format</h3>
+
+<pre>GET <a href="http://api.data.gov/nrel/energy-incentives/v1.json?api_key=DEMO_KEY&amp;lat=40&amp;lon=-105&amp;incentive_types=ad_incentives,csp_incentives">/api/energy-incentives/v1.json?api_key=DEMO_KEY&amp;lat=40&amp;lon=-105&amp;incentive_types=ad_incentives,csp_incentives</a></pre>
+
+<div>
+<div class="CodeRay">
+  <div class="code"><pre>{
+  <span class="key"><span class="delimiter">"</span><span class="content">version</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">1.0.1</span><span class="delimiter">"</span></span>,
+  <span class="key"><span class="delimiter">"</span><span class="content">metadata</span><span class="delimiter">"</span></span>: {
+    <span class="key"><span class="delimiter">"</span><span class="content">sources</span><span class="delimiter">"</span></span>: [
+      <span class="string"><span class="delimiter">"</span><span class="content">Ventyx Research (2011)</span><span class="delimiter">"</span></span>,
+      <span class="string"><span class="delimiter">"</span><span class="content">EIA (2011)</span><span class="delimiter">"</span></span>
+    ]
+  },
+  <span class="key"><span class="delimiter">"</span><span class="content">inputs</span><span class="delimiter">"</span></span>: {
+    <span class="key"><span class="delimiter">"</span><span class="content">api_key</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">DEMO_KEY</span><span class="delimiter">"</span></span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">lat</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">40</span><span class="delimiter">"</span></span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">lon</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">-105</span><span class="delimiter">"</span></span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">incentive_types</span><span class="delimiter">"</span></span>: [
+      <span class="string"><span class="delimiter">"</span><span class="content">ad_incentives</span><span class="delimiter">"</span></span>,
+      <span class="string"><span class="delimiter">"</span><span class="content">csp_incentives</span><span class="delimiter">"</span></span>
+    ]
+  },
+  <span class="key"><span class="delimiter">"</span><span class="content">infos</span><span class="delimiter">"</span></span>: [
+
+  ],
+  <span class="key"><span class="delimiter">"</span><span class="content">errors</span><span class="delimiter">"</span></span>: [
+
+  ],
+  <span class="key"><span class="delimiter">"</span><span class="content">warnings</span><span class="delimiter">"</span></span>: [
+
+  ],
+  <span class="key"><span class="delimiter">"</span><span class="content">outputs</span><span class="delimiter">"</span></span>: {
+    <span class="key"><span class="delimiter">"</span><span class="content">ad_incentives</span><span class="delimiter">"</span></span>: [
+      {
+        <span class="key"><span class="delimiter">"</span><span class="content">dsire_id</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">US13F</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">gid</span><span class="delimiter">"</span></span>: <span class="integer">123</span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">incentive_code</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">US13F</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">memo</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">03/07/11 revised history section to show 3 PTC expirations (1999 one was missing). JB 12/3/10 Added to note info about grant expiration on 12/31/10. AH 07/19/10 fixed incentive amount field, 2.1 cents to 2.2 cents, missed this hen I did the update. 06/09/10 removed ADG from eligible list, pending conv. with IRS abou...</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">notes</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">The electricity must be sold by the taxpayer to an unrelated person during the taxable year. The American Recovery and Reinvestment Act of 2009 allows taxpayers eligible for the federal renewable electricity production tax credit (PTC) to take the federal business energy investment tax credit (ITC) instead of taking the PTC for new installations. Credit level listed here is for 2013.</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">program_name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Renewable Electricity Production Tax Credit (PTC)</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">sector</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">F</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Federal</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">anaerobic_digestion_com_ptc_dlrs_kwh</span><span class="delimiter">"</span></span>: <span class="float">0.011</span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">anaerobic_digestion_ptc_duration_years</span><span class="delimiter">"</span></span>: <span class="float">10.0</span>
+      }
+    ],
+    <span class="key"><span class="delimiter">"</span><span class="content">csp_incentives</span><span class="delimiter">"</span></span>: [
+      {
+        <span class="key"><span class="delimiter">"</span><span class="content">dsire_id</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">US02F</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">gid</span><span class="delimiter">"</span></span>: <span class="integer">122</span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">incentive_code</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">US02F</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">memo</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">12/20/10 Changed reference to grant expiration to 12/31/11 BL 12/3/10 Added to note info about grant expiration date of 12/31/10. AH 6/9/10 Reviewed statute -- no substantive changes. Removed history section: The federal Energy Policy Act of 2005 (EPAct 2005) expanded the existing federal business energy tax c...</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">notes</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">The American Recovery and Reinvestment Act of 2009 allows taxpayers eligible for the federal renewable electricity production tax credit (PTC) to take the federal business energy investment tax credit (ITC) instead of taking the PTC for new installations.</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">program_name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Business Energy Investment Tax Credit (ITC)</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">sector</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">F</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Federal</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">csp_com_tax_credit_pcnt_cost</span><span class="delimiter">"</span></span>: <span class="float">0.3</span>
+      }
+    ],
+    <span class="key"><span class="delimiter">"</span><span class="content">utility_name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">United Power Inc</span><span class="delimiter">"</span></span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">utility_id</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">63360</span><span class="delimiter">"</span></span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">utility_info</span><span class="delimiter">"</span></span>: [
+      {
+        <span class="key"><span class="delimiter">"</span><span class="content">company_id</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">63360</span><span class="delimiter">"</span></span>,
+        <span class="key"><span class="delimiter">"</span><span class="content">utility_name</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">United Power Inc</span><span class="delimiter">"</span></span>
+      }
+    ],
+    <span class="key"><span class="delimiter">"</span><span class="content">lat</span><span class="delimiter">"</span></span>: <span class="float">40.0</span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">lon</span><span class="delimiter">"</span></span>: <span class="float">-105.0</span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">city</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">Broomfield</span><span class="delimiter">"</span></span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">CO</span><span class="delimiter">"</span></span>,
+    <span class="key"><span class="delimiter">"</span><span class="content">zip</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">80023</span><span class="delimiter">"</span></span>
+  }
+}
+</pre></div>
+</div>
+</div>
+
+<h3 id="xml-output-format">XML Output Format</h3>
+
+<pre>GET <a href="http://api.data.gov/nrel/energy-incentives/v1.xml?api_key=DEMO_KEY&amp;lat=40&amp;lon=-105&amp;incentive_types=ad_incentives,csp_incentives">/api/energy-incentives/v1.xml?api_key=DEMO_KEY&amp;lat=40&amp;lon=-105&amp;incentive_types=ad_incentives,csp_incentives</a></pre>
+
+<div>
+<div class="CodeRay">
+  <div class="code"><pre><span class="preprocessor">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="tag">&lt;incentives&gt;</span>
+  <span class="tag">&lt;version&gt;</span>1.0.1<span class="tag">&lt;/version&gt;</span>
+  <span class="tag">&lt;metadata&gt;</span>
+    <span class="tag">&lt;sources</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
+      <span class="tag">&lt;source&gt;</span>Ventyx Research (2011)<span class="tag">&lt;/source&gt;</span>
+      <span class="tag">&lt;source&gt;</span>EIA (2011)<span class="tag">&lt;/source&gt;</span>
+    <span class="tag">&lt;/sources&gt;</span>
+  <span class="tag">&lt;/metadata&gt;</span>
+  <span class="tag">&lt;inputs&gt;</span>
+    <span class="tag">&lt;api-key&gt;</span>DEMO_KEY<span class="tag">&lt;/api-key&gt;</span>
+    <span class="tag">&lt;lat&gt;</span>40<span class="tag">&lt;/lat&gt;</span>
+    <span class="tag">&lt;lon&gt;</span>-105<span class="tag">&lt;/lon&gt;</span>
+    <span class="tag">&lt;incentive-types</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
+      <span class="tag">&lt;incentive-type&gt;</span>ad_incentives<span class="tag">&lt;/incentive-type&gt;</span>
+      <span class="tag">&lt;incentive-type&gt;</span>csp_incentives<span class="tag">&lt;/incentive-type&gt;</span>
+    <span class="tag">&lt;/incentive-types&gt;</span>
+  <span class="tag">&lt;/inputs&gt;</span>
+  <span class="tag">&lt;infos</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;errors</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;warnings</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;outputs&gt;</span>
+    <span class="tag">&lt;ad-incentives</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
+      <span class="tag">&lt;ad-incentive&gt;</span>
+        <span class="tag">&lt;dsire-id&gt;</span>US13F<span class="tag">&lt;/dsire-id&gt;</span>
+        <span class="tag">&lt;gid</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">integer</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>123<span class="tag">&lt;/gid&gt;</span>
+        <span class="tag">&lt;incentive-code&gt;</span>US13F<span class="tag">&lt;/incentive-code&gt;</span>
+        <span class="tag">&lt;memo&gt;</span>03/07/11 revised history section to show 3 PTC expirations (1999 one was missing). JB 12/3/10 Added to note info about grant expiration on 12/31/10. AH 07/19/10 fixed incentive amount field, 2.1 cents to 2.2 cents, missed this hen I did the update. 06/09/10 removed ADG from eligible list, pending conv. with IRS abou...<span class="tag">&lt;/memo&gt;</span>
+        <span class="tag">&lt;notes&gt;</span>The electricity must be sold by the taxpayer to an unrelated person during the taxable year. The American Recovery and Reinvestment Act of 2009 allows taxpayers eligible for the federal renewable electricity production tax credit (PTC) to take the federal business energy investment tax credit (ITC) instead of taking the PTC for new installations. Credit level listed here is for 2013.<span class="tag">&lt;/notes&gt;</span>
+        <span class="tag">&lt;program-name&gt;</span>Renewable Electricity Production Tax Credit (PTC)<span class="tag">&lt;/program-name&gt;</span>
+        <span class="tag">&lt;sector&gt;</span>F<span class="tag">&lt;/sector&gt;</span>
+        <span class="tag">&lt;state&gt;</span>Federal<span class="tag">&lt;/state&gt;</span>
+        <span class="tag">&lt;dsire-id&gt;</span>US13F<span class="tag">&lt;/dsire-id&gt;</span>
+        <span class="tag">&lt;anaerobic-digestion-com-ptc-dlrs-kwh</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>0.011<span class="tag">&lt;/anaerobic-digestion-com-ptc-dlrs-kwh&gt;</span>
+        <span class="tag">&lt;anaerobic-digestion-ptc-duration-years</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>10.0<span class="tag">&lt;/anaerobic-digestion-ptc-duration-years&gt;</span>
+      <span class="tag">&lt;/ad-incentive&gt;</span>
+    <span class="tag">&lt;/ad-incentives&gt;</span>
+    <span class="tag">&lt;csp-incentives</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
+      <span class="tag">&lt;csp-incentive&gt;</span>
+        <span class="tag">&lt;dsire-id&gt;</span>US02F<span class="tag">&lt;/dsire-id&gt;</span>
+        <span class="tag">&lt;gid</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">integer</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>122<span class="tag">&lt;/gid&gt;</span>
+        <span class="tag">&lt;incentive-code&gt;</span>US02F<span class="tag">&lt;/incentive-code&gt;</span>
+        <span class="tag">&lt;memo&gt;</span>12/20/10 Changed reference to grant expiration to 12/31/11 BL 12/3/10 Added to note info about grant expiration date of 12/31/10. AH 6/9/10 Reviewed statute -- no substantive changes. Removed history section: The federal Energy Policy Act of 2005 (EPAct 2005) expanded the existing federal business energy tax c...<span class="tag">&lt;/memo&gt;</span>
+        <span class="tag">&lt;notes&gt;</span>The American Recovery and Reinvestment Act of 2009 allows taxpayers eligible for the federal renewable electricity production tax credit (PTC) to take the federal business energy investment tax credit (ITC) instead of taking the PTC for new installations.<span class="tag">&lt;/notes&gt;</span>
+        <span class="tag">&lt;program-name&gt;</span>Business Energy Investment Tax Credit (ITC)<span class="tag">&lt;/program-name&gt;</span>
+        <span class="tag">&lt;sector&gt;</span>F<span class="tag">&lt;/sector&gt;</span>
+        <span class="tag">&lt;state&gt;</span>Federal<span class="tag">&lt;/state&gt;</span>
+        <span class="tag">&lt;dsire-id&gt;</span>US02F<span class="tag">&lt;/dsire-id&gt;</span>
+        <span class="tag">&lt;csp-com-tax-credit-pcnt-cost</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>0.3<span class="tag">&lt;/csp-com-tax-credit-pcnt-cost&gt;</span>
+      <span class="tag">&lt;/csp-incentive&gt;</span>
+    <span class="tag">&lt;/csp-incentives&gt;</span>
+    <span class="tag">&lt;utility-name&gt;</span>United Power Inc<span class="tag">&lt;/utility-name&gt;</span>
+    <span class="tag">&lt;utility-id&gt;</span>63360<span class="tag">&lt;/utility-id&gt;</span>
+    <span class="tag">&lt;utility-info</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
+      <span class="tag">&lt;utility-info&gt;</span>
+        <span class="tag">&lt;company-id&gt;</span>63360<span class="tag">&lt;/company-id&gt;</span>
+        <span class="tag">&lt;utility-name&gt;</span>United Power Inc<span class="tag">&lt;/utility-name&gt;</span>
+      <span class="tag">&lt;/utility-info&gt;</span>
+    <span class="tag">&lt;/utility-info&gt;</span>
+    <span class="tag">&lt;lat</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>40.0<span class="tag">&lt;/lat&gt;</span>
+    <span class="tag">&lt;lon</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>-105.0<span class="tag">&lt;/lon&gt;</span>
+    <span class="tag">&lt;city&gt;</span>Broomfield<span class="tag">&lt;/city&gt;</span>
+    <span class="tag">&lt;state&gt;</span>CO<span class="tag">&lt;/state&gt;</span>
+    <span class="tag">&lt;zip&gt;</span>80023<span class="tag">&lt;/zip&gt;</span>
+  <span class="tag">&lt;/outputs&gt;</span>
+<span class="tag">&lt;/incentives&gt;</span>
+</pre></div>
+</div>
+</div>
+
+<h2 id="rate-limits">Rate Limits</h2>
+
+<p><a href="/docs/rate-limits">Standard rate limits</a> apply. No more than 1,000 requests may be made in any hour. No more than 10,000 requests may be made in any day.</p>
+
+<h2 id="errors">Errors</h2>
+
+<p><a href="/docs/errors">Standard errors</a> may be returned. In addition, the following service-specific errors may be returned:</p>
+
+<table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
+<thead><tr>
+<th class="doc-parameters-name" scope="col">HTTP Status Code</th>
+      <th class="doc-parameters-required" scope="col">Description</th>
+    </tr></thead>
+<tbody><tr>
+<th class="doc-parameter-name" scope="row">422</th>
+      <td class="doc-parameter-description">Unprocessable Entity - One or more parameters did not pass validation, or a parameter may be missing. Check the <em>error</em> section of the response to see how the request url should be modified to address the error.</td>
+    </tr></tbody>
+</table>
+
+          
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'apidatagov'; // required: replace example with your forum shortname
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          
+
+          <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
+            <a href="https://github.com/GSA-OCSIT/api.data.gov/blob/master/content/docs/nrel/electricity/energy-incentives-v1.md">Help Improve this Content</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="container-fluid">
+      <div id="footer-inner">
+        <div id="footer-menu">
+          <ul class="menu">
+            <li class="first leaf"><a href="http://www.data.gov/about">About</a></li>
+            <li class="leaf"><a href="http://www.data.gov/accessibility">Accessibility</a></li>
+            <li class="leaf"><a href="http://www.data.gov/contact-us">Contact Us</a></li>
+            <li class="leaf"><a href="http://www.data.gov/data-policy">Data Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/faq">FAQ</a></li>
+            <li class="leaf"><a href="http://www.data.gov/privacy-policy">Privacy Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/sitemap" title="">Sitemap</a></li>
+            <li class="last leaf"><a href="http://www.usa.gov" title="">USA.gov</a></li>
+          </ul>
+        </div>
+        <div id="footer-logo"><img src="/images/gsa/datagov-footer-logo-cb3085c5b9a.png" alt="Data.gov" /></div>
+      </div>
+    </div>
+  </body>
+</html>

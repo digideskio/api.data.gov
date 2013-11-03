@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Document Search</title>
+    <title>
+      
+        Document Search
+        
+          API
+        
+        |
+      
+      api.data.gov
+    </title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta content="en" name="language">
     <meta content="width=1015,maximum-scale=1.0" name="viewport">
-    <meta name="generator" content="nanoc 3.6.4"> 
+    <meta name="generator" content="nanoc 3.6.5"> 
 
-    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-be79a7772452de9216409fad385e5bdf.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-d934871e8ee91606cd372c8eae8f9c33.css" />
     <!--[if IE]>
       <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
     <![endif]-->
@@ -20,8 +29,8 @@
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-42542568-1', 'data.gov');
@@ -110,7 +119,6 @@
 
         <div id="content">
           <h1 id="document-search">Document Search</h1>
-
 <p>This API allows users to build a query based on any of the parameters below.</p>
 
 <p style="background-color:#FFFFCC; border:2px solid #707070; padding: 5px">
@@ -124,10 +132,8 @@ Please review the Regulations.gov <a href="http://www.regulations.gov/#!develope
 <h2 id="sample-requests">Sample Requests</h2>
 
 <ol>
-<li>All EPA documents containing the search term 'tires': <pre><a href="http://api.data.gov/regulations/v2/documents.xml?api_key=DEMO_KEY&amp;a=EPA&amp;rpp=10&amp;po=0&amp;s=tires&amp;encoded=1&amp;countsOnly=0">http://api.data.gov/regulations/v2/documents.xml?api_key=DEMO_KEY&amp;a=EPA&amp;rpp=10&amp;po=0&amp;s=tires&amp;encoded=1&amp;countsOnly=0</a></pre>
-</li>
-<li>All FR documents posted today: <pre><a href="http://api.data.gov/regulations/v2/documents.xml?api_key=DEMO_KEY&amp;encoded=1&amp;countsOnly=0&amp;dct=N%252BFR%252BPR&amp;np=0">http://api.data.gov/regulations/v2/documents.xml?api_key=DEMO_KEY&amp;encoded=1&amp;countsOnly=0&amp;dct=N%252BFR%252BPR&amp;np=0</a></pre>
-</li>
+<li>All EPA documents containing the search term 'tires': &lt;pre&gt;<a href="http://api.data.gov/regulations/v2/documents.xml?api_key=DEMO_KEY&amp;a=EPA&amp;rpp=10&amp;po=0&amp;s=tires&amp;encoded=1&amp;countsOnly=0">http://api.data.gov/regulations/v2/documents.xml?api_key=DEMO_KEY&amp;a=EPA&amp;rpp=10&amp;po=0&amp;s=tires&amp;encoded=1&amp;countsOnly=0</a>&lt;/pre&gt;</li>
+  <li>All FR documents posted today: &lt;pre&gt;<a href="http://api.data.gov/regulations/v2/documents.xml?api_key=DEMO_KEY&amp;encoded=1&amp;countsOnly=0&amp;dct=N%252BFR%252BPR&amp;np=0">http://api.data.gov/regulations/v2/documents.xml?api_key=DEMO_KEY&amp;encoded=1&amp;countsOnly=0&amp;dct=N%252BFR%252BPR&amp;np=0</a>&lt;/pre&gt;</li>
 </ol><h2 id="request-parameters">Request Parameters</h2>
 
 <table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
@@ -461,57 +467,62 @@ Please review the Regulations.gov <a href="http://www.regulations.gov/#!develope
     </tr>
 </tbody>
 </table><h2 id="sample-output-json">Sample Output: JSON</h2>
-<div class="highlight"><pre><span class="p">{</span>
-  <span class="err">searchresult:{</span>
-    <span class="err">recordCount:11,</span>
-    <span class="err">documents:{</span>
-      <span class="err">document:{</span>
-        <span class="err">agency:</span><span class="nt">"SEC"</span><span class="p">,</span>
-        <span class="err">attachmentCount:0,</span>
-        <span class="err">acceptingComments:false,</span>
-        <span class="err">commentsDue:</span><span class="nt">"2012-02-01T00:00:00-05:00"</span><span class="p">,</span>
-        <span class="err">commentsBegin:</span><span class="nt">"2012-01-11T00:00:00-05:00"</span><span class="p">,</span>
-        <span class="err">commentText:</span><span class="nt">""</span><span class="p">,</span>
-        <span class="err">docketId:</span><span class="nt">"SEC-2012-0044"</span><span class="p">,</span>
-        <span class="err">docketTitle:</span><span class="nt">"Self-Regulatory Organizations; Proposed Rule Changes: NYSE Amex LLC"</span><span class="p">,</span>
-        <span class="err">docketType:</span><span class="nt">"RULEMAKING"</span><span class="p">,</span>
-        <span class="err">documentId:</span><span class="nt">"SEC-2012-0044-0001"</span><span class="p">,</span>
-        <span class="err">documentStatus:</span><span class="nt">"Posted"</span><span class="p">,</span>
-        <span class="err">documentType:</span><span class="nt">"Notice"</span><span class="p">,</span>
-        <span class="err">fileFormats:[</span>
-          <span class="nt">"http://api.data.gov/regulations/v2/contentStreamer?objectId=0900006480b95b79&amp;disposition=attachment&amp;contentType=pdf"</span><span class="p">,</span>
-          <span class="nt">"http://api.data.gov/regulations/v2/contentStreamer?objectId=0900006480b95b79&amp;disposition=attachment&amp;contentType=html"</span>
-        <span class="err">]</span><span class="p">,</span>
-        <span class="err">fromParticipatingAgency:false,</span>
-        <span class="err">isFrDoc:false,</span>
-        <span class="err">metadata:{</span>
-          <span class="err">entry:[</span>
-            <span class="err">{</span>
-              <span class="err">@name:</span><span class="nt">"Date Posted"</span><span class="p">,</span>
-              <span class="err">$:</span><span class="nt">"January 11 2012, at 12:00 AM Eastern Standard Time"</span>
-            <span class="p">}</span><span class="err">,</span>
-            <span class="p">{</span>
-              <span class="err">@name:</span><span class="nt">"Comment Start Date"</span><span class="p">,</span>
-              <span class="err">$:</span><span class="nt">"January 11 2012, at 12:00 AM Eastern Standard Time"</span>
-            <span class="p">}</span><span class="err">,</span>
-            <span class="p">{</span>
-              <span class="err">@name:</span><span class="nt">"Comment Due Date"</span><span class="p">,</span>
-              <span class="err">$:</span><span class="nt">"February 01 2012, at 11:59 PM Eastern Standard Time"</span>
-            <span class="p">}</span>
-          <span class="err">]</span>
-        <span class="err">},</span>
-        <span class="err">objectId:</span><span class="s2">"0900006480b95b79"</span><span class="err">,</span>
-        <span class="err">organization:</span><span class="s2">""</span><span class="err">,</span>
-        <span class="err">postedDate:</span><span class="s2">"2012-01-11T00:00:00-05:00"</span><span class="err">,</span>
-        <span class="err">rin:</span><span class="s2">""</span><span class="err">,</span>
-        <span class="err">submitterName:</span><span class="s2">""</span><span class="err">,</span>
-        <span class="err">summary:</span><span class="s2">""</span><span class="err">,</span>
-        <span class="err">title:</span><span class="s2">"Self-Regulatory Organizations; Proposed Rule Changes: NYSE Amex LLC"</span>
-      <span class="err">}</span>
-    <span class="err">}</span>
-  <span class="err">}</span>
-<span class="err">}</span>
+
+<div>
+<div class="CodeRay">
+  <div class="code"><pre>{
+  <span class="error">s</span><span class="error">e</span><span class="error">a</span><span class="error">r</span><span class="error">c</span><span class="error">h</span><span class="error">r</span><span class="error">e</span><span class="error">s</span><span class="error">u</span><span class="error">l</span><span class="error">t</span>:{
+    <span class="error">r</span><span class="error">e</span><span class="error">c</span><span class="error">o</span><span class="error">r</span><span class="error">d</span><span class="error">C</span><span class="error">o</span><span class="error">u</span><span class="error">n</span><span class="error">t</span>:<span class="integer">11</span>,
+    <span class="error">d</span><span class="error">o</span><span class="error">c</span><span class="error">u</span><span class="error">m</span><span class="error">e</span><span class="error">n</span><span class="error">t</span><span class="error">s</span>:{
+      <span class="error">d</span><span class="error">o</span><span class="error">c</span><span class="error">u</span><span class="error">m</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>:{
+        <span class="error">a</span><span class="error">g</span><span class="error">e</span><span class="error">n</span><span class="error">c</span><span class="error">y</span>:<span class="string"><span class="delimiter">"</span><span class="content">SEC</span><span class="delimiter">"</span></span>,
+        <span class="error">a</span><span class="error">t</span><span class="error">t</span><span class="error">a</span><span class="error">c</span><span class="error">h</span><span class="error">m</span><span class="error">e</span><span class="error">n</span><span class="error">t</span><span class="error">C</span><span class="error">o</span><span class="error">u</span><span class="error">n</span><span class="error">t</span>:<span class="integer">0</span>,
+        <span class="error">a</span><span class="error">c</span><span class="error">c</span><span class="error">e</span><span class="error">p</span><span class="error">t</span><span class="error">i</span><span class="error">n</span><span class="error">g</span><span class="error">C</span><span class="error">o</span><span class="error">m</span><span class="error">m</span><span class="error">e</span><span class="error">n</span><span class="error">t</span><span class="error">s</span>:<span class="value">false</span>,
+        <span class="error">c</span><span class="error">o</span><span class="error">m</span><span class="error">m</span><span class="error">e</span><span class="error">n</span><span class="error">t</span><span class="error">s</span><span class="error">D</span><span class="error">u</span><span class="error">e</span>:<span class="string"><span class="delimiter">"</span><span class="content">2012-02-01T00:00:00-05:00</span><span class="delimiter">"</span></span>,
+        <span class="error">c</span><span class="error">o</span><span class="error">m</span><span class="error">m</span><span class="error">e</span><span class="error">n</span><span class="error">t</span><span class="error">s</span><span class="error">B</span><span class="error">e</span><span class="error">g</span><span class="error">i</span><span class="error">n</span>:<span class="string"><span class="delimiter">"</span><span class="content">2012-01-11T00:00:00-05:00</span><span class="delimiter">"</span></span>,
+        <span class="error">c</span><span class="error">o</span><span class="error">m</span><span class="error">m</span><span class="error">e</span><span class="error">n</span><span class="error">t</span><span class="error">T</span><span class="error">e</span><span class="error">x</span><span class="error">t</span>:<span class="string"><span class="delimiter">"</span><span class="delimiter">"</span></span>,
+        <span class="error">d</span><span class="error">o</span><span class="error">c</span><span class="error">k</span><span class="error">e</span><span class="error">t</span><span class="error">I</span><span class="error">d</span>:<span class="string"><span class="delimiter">"</span><span class="content">SEC-2012-0044</span><span class="delimiter">"</span></span>,
+        <span class="error">d</span><span class="error">o</span><span class="error">c</span><span class="error">k</span><span class="error">e</span><span class="error">t</span><span class="error">T</span><span class="error">i</span><span class="error">t</span><span class="error">l</span><span class="error">e</span>:<span class="string"><span class="delimiter">"</span><span class="content">Self-Regulatory Organizations; Proposed Rule Changes: NYSE Amex LLC</span><span class="delimiter">"</span></span>,
+        <span class="error">d</span><span class="error">o</span><span class="error">c</span><span class="error">k</span><span class="error">e</span><span class="error">t</span><span class="error">T</span><span class="error">y</span><span class="error">p</span><span class="error">e</span>:<span class="string"><span class="delimiter">"</span><span class="content">RULEMAKING</span><span class="delimiter">"</span></span>,
+        <span class="error">d</span><span class="error">o</span><span class="error">c</span><span class="error">u</span><span class="error">m</span><span class="error">e</span><span class="error">n</span><span class="error">t</span><span class="error">I</span><span class="error">d</span>:<span class="string"><span class="delimiter">"</span><span class="content">SEC-2012-0044-0001</span><span class="delimiter">"</span></span>,
+        <span class="error">d</span><span class="error">o</span><span class="error">c</span><span class="error">u</span><span class="error">m</span><span class="error">e</span><span class="error">n</span><span class="error">t</span><span class="error">S</span><span class="error">t</span><span class="error">a</span><span class="error">t</span><span class="error">u</span><span class="error">s</span>:<span class="string"><span class="delimiter">"</span><span class="content">Posted</span><span class="delimiter">"</span></span>,
+        <span class="error">d</span><span class="error">o</span><span class="error">c</span><span class="error">u</span><span class="error">m</span><span class="error">e</span><span class="error">n</span><span class="error">t</span><span class="error">T</span><span class="error">y</span><span class="error">p</span><span class="error">e</span>:<span class="string"><span class="delimiter">"</span><span class="content">Notice</span><span class="delimiter">"</span></span>,
+        <span class="error">f</span><span class="error">i</span><span class="error">l</span><span class="error">e</span><span class="error">F</span><span class="error">o</span><span class="error">r</span><span class="error">m</span><span class="error">a</span><span class="error">t</span><span class="error">s</span>:[
+          <span class="string"><span class="delimiter">"</span><span class="content">http://api.data.gov/regulations/v2/contentStreamer?objectId=0900006480b95b79&amp;disposition=attachment&amp;contentType=pdf</span><span class="delimiter">"</span></span>,
+          <span class="string"><span class="delimiter">"</span><span class="content">http://api.data.gov/regulations/v2/contentStreamer?objectId=0900006480b95b79&amp;disposition=attachment&amp;contentType=html</span><span class="delimiter">"</span></span>
+        ],
+        <span class="error">f</span><span class="error">r</span><span class="error">o</span><span class="error">m</span><span class="error">P</span><span class="error">a</span><span class="error">r</span><span class="error">t</span><span class="error">i</span><span class="error">c</span><span class="error">i</span><span class="error">p</span><span class="error">a</span><span class="error">t</span><span class="error">i</span><span class="error">n</span><span class="error">g</span><span class="error">A</span><span class="error">g</span><span class="error">e</span><span class="error">n</span><span class="error">c</span><span class="error">y</span>:<span class="value">false</span>,
+        <span class="error">i</span><span class="error">s</span><span class="error">F</span><span class="error">r</span><span class="error">D</span><span class="error">o</span><span class="error">c</span>:<span class="value">false</span>,
+        <span class="error">m</span><span class="error">e</span><span class="error">t</span><span class="error">a</span><span class="error">d</span><span class="error">a</span><span class="error">t</span><span class="error">a</span>:{
+          <span class="error">e</span><span class="error">n</span><span class="error">t</span><span class="error">r</span><span class="error">y</span>:[
+            {
+              <span class="error">@</span><span class="error">n</span><span class="error">a</span><span class="error">m</span><span class="error">e</span>:<span class="string"><span class="delimiter">"</span><span class="content">Date Posted</span><span class="delimiter">"</span></span>,
+              <span class="error">$</span>:<span class="string"><span class="delimiter">"</span><span class="content">January 11 2012, at 12:00 AM Eastern Standard Time</span><span class="delimiter">"</span></span>
+            },
+            {
+              <span class="error">@</span><span class="error">n</span><span class="error">a</span><span class="error">m</span><span class="error">e</span>:<span class="string"><span class="delimiter">"</span><span class="content">Comment Start Date</span><span class="delimiter">"</span></span>,
+              <span class="error">$</span>:<span class="string"><span class="delimiter">"</span><span class="content">January 11 2012, at 12:00 AM Eastern Standard Time</span><span class="delimiter">"</span></span>
+            },
+            {
+              <span class="error">@</span><span class="error">n</span><span class="error">a</span><span class="error">m</span><span class="error">e</span>:<span class="string"><span class="delimiter">"</span><span class="content">Comment Due Date</span><span class="delimiter">"</span></span>,
+              <span class="error">$</span>:<span class="string"><span class="delimiter">"</span><span class="content">February 01 2012, at 11:59 PM Eastern Standard Time</span><span class="delimiter">"</span></span>
+            }
+          ]
+        },
+        <span class="error">o</span><span class="error">b</span><span class="error">j</span><span class="error">e</span><span class="error">c</span><span class="error">t</span><span class="error">I</span><span class="error">d</span>:<span class="string"><span class="delimiter">"</span><span class="content">0900006480b95b79</span><span class="delimiter">"</span></span>,
+        <span class="error">o</span><span class="error">r</span><span class="error">g</span><span class="error">a</span><span class="error">n</span><span class="error">i</span><span class="error">z</span><span class="error">a</span><span class="error">t</span><span class="error">i</span><span class="error">o</span><span class="error">n</span>:<span class="string"><span class="delimiter">"</span><span class="delimiter">"</span></span>,
+        <span class="error">p</span><span class="error">o</span><span class="error">s</span><span class="error">t</span><span class="error">e</span><span class="error">d</span><span class="error">D</span><span class="error">a</span><span class="error">t</span><span class="error">e</span>:<span class="string"><span class="delimiter">"</span><span class="content">2012-01-11T00:00:00-05:00</span><span class="delimiter">"</span></span>,
+        <span class="error">r</span><span class="error">i</span><span class="error">n</span>:<span class="string"><span class="delimiter">"</span><span class="delimiter">"</span></span>,
+        <span class="error">s</span><span class="error">u</span><span class="error">b</span><span class="error">m</span><span class="error">i</span><span class="error">t</span><span class="error">t</span><span class="error">e</span><span class="error">r</span><span class="error">N</span><span class="error">a</span><span class="error">m</span><span class="error">e</span>:<span class="string"><span class="delimiter">"</span><span class="delimiter">"</span></span>,
+        <span class="error">s</span><span class="error">u</span><span class="error">m</span><span class="error">m</span><span class="error">a</span><span class="error">r</span><span class="error">y</span>:<span class="string"><span class="delimiter">"</span><span class="delimiter">"</span></span>,
+        <span class="error">t</span><span class="error">i</span><span class="error">t</span><span class="error">l</span><span class="error">e</span>:<span class="string"><span class="delimiter">"</span><span class="content">Self-Regulatory Organizations; Proposed Rule Changes: NYSE Amex LLC</span><span class="delimiter">"</span></span>
+      }
+    }
+  }
+}
 </pre></div>
+</div>
+</div>
 
           
             <div id="disqus_thread"></div>
