@@ -3,7 +3,7 @@
   <head>
     <title>
       
-        Buildings
+        High Performance Building Database
         
           API
         
@@ -109,7 +109,18 @@
     
       
         
-          <li class="active">Buildings</li>
+          <li>
+            <a href="/docs/nrel/buildings/">Buildings</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="active">High Performance Building Database</li>
         
       
     
@@ -118,43 +129,35 @@
 
 
         <div id="content">
-          <h1 id="buildings">Buildings</h1>
-<p>Services related to energy efficiency and the use of renewable technologies in residential and commercial buildings.</p>
+          <script type="text/javascript">
+  window.swaggerUi = new SwaggerUi({
+    url: "/docs/buildings/building-case-studies/api-docs.json",
+    dom_id: "swagger-ui-container",
+    supportHeaderParams: false,
+    supportedSubmitMethods: ['get', 'post', 'put', 'delete'],
+    onComplete: function(swaggerApi, swaggerUi){
+      if(console) {
+        console.log("Loaded SwaggerUI")
+      }
+      $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+    },
+    onFailure: function(data) {
+      if(console) {
+        console.log("Unable to Load SwaggerUI");
+        console.log(data);
+      }
+    },
+    docExpansion: "list"
+  });
 
-<h3 class="doc" id="building-component-library">
-<a href="/docs/nrel/buildings/building-component-library/">Building Component Library</a>
-
-</h3>
-
-<p>Access energy data on individual components or energy conservation measures for buildings. This data can be used to create building energy models.</p>
-
-<h3 class="doc" id="commercial-building-resource-database">
-<a href="/docs/nrel/buildings/commercial-building-resource-database-v1/">Commercial Building Resource Database</a>
-
-</h3>
-
-<p>Resources to support the adoption of energy-saving building technologies.</p>
-
-<h3 class="doc" id="high-performance-building-database">
-<a href="/docs/nrel/buildings/building-case-studies/">High Performance Building Database</a>
-
-</h3>
-
-<p>A central repository of in-depth information and data on high-performance, green building projects across the United States and abroad.</p>
-
-<h3 class="doc" id="standard-work-specifications-get-api-standard-work-specs-spec-v1">
-<a href="/docs/nrel/buildings/standard-work-spec-v1/">Standard Work Specifications</a>
-
-<span class="url">(GET /api/standard-work-specs/spec/v1)</span>
-
-</h3>
-
-<p>Retrieve standard work specification details for home energy upgrades.</p>
+  window.swaggerUi.load();
+</script><div id="swagger-ui-container" class="swagger-ui-wrap">
+</div>
 
           
 
           <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
-            <a href="https://github.com/GSA-OCSIT/api.data.gov/blob/master/content/docs/nrel/buildings.md">Help Improve this Content</a>
+            <a href="https://github.com/GSA-OCSIT/api.data.gov/blob/master/content/docs/nrel/buildings/building-case-studies.html">Help Improve this Content</a>
           </div>
         </div>
       </div>
