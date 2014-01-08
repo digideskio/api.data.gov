@@ -281,10 +281,6 @@
             </tr></thead>
 <tbody>
 <tr>
-<th scope="row">perez</th>
-              <td>Perez Satellite Solar Resource Data Set</td>
-            </tr>
-<tr>
 <th scope="row">tmy2</th>
               <td>
                 TMY2 station data (see <a href="http://rredc.nrel.gov/solar/old_data/nsrdb/1961-1990/tmy2/State.html" target="_blank">Typical Meteorological Year, version 2</a>)
@@ -326,43 +322,43 @@
 <th class="doc-parameter-name" scope="row">lat</th>
       <td class="doc-parameter-value">
 <strong>Type:</strong> decimal</td>
-      <td class="doc-parameter-description">The latitude of the station (tmy2/tmy3) or grid cell (perez).</td>
+      <td class="doc-parameter-description">The latitude of the station.</td>
     </tr>
 <tr>
 <th class="doc-parameter-name" scope="row">lon</th>
       <td class="doc-parameter-value">
 <strong>Type:</strong> decimal</td>
-      <td class="doc-parameter-description">The longitude of the station (tmy2/tmy3) or grid cell (perez).</td>
+      <td class="doc-parameter-description">The longitude of the station.</td>
     </tr>
 <tr>
 <th class="doc-parameter-name" scope="row">city</th>
       <td class="doc-parameter-value">
 <strong>Type:</strong> string</td>
-      <td class="doc-parameter-description">The city where the station is located (for perez it will say "satellite data").</td>
+      <td class="doc-parameter-description">The city where the station is located.</td>
     </tr>
 <tr>
 <th class="doc-parameter-name" scope="row">state</th>
       <td class="doc-parameter-value">
-<strong>Type:</strong> array of decimal</td>
-      <td class="doc-parameter-description">The state where the station is located (for perez it will be an empty string).</td>
+<strong>Type:</strong> string</td>
+      <td class="doc-parameter-description">The state where the station is located.</td>
     </tr>
 <tr>
 <th class="doc-parameter-name" scope="row">timezone</th>
       <td class="doc-parameter-value">
 <strong>Type:</strong> integer</td>
-      <td class="doc-parameter-description">The timezone of the station or grid cell, relative to GMT.</td>
+      <td class="doc-parameter-description">The timezone of the station, relative to GMT.</td>
     </tr>
 <tr>
 <th class="doc-parameter-name" scope="row">elevation</th>
       <td class="doc-parameter-value">
 <strong>Type:</strong> integer</td>
-      <td class="doc-parameter-description">The elevation of the station or grid cell in meters.</td>
+      <td class="doc-parameter-description">The elevation of the station in meters.</td>
     </tr>
 <tr>
 <th class="doc-parameter-name" scope="row">distance</th>
       <td class="doc-parameter-value">
 <strong>Type:</strong> integer</td>
-      <td class="doc-parameter-description">The distance in meters from the input location to the station or grid cell.</td>
+      <td class="doc-parameter-description">The distance in meters from the input location to the station.</td>
     </tr>
 </tbody>
 </table><h2 id="examples">Examples</h2>
@@ -389,16 +385,6 @@
 
   ],
   <span class="key"><span class="delimiter">"</span><span class="content">outputs</span><span class="delimiter">"</span></span>: {
-    <span class="key"><span class="delimiter">"</span><span class="content">perez</span><span class="delimiter">"</span></span>: {
-      <span class="key"><span class="delimiter">"</span><span class="content">lon</span><span class="delimiter">"</span></span>: <span class="float">-105.3</span>,
-      <span class="key"><span class="delimiter">"</span><span class="content">elevation</span><span class="delimiter">"</span></span>: <span class="integer">1555</span>,
-      <span class="key"><span class="delimiter">"</span><span class="content">city</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">satellite data</span><span class="delimiter">"</span></span>,
-      <span class="key"><span class="delimiter">"</span><span class="content">state</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="delimiter">"</span></span>,
-      <span class="key"><span class="delimiter">"</span><span class="content">id</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">0-10440-105054005</span><span class="delimiter">"</span></span>,
-      <span class="key"><span class="delimiter">"</span><span class="content">timezone</span><span class="delimiter">"</span></span>: <span class="integer">-7</span>,
-      <span class="key"><span class="delimiter">"</span><span class="content">distance</span><span class="delimiter">"</span></span>: <span class="integer">42089</span>,
-      <span class="key"><span class="delimiter">"</span><span class="content">lat</span><span class="delimiter">"</span></span>: <span class="float">40.3</span>
-    },
     <span class="key"><span class="delimiter">"</span><span class="content">tmy2</span><span class="delimiter">"</span></span>: {
       <span class="key"><span class="delimiter">"</span><span class="content">lon</span><span class="delimiter">"</span></span>: <span class="float">-105.15</span>,
       <span class="key"><span class="delimiter">"</span><span class="content">elevation</span><span class="delimiter">"</span></span>: <span class="integer">1634</span>,
@@ -443,16 +429,6 @@
     <span class="tag">&lt;lon&gt;</span>-105<span class="tag">&lt;/lon&gt;</span>
   <span class="tag">&lt;/inputs&gt;</span>
   <span class="tag">&lt;outputs&gt;</span>
-    <span class="tag">&lt;perez&gt;</span>
-      <span class="tag">&lt;id&gt;</span>0-10440-105054005<span class="tag">&lt;/id&gt;</span>
-      <span class="tag">&lt;city&gt;</span>satellite data<span class="tag">&lt;/city&gt;</span>
-      <span class="tag">&lt;state</span><span class="tag">/&gt;</span>
-      <span class="tag">&lt;timezone</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">integer</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>-7<span class="tag">&lt;/timezone&gt;</span>
-      <span class="tag">&lt;lat</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>40.3<span class="tag">&lt;/lat&gt;</span>
-      <span class="tag">&lt;lon</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>-105.3<span class="tag">&lt;/lon&gt;</span>
-      <span class="tag">&lt;elevation</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">integer</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>1555<span class="tag">&lt;/elevation&gt;</span>
-      <span class="tag">&lt;distance</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">integer</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>42089<span class="tag">&lt;/distance&gt;</span>
-    <span class="tag">&lt;/perez&gt;</span>
     <span class="tag">&lt;tmy2&gt;</span>
       <span class="tag">&lt;id&gt;</span>1-94018<span class="tag">&lt;/id&gt;</span>
       <span class="tag">&lt;city&gt;</span>BOULDER<span class="tag">&lt;/city&gt;</span>
