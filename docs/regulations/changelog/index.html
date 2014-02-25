@@ -125,8 +125,7 @@
 <ul>
 <li>Improvements to XML and JSON allow for easier processing</li>
   <li>Each piece of information is now directly referrable via a key/element name</li>
-  <li>Many attributes now include a human-readable label as well as a key</li>
-  <li>Attributes missing from 1.0 to 2.0 have been restored</li>
+  <li>Many fields now include a human-readable label as well as a key. The label is included as an attribute on the XML element.  JSON response include the label as a key/value pair under an object.</li>
   <li>Dates are formatted as ISO 8601 with the time zone</li>
   <li>Values now represented in a display-friendly format:
     <ul>
@@ -136,7 +135,7 @@
     </ul>
 </li>
   <li>Charset is set to UTF-8 in all service responses</li>
-  <li>Renamed the attribute commentEndDate to commentDueDate</li>
+  <li>Renamed the field commentEndDate to commentDueDate</li>
 </ul><h2 id="document">Document</h2>
 <ul>
 <li>Renamed the parameters:
@@ -160,40 +159,40 @@
       <li>isFrDoc</li>
     </ul>
 </li>
-  <li>Restored attributes: (missing from v1 to v2)
+  <li>New fields:
     <ul>
 <li>frCitation</li>
       <li>postedDate</li>
       <li>rin</li>
       <li>docStatus</li>
       <li>abstract</li>
-      <li>CommentOnDocf
+      <li>CommentOnDoc
         <ul>
-<li>Restored with simplified attributes.  Only documentId, documentType, and title are included </li>
+<li>Only documentId, documentType, and title are included (changed from v1).</li>
         </ul>
 </li>
     </ul>
 </li>
   <li>File Content download URL's now listed as api.data.gov links and a "Download" service</li>
   <li>fileFormats are no longer available for Public Submissions; Instead the values are available as metadata</li>
+  <li>Metadata 'entry' fields are now at the root-level and include a label for data presentation.
+    <ul>
+<li>Ex. <code>&lt;entry name="Page Count"&gt;20&lt;/entry&gt;</code> becomes <code>&lt;pageCount label="Page Count"&gt;20&lt;/pageCount&gt;</code>
+</li>
+      <li>Ex. <code>{ "@name": "Page Count", $: "20" }</code> becomes <code>pageCount: { "label": "Page Count", "value": "20" }</code>
+</li>
+    </ul>
+</li>
   <li>XML Improvements:
     <ul>
 <li>fileFormats tag surrounds fileFormat entries in XML response</li>
       <li>Topics are now wrapped with a topics element, and each topic is singular</li>
     </ul>
 </li>
-  <li>Metadata 'entry' attributes are now at the root-level and include a label for data presentation.
-    <ul>
-<li>Ex. <code>&lt;entry name="Page Count"&gt;20&lt;/entry&gt;</code> becomes <code>&lt;pageCount label="Page Count"&gt;20&lt;/pageCount&gt;</code>
-</li>
-      <li>Ex. <code>{ @name: "Page Count", $: "20" }</code> becomes <code>pageCount: { label: "Page Count", value: "20" }</code>
-</li>
-    </ul>
-</li>
 </ul><h2 id="docket">Docket</h2>
 <ul>
 <li>Renamed the parameter: D to docketId</li>
-  <li>The "metadata" and "ualist" sets of attributes have been collapsed to the root level of the XML/Object</li>
+  <li>The "metadata" and "ualist" field sets have been collapsed to the root level of the XML/Object</li>
 </ul><h2 id="search">Search</h2>
 <ul>
 <li>File formats are no longer available. To download files, make a request for each Document</li>
