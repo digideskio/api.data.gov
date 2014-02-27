@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      
+        Change Log
+        
+          API
+        
+        |
+      
+      api.data.gov
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="en" name="language">
+    <meta content="width=1015,maximum-scale=1.0" name="viewport">
+    <meta name="generator" content="nanoc 3.6.5"> 
+
+    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-96812d19ecbcb3b0c7a96cb54af6b467.css" />
+    <!--[if IE]>
+      <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/static/assets/ie_lt_9-592d2b1bfdec04e5ce3219e54a1a7316.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/assets/application-f78c15f34a7088431b66590b1ae0cacd.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-42542568-1', 'data.gov');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body class="">
+    <div id="preheader">
+  <div id="preheader-inner" class="container-fluid">
+    <div class="row-fluid">
+      <div id="whitehouse"><p><img src="/images/gsa/usaflag-cb0d50f585d.gif" alt="USA Flag" /> <em>An Official Website of the United States Government</em></p></div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container-fluid">
+      <div class="corner-ribbon-wrapper right">
+        <div class="corner-ribbon">
+          <span>BETA</span>
+        </div>
+      </div>
+
+      <div id="main" class="row-fluid">
+        <header>
+          <div id="logo"><a class="logo" href="#" title="Home">Data.gov</a></div>
+        </header>
+        <nav class="navbar">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li class="nav-home "><a href="/">Home</a></li>
+      <li class="nav-documentation active"><a href="/docs">Documentation</a></li>
+      <li class="nav-community "><a href="/community">Community</a></li>
+    </ul>
+  </div>
+</nav>
+                                                                                                                                       
+
+
+        
+  <ul class="breadcrumb">
+    
+    
+      
+        
+          <li>
+            <a href="/">Home</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/">Documentation</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/regulations_interactive/">Regulations.gov</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="active">Change Log</li>
+        
+      
+    
+  </ul>
+
+
+
+        <div id="content">
+          <h1 id="change-log">Change Log</h1>
+
+<h1 id="2-1-march-2014">2.1 - March 2014</h1>
+<ul>
+<li>Improvements to XML and JSON allow for easier processing</li>
+  <li>Each piece of information is now directly referrable via a key/element name</li>
+  <li>Many fields now include a human-readable label as well as a key. The label is included as an attribute on the XML element.  JSON response include the label as a key/value pair under an object.</li>
+  <li>Dates are formatted as ISO 8601 with the time zone</li>
+  <li>Values now represented in a display-friendly format:
+    <ul>
+<li>documentStatus:  "POSTED" to "Posted"</li>
+      <li>documentType: "PROPOSED_RULES" to "Proposed Rule".</li>
+      <li>dockeType: "NON_RULEMAKING" to "Nonrulemaking"</li>
+    </ul>
+</li>
+  <li>Charset is set to UTF-8 in all service responses</li>
+  <li>Renamed the field commentEndDate to commentDueDate</li>
+</ul><h2 id="document">Document</h2>
+<ul>
+<li>Renamed the parameters:
+    <ul>
+<li>D to documentId</li>
+      <li>FR to federalRegisterNumber</li>
+    </ul>
+</li>
+  <li>Fields renamed:
+    <ul>
+<li>canCommentOnDocument to openForComment</li>
+      <li>commentText to comment</li>
+      <li>commentTrackingNbr to trackingNumber</li>
+      <li>frNumber to federalRegisterNumber (same as the parameter)</li>
+      <li>renditionTypes to fileFormats</li>
+    </ul>
+</li>
+  <li>Fields removed:
+    <ul>
+<li>commentOnObjId</li>
+      <li>isFrDoc</li>
+    </ul>
+</li>
+  <li>New fields:
+    <ul>
+<li>frCitation</li>
+      <li>postedDate</li>
+      <li>rin</li>
+      <li>docStatus</li>
+      <li>abstract</li>
+      <li>CommentOnDoc
+        <ul>
+<li>Only documentId, documentType, and title are included (changed from v1).</li>
+        </ul>
+</li>
+    </ul>
+</li>
+  <li>File Content download URL's now listed as api.data.gov links and a "Download" service</li>
+  <li>fileFormats are no longer available for Public Submissions; Instead the values are available as metadata</li>
+  <li>Metadata 'entry' fields are now at the root-level and include a label for data presentation.
+    <ul>
+<li>Ex. <code>&lt;entry name="Page Count"&gt;20&lt;/entry&gt;</code> becomes <code>&lt;pageCount label="Page Count"&gt;20&lt;/pageCount&gt;</code>
+</li>
+      <li>Ex. <code>{ "@name": "Page Count", $: "20" }</code> becomes <code>pageCount: { "label": "Page Count", "value": "20" }</code>
+</li>
+    </ul>
+</li>
+  <li>XML Improvements:
+    <ul>
+<li>fileFormats tag surrounds fileFormat entries in XML response</li>
+      <li>Topics are now wrapped with a topics element, and each topic is singular</li>
+    </ul>
+</li>
+</ul><h2 id="docket">Docket</h2>
+<ul>
+<li>Renamed the parameter: D to docketId</li>
+  <li>The "metadata" and "ualist" field sets have been collapsed to the root level of the XML/Object</li>
+</ul><h2 id="search">Search</h2>
+<ul>
+<li>File formats are no longer available. To download files, make a request for each Document</li>
+  <li>Fields removed from Search Model: docketModel, wdm, properties, propertyNames</li>
+  <li>Fields removed from Document Model: wdm, properties, propertyNames, fromParticipatingAgency, fileFormats, everOpenForComment, sortDir, objectId, fileFormats</li>
+  <li>Renamed fields:
+    <ul>
+<li>canComment to openForComment</li>
+      <li>acceptComment to allowLateComment</li>
+      <li>agencyId to agencyAcronym</li>
+    </ul>
+</li>
+</ul><h1 id="2-0-july-31-2013">2.0 - July 31, 2013</h1>
+<ul>
+<li>Changed URL to use api.data.gov/regulations/</li>
+  <li>Services renamed:
+    <ul>
+<li>search to documents</li>
+      <li>getdocument to document</li>
+      <li>getdocket to docket</li>
+    </ul>
+</li>
+  <li>New API Key's are required. Free registration for a new key at http://api.data.gov</li>
+  <li>JSON format updated to be easier to use</li>
+  <li>Unified Agenda metadata added to Dockets (where applicable)</li>
+  <li>Comment Count added to Docket</li>
+  <li>Rate limits introduced</li>
+</ul><h1 id="1-0-february-18-2012">1.0 - February 18, 2012</h1>
+<ul>
+<li>Initial release of the Regulations.gov API</li>
+  <li>3 services available: Search, Document and Docket</li>
+</ul>
+
+          
+
+          <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
+            <a href="https://github.com/GSA-OCSIT/api.data.gov/blob/master/content/docs/regulations_interactive/changelog.md">Help Improve this Content</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="container-fluid">
+      <div id="footer-inner">
+        <div id="footer-menu">
+          <ul class="menu">
+            <li class="first leaf"><a href="http://www.data.gov/about">About</a></li>
+            <li class="leaf"><a href="http://www.data.gov/accessibility">Accessibility</a></li>
+            <li class="leaf"><a href="http://www.data.gov/contact-us">Contact Us</a></li>
+            <li class="leaf"><a href="http://www.data.gov/data-policy">Data Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/faq">FAQ</a></li>
+            <li class="leaf"><a href="http://www.data.gov/privacy-policy">Privacy Policy</a></li>
+            <li class="leaf"><a href="http://www.data.gov/sitemap" title="">Sitemap</a></li>
+            <li class="last leaf"><a href="http://www.usa.gov" title="">USA.gov</a></li>
+          </ul>
+        </div>
+        <div id="footer-logo"><img src="/images/gsa/datagov-footer-logo-cb3085c5b9a.png" alt="Data.gov" /></div>
+      </div>
+    </div>
+  </body>
+</html>
