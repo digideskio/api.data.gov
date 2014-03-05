@@ -3,6 +3,10 @@
   <head>
     <title>
       
+        SAM
+        
+        |
+      
       api.data.gov
     </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -56,8 +60,8 @@
         <nav class="navbar">
   <div class="navbar-inner">
     <ul class="nav">
-      <li class="nav-home active"><a href="/">Home</a></li>
-      <li class="nav-documentation "><a href="/docs">Documentation</a></li>
+      <li class="nav-home "><a href="/">Home</a></li>
+      <li class="nav-documentation active"><a href="/docs">Documentation</a></li>
       <li class="nav-community "><a href="/community">Community</a></li>
     </ul>
   </div>
@@ -66,75 +70,79 @@
 
 
         
+  <ul class="breadcrumb">
+    
+    
+      
+        
+          <li>
+            <a href="/">Home</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li>
+            <a href="/docs/">Documentation</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="active">SAM</li>
+        
+      
+    
+  </ul>
+
 
 
         <div id="content">
-          <p class="home-callout">Easily find and use APIs across federal government.</p>
-<hr><div class="row-fluid">
-  <div class="span4 feature feature-doc">
-    <h2 id="web-service-documentation"><a href="/docs">Web Service Documentation</a></h2>
-    <p>Explore our available Web services.</p>
-    <ul>
-<li><a href="/docs/census/">Census</a></li>
-        
-      
-        
-        
-          <li><a href="/docs/fcc/">Federal Communications Commission</a></li>
-        
-      
-        
-        
-      
-        
-        
-          <li><a href="/docs/myusa/">MyUSA</a></li>
-        
-      
-        
-        
-          <li><a href="/docs/nrel/">National Renewable Energy Laboratory</a></li>
-        
-      
-        
-        
-          <li><a href="/docs/regulations/">Regulations.gov</a></li>
-        
-      
-        
-        
-        
-      
-    </ul>
+          <!--[if lt IE 9]>
+<div class="alert">
+  <strong>You're using an outdated web browser</strong><br>
+  In order to view this interactive documentation, please <a href="http://browsehappy.com">upgrade your browser</a>.
 </div>
+<![endif]-->
 
-  <div class="span4 feature feature-key">
-    <h2 id="api-key"><a href="/signup">API Key</a></h2>
-    <p>Sign up to use our APIs.</p>
-    <ul>
-<li><a href="/signup">Get an API Key</a></li>
-    </ul>
-</div>
 
-  <div class="span4 feature feature-community">
-    <h2 id="community"><a href="/community">Community</a></h2>
-    <p>Join the discussion and stay updated.</p>
-    <ul>
-<li><a href="http://twitter.com/usdatagov">Follow Us on Twitter</a></li>
-    </ul>
-</div>
-</div>
+<script type="text/javascript">
+  window.swaggerUi = new SwaggerUi({
+    url: "/docs/sam-testing/api-docs.json",
+    dom_id: "swagger-ui-container",
+    supportHeaderParams: false,
+    supportedSubmitMethods: ['get', 'post', 'put', 'delete'],
+    onComplete: function(swaggerApi, swaggerUi){
+      if(console) {
+        console.log("Loaded SwaggerUI")
+      }
+      $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+    },
+    onFailure: function(data) {
+      if(console) {
+        console.log("Unable to Load SwaggerUI");
+        console.log(data);
+      }
+    },
+    docExpansion: "list"
+  });
 
-<hr><div class="row-fluid home-about">
-  <h2 id="about-this-service">About This Service</h2>
-  <p>api.data.gov is a free API management service for federal agencies. Our aim is to make it easier for agencies to release and manage APIs.</p>
-  <a href="/about/" class="btn">More information for agencies</a>
+  window.swaggerUi.load();
+</script><div id="swagger-ui-container" class="swagger-ui-wrap swagger-ui-hide-response-content-type">
 </div>
 
           
 
           <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
-            <a href="https://github.com/GSA-OCSIT/api.data.gov/blob/master/content/index.html">Help Improve this Content</a>
+            <a href="https://github.com/GSA-OCSIT/api.data.gov/blob/master/content/docs/sam-testing.html">Help Improve this Content</a>
           </div>
         </div>
       </div>
