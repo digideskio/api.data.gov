@@ -3,7 +3,9 @@
   <head>
     <title>
       
-        Web Service Rate Limits
+        Wind
+        
+          API
         
         |
       
@@ -97,7 +99,18 @@
     
       
         
-          <li class="active">Web Service Rate Limits</li>
+          <li>
+            <a href="/docs/nrel/">National Renewable Energy Laboratory</a>
+            
+              <span class="divider">&raquo;</span>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="active">Wind</li>
         
       
     
@@ -106,48 +119,22 @@
 
 
         <div id="content">
-          <h1 id="web-service-rate-limits">Web Service Rate Limits</h1>
+          <h1 id="wind">Wind</h1>
+<p>Access data and analysis services that provide access to wind resource data and NREL models.</p>
 
-<p>Limits are placed on the number of Data.gov Web service requests you may make using your API key.</p>
+<h3 class="doc" id="wind-toolkit-data-api-wind-wind_toolkit_extract">
+<a href="/docs/nrel/wind/wind-toolkit-extract/">Wind Toolkit Data</a>
 
-<ul>
-<li>
-<strong>Hourly Limit:</strong> 1,000 requests per hour</li>
-</ul><p>For each API key, these limits are applied across all Data.gov Web services requests. Exceeding these limits will lead to your API key being temporarily blocked from making further requests. Depending on the limit exceeded, the block will be lifted automatically by waiting until the next hour or calendar day.</p>
+<span class="url">(/api/wind/wind_toolkit_extract)</span>
 
-<h2 id="understanding-rate-limit-time-periods">Understanding Rate Limit Time Periods</h2>
+</h3>
 
-<h3 id="hourly-limit">Hourly Limit</h3>
-
-<p>The hourly counters for your API key reset on a rolling basis.</p>
-
-<p><em>Example:</em> If you made 500 requests at 10:15AM and 500 requests at 10:25AM, your API key would become temporarily blocked. This temporary block of your API key would cease at 11:15AM, at which point you could make 500 requests. At 11:25AM, you could then make another 500 requests.</p>
-
-<h2 id="rate-limit-error-response">Rate Limit Error Response</h2>
-
-<p>If your API key exceeds the rate limits, you will receive a response with an HTTP status code of 503, Service Unavailable. The response body will contain an error message reading "503 Service Unavailable (Rate Limit Exceeded)." For example, a JSON request that has exceed the rate limits would respond with:</p>
-
-<div>
-<div class="CodeRay">
-  <div class="code"><pre>{
-  <span class="key"><span class="delimiter">"</span><span class="content">errors</span><span class="delimiter">"</span></span>:[
-    <span class="string"><span class="delimiter">"</span><span class="content">503 Service Unavailable (Rate Limit Exceeded)</span><span class="delimiter">"</span></span>
-  ]
-}
-</pre></div>
-</div>
-</div>
-
-<p>For more details on how errors are returned, see the <a href="/docs/errors">general Web service errors</a>.</p>
-
-<h2 id="need-higher-limits">Need Higher Limits?</h2>
-
-<p>If you're building an application that needs higher rate limits, we'd be happy to work with you. <a href="/contact">Contact us</a> for more details.</p>
+<p>Collect and download, as CSV, a configurable set of data fields from a national collection of wind stations.</p>
 
           
 
           <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
-            <a href="https://github.com/GSA-OCSIT/api.data.gov/blob/master/content/docs/rate-limits.md">Help Improve this Content</a>
+            <a href="https://github.com/GSA-OCSIT/api.data.gov/blob/master/content/docs/nrel/wind.md">Help Improve this Content</a>
           </div>
         </div>
       </div>
