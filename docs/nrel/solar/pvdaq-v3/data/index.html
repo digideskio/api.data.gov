@@ -2,31 +2,26 @@
 <html lang="en">
   <head>
     <title>
-      
         Raw Data
-        
           API
-        
         |
-      
       api.data.gov
     </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta content="en" name="language">
     <meta content="width=1015,maximum-scale=1.0" name="viewport">
-    <meta name="generator" content="nanoc 3.6.5"> 
 
-    <link rel="stylesheet" type="text/css" media="all" href="/static/assets/application-4bdee517ca480c1df91c1df59da1a887.css" />
+    <link href="../../../../../stylesheets/all-7640732a.css" rel="stylesheet" type="text/css" />
     <!--[if IE]>
-      <link rel="stylesheet" type="text/css" media="all" href="/static/assets/ie-43e9085c9d93c6ef0da5bc16d5e7d19c.css" />
+      <link href="../../../../../stylesheets/ie-94356489.css" rel="stylesheet" type="text/css" />
     <![endif]-->
 
     <!--[if lt IE 9]>
-      <script type="text/javascript" src="/static/assets/ie_lt_9-592d2b1bfdec04e5ce3219e54a1a7316.js"></script>
+      <script src="../../../../../javascripts/ie_lt_9-abc24081.js" type="text/javascript"></script>
     <![endif]-->
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/assets/application-f78c15f34a7088431b66590b1ae0cacd.js"></script>
+    <script src="../../../../../javascripts/all-2a057f70.js" type="text/javascript"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -38,11 +33,11 @@
       ga('send', 'pageview');
     </script>
   </head>
-  <body class="">
+  <body class="docs docs_nrel docs_nrel_solar docs_nrel_solar_pvdaq-v3 docs_nrel_solar_pvdaq-v3_data docs_nrel_solar_pvdaq-v3_data_index">
     <div id="preheader">
   <div id="preheader-inner" class="container-fluid">
     <div class="row-fluid">
-      <div id="whitehouse"><p><img src="/images/gsa/usaflag-cb0d50f585d.gif" alt="USA Flag" /> <em>An Official Website of the United States Government</em></p></div>
+      <div id="whitehouse"><p><img src="/images/gsa/usaflag-71654e7d.gif" alt="USA Flag" /> <em>An Official Website of the United States Government</em></p></div>
     </div>
   </div>
 </div>
@@ -71,100 +66,59 @@
                                                                                                                                        
 
 
-        
-  <ul class="breadcrumb">
-    
-    
-      
-        
+          <ul class="breadcrumb">
           <li>
             <a href="/">Home</a>
-            
               <span class="divider">&raquo;</span>
-            
           </li>
-        
-      
-    
-      
-        
           <li>
             <a href="/docs/">Documentation</a>
-            
               <span class="divider">&raquo;</span>
-            
           </li>
-        
-      
-    
-      
-        
           <li>
             <a href="/docs/nrel/">National Renewable Energy Laboratory</a>
-            
               <span class="divider">&raquo;</span>
-            
           </li>
-        
-      
-    
-      
-        
           <li>
             <a href="/docs/nrel/solar/">Solar</a>
-            
               <span class="divider">&raquo;</span>
-            
           </li>
-        
-      
-    
-      
-        
           <li>
             <a href="/docs/nrel/solar/pvdaq-v3/">PVDAQ (PV Data Acquisition)</a>
-            
               <span class="divider">&raquo;</span>
-            
           </li>
-        
-      
-    
-      
-        
           <li class="active">Raw Data</li>
-        
-      
-    
   </ul>
 
 
-
         <div id="content">
-          <h1 id="raw-data-get-api-pvdaq-v3-data">Raw Data <span class="url">(GET /api/pvdaq/v3/data)</span>
-</h1>
+          <h1 id="raw-data-span-classurlget-apipvdaqv3dataspan">Raw Data <span class="url">(GET /api/pvdaq/v3/data)</span></h1>
 <p>Return raw data for a specific PVDAQ system and date range.</p>
 
-<ul id="toc"></ul><h2 id="request-url">Request URL</h2>
+<ul id="toc"></ul>
+
+<h2 id="request-url">Request URL</h2>
 
 <pre>GET /api/pvdaq/v3/data<em>.format?parameters</em></pre>
 
 <h2 id="http-basic-authentication">HTTP Basic Authentication</h2>
 
-<p>For PVDAQ services, in addition to your developer API key, you must also provide a username and password for your PVDAQ account via <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic Authentication</a>. For login credentials, contact <a href="mailto:ryan.smith@nrel.gov">Ryan Smith</a>.</p>
+<p>For PVDAQ services, in addition to your developer API key, you must also provide a username and password for your PVDAQ account via <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic Authentication</a>. For login credentials, contact <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#114;&#121;&#097;&#110;&#046;&#115;&#109;&#105;&#116;&#104;&#064;&#110;&#114;&#101;&#108;&#046;&#103;&#111;&#118;">Ryan Smith</a>.</p>
 
 <h2 id="request-parameters">Request Parameters</h2>
 
 <table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
-<thead><tr>
-<th class="doc-parameters-name" scope="col">Parameter</th>
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Parameter</th>
       <th class="doc-parameters-required" scope="col">Required</th>
       <th class="doc-parameters-value" scope="col">Value</th>
       <th class="doc-parameters-description" scope="col">Description</th>
-    </tr></thead>
-<tbody>
-<tr>
-<th class="doc-parameter-name" scope="row">format</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">format</th>
       <td class="doc-parameter-required">Yes</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -181,8 +135,8 @@
         <p>The output response format. Given in the URL as the file extension.</p>
       </td>
     </tr>
-<tr>
-<th class="doc-parameter-name" scope="row">api_key</th>
+    <tr>
+      <th class="doc-parameter-name" scope="row">api_key</th>
       <td class="doc-parameter-required">Yes</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -196,8 +150,8 @@
         <p>Your developer API key. See <a href="/docs/api-key/">API keys</a> for more information.</p>
       </td>
     </tr>
-<tr>
-<th class="doc-parameter-name" scope="row">system_id</th>
+    <tr>
+      <th class="doc-parameter-name" scope="row">system_id</th>
       <td class="doc-parameter-required">Yes</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -211,8 +165,8 @@
         <p>Return data for the given system ID. Your PVDAQ user account must have access to the given system.</p>
       </td>
     </tr>
-<tr>
-<th class="doc-parameter-name" scope="row">start_date</th>
+    <tr>
+      <th class="doc-parameter-name" scope="row">start_date</th>
       <td class="doc-parameter-required">Yes</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -226,8 +180,8 @@
         <p>Return data between this start date and the <em>end_date</em> given (MM/DD/YYYY format)</p>
       </td>
     </tr>
-<tr>
-<th class="doc-parameter-name" scope="row">end_date</th>
+    <tr>
+      <th class="doc-parameter-name" scope="row">end_date</th>
       <td class="doc-parameter-required">Yes</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -241,8 +195,8 @@
         <p>Return data between the <em>start_date</em> given and this end date (MM/DD/YYYY format).</p>
       </td>
     </tr>
-<tr>
-<th class="doc-parameter-name" scope="row">user_id</th>
+    <tr>
+      <th class="doc-parameter-name" scope="row">user_id</th>
       <td class="doc-parameter-required">No</td>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
@@ -254,18 +208,22 @@
       </td>
       <td class="doc-parameter-description">For PVDAQ admin user accounts only. Return only systems belonging to the given username.</td>
     </tr>
-</tbody>
-</table><h2 id="response-fields">Response Fields</h2>
+  </tbody>
+</table>
+
+<h2 id="response-fields">Response Fields</h2>
 
 <table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
-<thead><tr>
-<th class="doc-parameters-name" scope="col">Field</th>
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Field</th>
       <th class="doc-parameters-value" scope="col">Value</th>
       <th class="doc-parameters-description" scope="col">Description</th>
-    </tr></thead>
-<tbody>
-<tr>
-<th class="doc-parameter-name" scope="row">outputs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">outputs</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <strong>Type:</strong> record
@@ -275,8 +233,8 @@
         A record containing the data and header names. See <a href="#output-record-fields">output record fields</a> for response details.
       </td>
     </tr>
-<tr>
-<th class="doc-parameter-name" scope="row">errors</th>
+    <tr>
+      <th class="doc-parameter-name" scope="row">errors</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <strong>Type:</strong> array
@@ -286,8 +244,8 @@
         <p>If errors were encountered, a list describing each error. Errors will be returned with an HTTP status code of 422 (<span>Unprocessable Entity).</span></p>
       </td>
     </tr>
-<tr>
-<th class="doc-parameter-name" scope="row">warnings</th>
+    <tr>
+      <th class="doc-parameter-name" scope="row">warnings</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <strong>Type:</strong> array
@@ -297,8 +255,8 @@
         <p>List of warnings, including information about API deprecations.</p>
       </td>
     </tr>
-<tr>
-<th class="doc-parameter-name" scope="row">infos</th>
+    <tr>
+      <th class="doc-parameter-name" scope="row">infos</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <strong>Type:</strong> array
@@ -308,8 +266,8 @@
         <p>List of additional, non-error information.</p>
       </td>
     </tr>
-<tr>
-<th class="doc-parameter-name" scope="row">inputs</th>
+    <tr>
+      <th class="doc-parameter-name" scope="row">inputs</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <strong>Type:</strong> record
@@ -319,8 +277,8 @@
         <p>List of request parameters given.</p>
       </td>
     </tr>
-<tr>
-<th class="doc-parameter-name" scope="row">version</th>
+    <tr>
+      <th class="doc-parameter-name" scope="row">version</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <strong>Type:</strong> string
@@ -330,18 +288,22 @@
         <p>The current version of the PVDAQ web service.</p>
       </td>
     </tr>
-</tbody>
-</table><h3 id="output-record-fields">Output Record Fields</h3>
+  </tbody>
+</table>
+
+<h3 id="output-record-fields">Output Record Fields</h3>
 
 <table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
-<thead><tr>
-<th class="doc-parameters-name" scope="col">Field</th>
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">Field</th>
       <th class="doc-parameters-value" scope="col">Value</th>
       <th class="doc-parameters-description" scope="col">Description</th>
-    </tr></thead>
-<tbody>
-<tr>
-<th class="doc-parameter-name" scope="row">data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">data</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <strong>Type:</strong> array
@@ -349,8 +311,8 @@
       </td>
       <td class="doc-parameter-description">An array of records containing the data for the site. The first row lists the field names.</td>
     </tr>
-<tr>
-<th class="doc-parameter-name" scope="row">headers</th>
+    <tr>
+      <th class="doc-parameter-name" scope="row">headers</th>
       <td class="doc-parameter-value">
         <div class="doc-parameter-value-field">
           <strong>Type:</strong> record
@@ -358,164 +320,158 @@
       </td>
       <td class="doc-parameter-description">List of header names used in the associated output data.</td>
     </tr>
-</tbody>
-</table><h2 id="examples">Examples</h2>
+  </tbody>
+</table>
+
+<h2 id="examples">Examples</h2>
 
 <h3 id="json-output-format">JSON Output Format</h3>
 
 <pre>GET <a href="https://api.data.gov/nrel/pvdaq/v3/data.json?api_key=DEMO_KEY&amp;system_id=2&amp;start_date=3/24/2011&amp;end_date=3/25/2011">/api/pvdaq/v3/data.json?api_key=DEMO_KEY&amp;system_id=2&amp;start_date=3/24/2011&amp;end_date=3/25/2011</a></pre>
 
-<div>
-<div class="CodeRay">
-  <div class="code"><pre>{
-  <span class="key"><span class="delimiter">"</span><span class="content">errors</span><span class="delimiter">"</span></span>: [
+<pre class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
 
-  ],
-  <span class="key"><span class="delimiter">"</span><span class="content">infos</span><span class="delimiter">"</span></span>: [
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"infos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
 
-  ],
-  <span class="key"><span class="delimiter">"</span><span class="content">inputs</span><span class="delimiter">"</span></span>: {
-    <span class="key"><span class="delimiter">"</span><span class="content">api_key</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">DEMO_KEY</span><span class="delimiter">"</span></span>,
-    <span class="key"><span class="delimiter">"</span><span class="content">end_date</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">3/25/2011</span><span class="delimiter">"</span></span>,
-    <span class="key"><span class="delimiter">"</span><span class="content">start_date</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">3/24/2011</span><span class="delimiter">"</span></span>,
-    <span class="key"><span class="delimiter">"</span><span class="content">system_id</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">2</span><span class="delimiter">"</span></span>
-  },
-  <span class="key"><span class="delimiter">"</span><span class="content">outputs</span><span class="delimiter">"</span></span>: {
-    <span class="key"><span class="delimiter">"</span><span class="content">data</span><span class="delimiter">"</span></span>: [
-      [
-        <span class="string"><span class="delimiter">"</span><span class="content">SiteID</span><span class="delimiter">"</span></span>,
-        <span class="string"><span class="delimiter">"</span><span class="content">Date-Time</span><span class="delimiter">"</span></span>,
-        <span class="string"><span class="delimiter">"</span><span class="content">poa_irradiance</span><span class="delimiter">"</span></span>,
-        <span class="string"><span class="delimiter">"</span><span class="content">dc_power</span><span class="delimiter">"</span></span>,
-        <span class="string"><span class="delimiter">"</span><span class="content">dc_pos_voltage</span><span class="delimiter">"</span></span>,
-        <span class="string"><span class="delimiter">"</span><span class="content">dc_pos_current</span><span class="delimiter">"</span></span>,
-        <span class="string"><span class="delimiter">"</span><span class="content">module_temp_1</span><span class="delimiter">"</span></span>,
-        <span class="string"><span class="delimiter">"</span><span class="content">das_temp</span><span class="delimiter">"</span></span>,
-        <span class="string"><span class="delimiter">"</span><span class="content">das_battery_voltage</span><span class="delimiter">"</span></span>
-      ],
-      [
-        <span class="integer">2</span>,
-        <span class="string"><span class="delimiter">"</span><span class="content">2011-03-24 00:00:00</span><span class="delimiter">"</span></span>,
-        <span class="integer">0</span>,
-        <span class="float">-0.0002</span>,
-        <span class="float">-0.7311</span>,
-        <span class="float">0.0003</span>,
-        <span class="float">-3.5754</span>,
-        <span class="float">4.3217</span>,
-        <span class="float">12.2088</span>
-      ],
-      [
-        <span class="integer">2</span>,
-        <span class="string"><span class="delimiter">"</span><span class="content">2011-03-24 00:01:00</span><span class="delimiter">"</span></span>,
-        <span class="integer">0</span>,
-        <span class="float">-0.0002</span>,
-        <span class="float">-0.767</span>,
-        <span class="float">0.0003</span>,
-        <span class="float">-3.4774</span>,
-        <span class="float">4.2991</span>,
-        <span class="float">12.2088</span>
-      ]
-    ],
-    <span class="key"><span class="delimiter">"</span><span class="content">headers</span><span class="delimiter">"</span></span>: [
-      <span class="string"><span class="delimiter">"</span><span class="content">SiteID</span><span class="delimiter">"</span></span>,
-      <span class="string"><span class="delimiter">"</span><span class="content">Date-Time</span><span class="delimiter">"</span></span>,
-      <span class="string"><span class="delimiter">"</span><span class="content">poa_irradiance</span><span class="delimiter">"</span></span>,
-      <span class="string"><span class="delimiter">"</span><span class="content">dc_power</span><span class="delimiter">"</span></span>,
-      <span class="string"><span class="delimiter">"</span><span class="content">dc_pos_voltage</span><span class="delimiter">"</span></span>,
-      <span class="string"><span class="delimiter">"</span><span class="content">dc_pos_current</span><span class="delimiter">"</span></span>,
-      <span class="string"><span class="delimiter">"</span><span class="content">module_temp_1</span><span class="delimiter">"</span></span>,
-      <span class="string"><span class="delimiter">"</span><span class="content">das_temp</span><span class="delimiter">"</span></span>,
-      <span class="string"><span class="delimiter">"</span><span class="content">das_battery_voltage</span><span class="delimiter">"</span></span>
-    ]
-  },
-  <span class="key"><span class="delimiter">"</span><span class="content">version</span><span class="delimiter">"</span></span>: <span class="string"><span class="delimiter">"</span><span class="content">3.0.0</span><span class="delimiter">"</span></span>,
-  <span class="key"><span class="delimiter">"</span><span class="content">warnings</span><span class="delimiter">"</span></span>: [
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"inputs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"api_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEMO_KEY"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3/25/2011"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3/24/2011"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"system_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"outputs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"SiteID"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Date-Time"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"poa_irradiance"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dc_power"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dc_pos_voltage"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dc_pos_current"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"module_temp_1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"das_temp"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"das_battery_voltage"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+        </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"2011-03-24 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="mf">-0.0002</span><span class="p">,</span><span class="w">
+        </span><span class="mf">-0.7311</span><span class="p">,</span><span class="w">
+        </span><span class="mf">0.0003</span><span class="p">,</span><span class="w">
+        </span><span class="mf">-3.5754</span><span class="p">,</span><span class="w">
+        </span><span class="mf">4.3217</span><span class="p">,</span><span class="w">
+        </span><span class="mf">12.2088</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+        </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"2011-03-24 00:01:00"</span><span class="p">,</span><span class="w">
+        </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="mf">-0.0002</span><span class="p">,</span><span class="w">
+        </span><span class="mf">-0.767</span><span class="p">,</span><span class="w">
+        </span><span class="mf">0.0003</span><span class="p">,</span><span class="w">
+        </span><span class="mf">-3.4774</span><span class="p">,</span><span class="w">
+        </span><span class="mf">4.2991</span><span class="p">,</span><span class="w">
+        </span><span class="mf">12.2088</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"SiteID"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Date-Time"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"poa_irradiance"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"dc_power"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"dc_pos_voltage"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"dc_pos_current"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"module_temp_1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"das_temp"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"das_battery_voltage"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"warnings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
 
-  ]
-}
-</pre></div>
-</div>
-</div>
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre>
 
 <h3 id="xml-output-format">XML Output Format</h3>
 
 <pre>GET <a href="https://api.data.gov/nrel/pvdaq/v3/data.xml?api_key=DEMO_KEY&amp;system_id=2&amp;start_date=3/24/2011&amp;end_date=3/25/2011">/api/pvdaq/v3/data.xml?api_key=DEMO_KEY&amp;system_id=2&amp;start_date=3/24/2011&amp;end_date=3/25/2011</a></pre>
 
-<div>
-<div class="CodeRay">
-  <div class="code"><pre><span class="preprocessor">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="tag">&lt;response&gt;</span>
-  <span class="tag">&lt;errors</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
-  <span class="tag">&lt;outputs&gt;</span>
-    <span class="tag">&lt;headers</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-      <span class="tag">&lt;header&gt;</span>SiteID<span class="tag">&lt;/header&gt;</span>
-      <span class="tag">&lt;header&gt;</span>Date-Time<span class="tag">&lt;/header&gt;</span>
-      <span class="tag">&lt;header&gt;</span>poa_irradiance<span class="tag">&lt;/header&gt;</span>
-      <span class="tag">&lt;header&gt;</span>dc_power<span class="tag">&lt;/header&gt;</span>
-      <span class="tag">&lt;header&gt;</span>dc_pos_voltage<span class="tag">&lt;/header&gt;</span>
-      <span class="tag">&lt;header&gt;</span>dc_pos_current<span class="tag">&lt;/header&gt;</span>
-      <span class="tag">&lt;header&gt;</span>module_temp_1<span class="tag">&lt;/header&gt;</span>
-      <span class="tag">&lt;header&gt;</span>das_temp<span class="tag">&lt;/header&gt;</span>
-      <span class="tag">&lt;header&gt;</span>das_battery_voltage<span class="tag">&lt;/header&gt;</span>
-    <span class="tag">&lt;/headers&gt;</span>
-    <span class="tag">&lt;data</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-      <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-        <span class="tag">&lt;datum&gt;</span>SiteID<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum&gt;</span>Date-Time<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum&gt;</span>poa_irradiance<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum&gt;</span>dc_power<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum&gt;</span>dc_pos_voltage<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum&gt;</span>dc_pos_current<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum&gt;</span>module_temp_1<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum&gt;</span>das_temp<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum&gt;</span>das_battery_voltage<span class="tag">&lt;/datum&gt;</span>
-      <span class="tag">&lt;/datum&gt;</span>
-      <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">integer</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>2<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum&gt;</span>2011-03-24 00:00:00<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>0.0<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>-0.0002<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>-0.7311<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>0.0003<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>-3.5754<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>4.3217<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>12.2088<span class="tag">&lt;/datum&gt;</span>
-      <span class="tag">&lt;/datum&gt;</span>
-      <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">integer</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>2<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum&gt;</span>2011-03-24 00:01:00<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>0.0<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>-0.0002<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>-0.767<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>0.0003<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>-3.4774<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>4.2991<span class="tag">&lt;/datum&gt;</span>
-        <span class="tag">&lt;datum</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">float</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>12.2088<span class="tag">&lt;/datum&gt;</span>
-      <span class="tag">&lt;/datum&gt;</span>
-    <span class="tag">&lt;/data&gt;</span>
-  <span class="tag">&lt;/outputs&gt;</span>
-  <span class="tag">&lt;warnings</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
-  <span class="tag">&lt;infos</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">"</span><span class="content">array</span><span class="delimiter">"</span></span><span class="tag">/&gt;</span>
-  <span class="tag">&lt;inputs&gt;</span>
-    <span class="tag">&lt;api-key&gt;</span>DEMO_KEY<span class="tag">&lt;/api-key&gt;</span>
-    <span class="tag">&lt;system-id&gt;</span>2<span class="tag">&lt;/system-id&gt;</span>
-    <span class="tag">&lt;start-date&gt;</span>3/24/2011<span class="tag">&lt;/start-date&gt;</span>
-    <span class="tag">&lt;end-date&gt;</span>3/25/2011<span class="tag">&lt;/end-date&gt;</span>
-  <span class="tag">&lt;/inputs&gt;</span>
-  <span class="tag">&lt;version&gt;</span>3.0.1<span class="tag">&lt;/version&gt;</span>
-<span class="tag">&lt;/response&gt;</span>
-</pre></div>
-</div>
-</div>
+<pre class="highlight xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;response&gt;</span>
+  <span class="nt">&lt;errors</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;outputs&gt;</span>
+    <span class="nt">&lt;headers</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;header&gt;</span>SiteID<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>Date-Time<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>poa_irradiance<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>dc_power<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>dc_pos_voltage<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>dc_pos_current<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>module_temp_1<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>das_temp<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;header&gt;</span>das_battery_voltage<span class="nt">&lt;/header&gt;</span>
+    <span class="nt">&lt;/headers&gt;</span>
+    <span class="nt">&lt;data</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>SiteID<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>Date-Time<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>poa_irradiance<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>dc_power<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>dc_pos_voltage<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>dc_pos_current<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>module_temp_1<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>das_temp<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>das_battery_voltage<span class="nt">&lt;/datum&gt;</span>
+      <span class="nt">&lt;/datum&gt;</span>
+      <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>2011-03-24 00:00:00<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>-0.0002<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>-0.7311<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>0.0003<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>-3.5754<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>4.3217<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>12.2088<span class="nt">&lt;/datum&gt;</span>
+      <span class="nt">&lt;/datum&gt;</span>
+      <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"integer"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum&gt;</span>2011-03-24 00:01:00<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>0.0<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>-0.0002<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>-0.767<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>0.0003<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>-3.4774<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>4.2991<span class="nt">&lt;/datum&gt;</span>
+        <span class="nt">&lt;datum</span> <span class="na">type=</span><span class="s">"float"</span><span class="nt">&gt;</span>12.2088<span class="nt">&lt;/datum&gt;</span>
+      <span class="nt">&lt;/datum&gt;</span>
+    <span class="nt">&lt;/data&gt;</span>
+  <span class="nt">&lt;/outputs&gt;</span>
+  <span class="nt">&lt;warnings</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;infos</span> <span class="na">type=</span><span class="s">"array"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;inputs&gt;</span>
+    <span class="nt">&lt;api-key&gt;</span>DEMO_KEY<span class="nt">&lt;/api-key&gt;</span>
+    <span class="nt">&lt;system-id&gt;</span>2<span class="nt">&lt;/system-id&gt;</span>
+    <span class="nt">&lt;start-date&gt;</span>3/24/2011<span class="nt">&lt;/start-date&gt;</span>
+    <span class="nt">&lt;end-date&gt;</span>3/25/2011<span class="nt">&lt;/end-date&gt;</span>
+  <span class="nt">&lt;/inputs&gt;</span>
+  <span class="nt">&lt;version&gt;</span>3.0.1<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/response&gt;</span>
+</pre>
 
 <h3 id="csv-output-format">CSV Output Format</h3>
 
 <pre>GET <a href="https://api.data.gov/nrel/pvdaq/v3/data.csv?api_key=DEMO_KEY&amp;system_id=2&amp;start_date=3/24/2011&amp;end_date=3/25/2011">/api/pvdaq/v3/data.csv?api_key=DEMO_KEY&amp;system_id=2&amp;start_date=3/24/2011&amp;end_date=3/25/2011</a></pre>
 
-<pre><code>SiteID,Date-Time,poa_irradiance,dc_power,dc_pos_voltage,dc_pos_current,module_temp_1,das_temp,das_battery_voltage
+<pre class="highlight plaintext">SiteID,Date-Time,poa_irradiance,dc_power,dc_pos_voltage,dc_pos_current,module_temp_1,das_temp,das_battery_voltage
 2,2011-03-24 00:00:00,0.0,-0.0002,-0.7311,0.0003,-3.5754,4.3217,12.2088
 2,2011-03-24 00:01:00,0.0,-0.0002,-0.767,0.0003,-3.4774,4.2991,12.2088
-</code></pre>
+</pre>
 
 <h2 id="rate-limits">Rate Limits</h2>
 
@@ -530,23 +486,29 @@
 <p><a href="/docs/errors">Standard errors</a> may be returned. In addition, the following service-specific errors may be returned:</p>
 
 <table border="0" cellpadding="0" cellspacing="0" class="doc-parameters">
-<thead><tr>
-<th class="doc-parameters-name" scope="col">HTTP Status Code</th>
+  <thead>
+    <tr>
+      <th class="doc-parameters-name" scope="col">HTTP Status Code</th>
       <th class="doc-parameters-required" scope="col">Description</th>
-    </tr></thead>
-<tbody><tr>
-<th class="doc-parameter-name" scope="row">401</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">401</th>
       <td class="doc-parameter-description">
         Unauthorized - For PVDAQ services, you must also provide a username and password for your PVDAQ account via <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic Authentication</a>. For login credentials, contact <a href="mailto:ryan.smith@nrel.gov">Ryan Smith</a>.
       </td>
-    </tr></tbody>
-<tbody><tr>
-<th class="doc-parameter-name" scope="row">422</th>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th class="doc-parameter-name" scope="row">422</th>
       <td class="doc-parameter-description">Unprocessable Entity - An invalid value was given for a query parameter. The response body will describe the specific error.</td>
-    </tr></tbody>
+    </tr>
+  </tbody>
 </table>
 
-          
+
             <div id="disqus_thread"></div>
             <script type="text/javascript">
                 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -561,10 +523,9 @@
             </script>
             <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-          
 
           <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
-            <a href="https://github.com/GSA-OCSIT/api.data.gov/blob/master/content/docs/nrel/solar/pvdaq-v3/data.md">Help Improve this Content</a>
+            <a href="https://github.com/GSA-OCSIT/api.data.gov/blob/master/source/docs/nrel/solar/pvdaq-v3/data.md.erb">Help Improve this Content</a>
           </div>
         </div>
       </div>
@@ -584,7 +545,7 @@
             <li class="last leaf"><a href="http://www.usa.gov" title="">USA.gov</a></li>
           </ul>
         </div>
-        <div id="footer-logo"><img src="/images/gsa/datagov-footer-logo-cb3085c5b9a.png" alt="Data.gov" /></div>
+        <div id="footer-logo"><img src="/images/gsa/datagov-footer-logo-c29d81b4.png" alt="Data.gov" /></div>
       </div>
     </div>
   </body>
