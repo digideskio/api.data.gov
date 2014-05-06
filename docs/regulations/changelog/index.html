@@ -86,16 +86,26 @@
         <div id="content">
           <h1 id="change-log">Change Log</h1>
 
-<h1 id="march-2014">2.1 - March 2014</h1>
+<h1 id="may-2014">3.0 - May 2014</h1>
+<ul>
+  <li>Records per page (rpp) is now limited to a maximum of 1,000 records</li>
+  <li>All changes listed from Beta release included</li>
+</ul>
+
+<h1 id="beta---march-2014">Beta - March 2014</h1>
 <ul>
   <li>Improvements to XML and JSON allow for easier processing</li>
-  <li>Each piece of information is now directly referrable via a key/element name</li>
+  <li>JSON now has descriptive keys for all metadata
+    <ul>
+      <li>Ex. <code>{ "@name": "Comment Due Date", $: "February 01 2012, at 11:59 PM Eastern Standard Time" }</code> becomes <code>commentDueDate: "2014-04-24T23:59:59-04:00"</code></li>
+    </ul>
+  </li>
   <li>Many fields now include a human-readable label as well as a key. The label is included as an attribute on the XML element.  JSON response include the label as a key/value pair under an object.</li>
   <li>Dates are formatted as ISO 8601 with the time zone</li>
   <li>Values now represented in a display-friendly format:
     <ul>
       <li>documentStatus:  "POSTED" to "Posted"</li>
-      <li>documentType: "PROPOSED_RULES" to "Proposed Rule".</li>
+      <li>documentType: "PROPOSED_RULES" to "Proposed Rule"</li>
       <li>dockeType: "NON_RULEMAKING" to "Nonrulemaking"</li>
     </ul>
   </li>
@@ -136,7 +146,7 @@
       <li>abstract</li>
       <li>CommentOnDoc
         <ul>
-          <li>Only documentId, documentType, and title are included (changed from v1).</li>
+          <li>Only documentId, documentType, and title are included (changed from v1)</li>
         </ul>
       </li>
     </ul>
@@ -179,7 +189,9 @@
 
 <h1 id="july-31-2013">2.0 - July 31, 2013</h1>
 <ul>
+  <li>Rate limits introduced</li>
   <li>Changed URL to use api.data.gov/regulations/</li>
+  <li>New API Key's are required. Free registration for a new key at http://api.data.gov</li>
   <li>Services renamed:
     <ul>
       <li>search to documents</li>
@@ -187,11 +199,9 @@
       <li>getdocket to docket</li>
     </ul>
   </li>
-  <li>New API Key's are required. Free registration for a new key at http://api.data.gov</li>
-  <li>JSON format updated to be easier to use</li>
+  <li>JSON format updated so it is easier to use</li>
   <li>Unified Agenda metadata added to Dockets (where applicable)</li>
   <li>Comment Count added to Docket</li>
-  <li>Rate limits introduced</li>
 </ul>
 
 <h1 id="february-18-2012">1.0 - February 18, 2012</h1>
