@@ -2,7 +2,7 @@
 <html lang="en-US" class="no-js">
   <head>
     <title>
-        Change Log
+        Regulations.gov API Terms of Use
           API
         |
       api.data.gov
@@ -148,136 +148,79 @@
             <li>
               <a href="/docs/regulations_pilot/">Regulations.gov</a>
             </li>
-            <li class="active">Change Log</li>
+            <li class="active">Regulations.gov API Terms of Use</li>
     </ol>
 
       <div class="wrap container content-page">
 
-    <h1 id="change-log">Change Log</h1>
+    <h1 id="regulationsgov-api-terms-of-use">Regulations.gov API Terms of Use</h1>
 
-<h1 id="may-2014">3.0 - May 2014</h1>
+<p>Regulations.gov offers its public data in machine readable format via an Application Programming Interface ("API"). This service is offered subject to your acceptance of the terms and conditions contained herein as well as any relevant sections of the Regulations.gov website Privacy Policy and User Notice (collectively, the "Agreement").</p>
+
+<h2 id="scope">Scope</h2>
+
+<p>All of the content, documentation, code and related materials made available to you through Regulations.gov is subject to these terms. Access to or use of Regulations.gov services or its content constitutes acceptance to this Agreement.</p>
+
+<h2 id="use">Use</h2>
+
+<p>You may use any Regulations.gov API to develop a service to search, display, analyze, retrieve, view and otherwise obtain information from Regulations.gov data.</p>
+
 <ul>
-  <li>Records per page (rpp) is now limited to a maximum of 1,000 records</li>
-  <li>All changes listed from Beta release included</li>
+  <li>The API can be used on demand, or the content can be queried and pulled into a separate database managed by an organization with an account ID.</li>
+  <li>To utilize the API, the organization must register and use a valid API key. The account API key must be included in each query when using the API.</li>
+  <li>Regulations.gov content is updated every day. API users who repackage and share the data or content with the public should display the "last updated" date near the Regulations.gov content.</li>
+  <li>End products that use Regulations.gov must conspicuously post to public users the following statement: "Regulations.gov and the Federal government cannot verify and are not responsible for the accuracy or authenticity of the data or analyses derived from the data after the data have been retrieved from Regulations.gov." Federal department and agency logos may not be used by persons who are not Federal agency employees or in relation to products (including Web pages) that are not Federal agency-sponsored.</li>
+  <li>All services which utilize or access the API should display the following notice prominently within the application: "This product uses the Regulations.gov Data API but is neither endorsed nor certified by Regulations.gov." You may use the Regulations.gov name or logo in order to identify the source of API content subject to these rules. You may not use the Regulations.gov name, logo, or the like to imply endorsement of any product, service, or entity, not-for-profit, commercial or otherwise.</li>
 </ul>
 
-<h1 id="beta---march-2014">Beta - March 2014</h1>
-<ul>
-  <li>Improvements to XML and JSON allow for easier processing</li>
-  <li>JSON now has descriptive keys for all metadata
-    <ul>
-      <li>Ex. <code>{ "@name": "Comment Due Date", $: "February 01 2012, at 11:59 PM Eastern Standard Time" }</code> becomes <code>commentDueDate: "2014-04-24T23:59:59-04:00"</code></li>
-    </ul>
-  </li>
-  <li>Many fields now include a human-readable label as well as a key. The label is included as an attribute on the XML element.  JSON response include the label as a key/value pair under an object.</li>
-  <li>Dates are formatted as ISO 8601 with the time zone</li>
-  <li>Values now represented in a display-friendly format:
-    <ul>
-      <li>documentStatus:  "POSTED" to "Posted"</li>
-      <li>documentType: "PROPOSED_RULES" to "Proposed Rule"</li>
-      <li>dockeType: "NON_RULEMAKING" to "Nonrulemaking"</li>
-    </ul>
-  </li>
-  <li>Charset is set to UTF-8 in all service responses</li>
-  <li>Response Content-Type is now limited to: 'application/json' and 'application/xml'</li>
-  <li>Renamed the field commentEndDate to commentDueDate</li>
-</ul>
+<h2 id="secondary-use">Secondary Use</h2>
 
-<h2 id="document">Document</h2>
-<ul>
-  <li>Renamed the parameters:
-    <ul>
-      <li>D to documentId</li>
-      <li>FR to federalRegisterNumber</li>
-    </ul>
-  </li>
-  <li>Fields renamed:
-    <ul>
-      <li>canCommentOnDocument to openForComment</li>
-      <li>commentText to comment</li>
-      <li>commentTrackingNbr to trackingNumber</li>
-      <li>frNumber to federalRegisterNumber (same as the parameter)</li>
-      <li>renditionTypes to fileFormats</li>
-    </ul>
-  </li>
-  <li>Fields removed:
-    <ul>
-      <li>commentOnObjId</li>
-      <li>isFrDoc</li>
-    </ul>
-  </li>
-  <li>New fields:
-    <ul>
-      <li>frCitation</li>
-      <li>postedDate</li>
-      <li>rin</li>
-      <li>docStatus</li>
-      <li>abstract</li>
-      <li>CommentOnDoc
-        <ul>
-          <li>Only documentId, documentType, and title are included (changed from v1)</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>File Content download URL's now listed as api.data.gov links and a "Download" service</li>
-  <li>fileFormats are no longer available for Public Submissions; Instead the values are available as metadata</li>
-  <li>Metadata 'entry' fields are now at the root-level and include a label for data presentation.
-    <ul>
-      <li>Ex. <code>&lt;entry name="Page Count"&gt;20&lt;/entry&gt;</code> becomes <code>&lt;pageCount label="Page Count"&gt;20&lt;/pageCount&gt;</code></li>
-      <li>Ex. <code>{ "@name": "Page Count", $: "20" }</code> becomes <code>pageCount: { "label": "Page Count", "value": "20" }</code></li>
-    </ul>
-  </li>
-  <li>XML Improvements:
-    <ul>
-      <li>fileFormats tag surrounds fileFormat entries in XML response</li>
-      <li>Topics are now wrapped with a topics element, and each topic is singular</li>
-    </ul>
-  </li>
-</ul>
+<p>Data accessed through Regulations.gov do not, and should not, include controls over its end use. However, as the data owners or authoritative sources, the Departments and Agencies providing the data retain version control. Once the data has been downloaded from Regulations.gov, the U.S. Government cannot verify and is not responsible for the quality, accuracy, reliability or timeliness of any analyses conducted using the downloaded data.</p>
 
-<h2 id="docket">Docket</h2>
-<ul>
-  <li>Renamed the parameter: D to docketId</li>
-  <li>The "metadata" and "ualist" field sets have been collapsed to the root level of the XML/Object</li>
-</ul>
+<h2 id="modification-or-false-representation-of-content">Modification or False Representation of Content</h2>
 
-<h2 id="search">Search</h2>
-<ul>
-  <li>File formats are no longer available. To download files, make a request for each Document</li>
-  <li>Fields removed from Search Model: docketModel, wdm, properties, propertyNames</li>
-  <li>Fields removed from Document Model: wdm, properties, propertyNames, fromParticipatingAgency, fileFormats, everOpenForComment, sortDir, objectId, fileFormats</li>
-  <li>Renamed fields:
-    <ul>
-      <li>canComment to openForComment</li>
-      <li>acceptComment to allowLateComment</li>
-      <li>agencyId to agencyAcronym</li>
-    </ul>
-  </li>
-</ul>
+<p>You may not modify or falsely represent content accessed through Regulations.gov and still claim the source is Regulations.gov. Modification includes but is not limited to altering dates, data values, or document text.</p>
 
-<h1 id="july-31-2013">2.0 - July 31, 2013</h1>
-<ul>
-  <li>Rate limits introduced</li>
-  <li>Changed URL to use api.data.gov/regulations/</li>
-  <li>New API Key's are required. Free registration for a new key at http://api.data.gov</li>
-  <li>Services renamed:
-    <ul>
-      <li>search to documents</li>
-      <li>getdocument to document</li>
-      <li>getdocket to docket</li>
-    </ul>
-  </li>
-  <li>JSON format updated so it is easier to use</li>
-  <li>Unified Agenda metadata added to Dockets (where applicable)</li>
-  <li>Comment Count added to Docket</li>
-</ul>
+<h2 id="right-to-limit">Right to Limit</h2>
 
-<h1 id="february-18-2012">1.0 - February 18, 2012</h1>
-<ul>
-  <li>Initial release of the Regulations.gov API</li>
-  <li>3 services available: Search, Document and Docket</li>
-</ul>
+<p>Regulations.gov reserves the right to limit the volume of transactions per user in order to ensure equal access to all Regulations.gov users. Use of the APIs may be subject to certain limitations on access, calls, or use as set forth within this Agreement or otherwise provided by Regulations.gov. If Regulations.gov reasonably believes that you have attempted to exceed or circumvent these limits, your ability to use the API may be permanently or temporarily blocked.<br />
+Regulations.gov may review your use of its services to improve the service or to insure compliance with this Agreement.</p>
+
+<h2 id="service-termination">Service Termination</h2>
+
+<p>If you wish to terminate this Agreement, you may do so by refraining from further use of the services. Regulations.gov reserves the right (though not the obligation) to (1) refuse to provide the services to you, if Regulations.gov finds that your use violates any Regulations.gov policy posted on its website (e.g., Regulations.gov Privacy Notice and the Regulations.gov User Notice), or (2) terminate or deny you access to all or part of the services at any time for any other reason in its sole discretion. Any hosted applications may also be shutdown or removed. All provisions of this Agreement which by their nature should survive termination shall survive termination including, without limitation, warranty disclaimers, indemnity, and limitations of liability.</p>
+
+<h2 id="changes">Changes</h2>
+
+<p>Regulations.gov reserves the right, at its sole discretion, to modify or replace this Agreement, in whole or in part. Your continued use of or access to the Regulations.gov services following posting of any changes to this Agreement constitutes acceptance of those modified terms. Regulations.gov may, in the future, offer new services and/or features. Such new features and/or services shall be subject to the terms and conditions of this Agreement.</p>
+
+<h2 id="disclaimer-of-warranties">Disclaimer of Warranties</h2>
+
+<p>Regulations.gov services are provided “as is” and on an “as-available” basis. Regulations.gov hereby disclaims all warranties of any kind, express or implied, including without limitation the warranties of merchantability, fitness for a particular purpose, and non-infringement. Regulations.gov makes no warranty that the services will be error free or that access thereto will be continuous or uninterrupted.</p>
+
+<h2 id="limitations-on-liability">Limitations on Liability</h2>
+
+<p>In no event will Regulations.gov be liable with to respect to any subject matter of this Agreement under any contract, negligence, strict liability or other legal or equitable theory for: (1) any special, incidental, or consequential damages; (2) the cost of procurement of substitute products or services; or (3) for interruption of use or loss or corruption of data.</p>
+
+<h2 id="general-representations">General Representations</h2>
+
+<p>You hereby warrant that (1) your use of the services will be in strict accordance with the Regulations.gov privacy policy, this Agreement, and all applicable laws and regulations, and (2) your use of the services will not infringe or misappropriate the intellectual property rights of any third party.</p>
+
+<h2 id="indemnification">Indemnification</h2>
+
+<p>You agree to indemnify and hold harmless Regulations.gov, its contractors, employees, agents, and the like from and against any and all claims and expenses including attorney’s fees, arising out of your use of the APIs, including but not limited to violation of this Agreement. This Indemnification clause shall not apply to government entities.</p>
+
+<h2 id="miscellaneous">Miscellaneous</h2>
+
+<p>This Agreement constitutes the entire Agreement between Regulations.gov and you concerning the subject matter hereof, and may only be modified by the posting of a revised version on this page by Regulations.gov.</p>
+
+<h2 id="disputes">Disputes</h2>
+
+<p>Any disputes arising out of this Agreement and access to or use of the services shall be governed, interpreted and enforced in accordance with the federal laws of the United States of America.</p>
+
+<h2 id="no-waiver-of-rights">No Waiver of Rights</h2>
+
+<p>Regulations.gov’s failure to exercise or enforce any right or provision of this Agreement shall not constitute waiver of such right or provision.v</p>
 
     
     <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">

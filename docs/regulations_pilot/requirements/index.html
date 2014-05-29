@@ -2,7 +2,7 @@
 <html lang="en-US" class="no-js">
   <head>
     <title>
-        
+        Comment API Requirements
           API
         |
       api.data.gov
@@ -148,66 +148,65 @@
             <li>
               <a href="/docs/regulations_pilot/">Regulations.gov</a>
             </li>
-            <li class="active"></li>
+            <li class="active">Comment API Requirements</li>
     </ol>
 
       <div class="wrap container content-page">
 
     <h1 id="general-comment-api-requirements">General Comment API Requirements</h1>
 
-<ol>
-  <li>
-    <p>Getting Started<br />
- a. In order to use this service, you must have the ability to protect the API key from exposure.  This typically means you should only pass the API key directly from your server to our server.  The API key should not be included in any client-side JavaScript or HTML, or be exposed in any other way to a user's Web Browser.</p>
-
-    <ul>
-      <li>Review our Terms of Service, available here: http://www.regulations.gov/#!developers;page=termsOfService</li>
-      <li>You are responsible for providing users with a quality commenting experience, similar to what they would receive on Regulations.gov.  You must not defraud, mislead, or spam users. </li>
-    </ul>
-  </li>
-</ol>
-
+<h2 id="getting-started">Getting Started</h2>
 <ul>
-  <li>Comment Form<br />
-  a. Display the Regulations.gov logo somewhere on the form.  For a high resolution image see:  http://regulations.gov/images/regs_logo.eps   This image may be resized to suit the user interface.
+  <li>In order to use this service, you must have the ability to protect the API key from exposure.  This typically means you should only pass the API key directly from your server to our server.  The API key should not be included in any client-side JavaScript or HTML, or be exposed in any other way to a user's Web Browser.</li>
+  <li>Review our Terms of Service, available here: http://www.regulations.gov/#!developers;page=termsOfService</li>
+  <li>You are responsible for providing users with a quality commenting experience, similar to what they would receive on Regulations.gov.  You must not defraud, mislead, or spam users. </li>
+</ul>
+
+<h2 id="comment-form">Comment Form</h2>
+<ul>
+  <li>Display the Regulations.gov logo somewhere on the form.  For a high resolution image see:  http://regulations.gov/images/regs_logo.eps   This image may be resized to suit the user interface.</li>
+  <li>Display the following text in a prominent location on the form or widget: You are submitting an official comment to Regulations.gov." </li>
+  <li>If the agency provides the following, then this information needs to be accessible to the commenter:
     <ul>
-      <li>Display the following text in a prominent location on the form or widget: You are submitting an official comment to Regulations.gov." </li>
-      <li>If the agency provides the following, then this information needs to be accessible to the commenter:
-        <ul>
-          <li>Agency Posting Guidelines</li>
-          <li>Alternate Ways to Comment</li>
-        </ul>
-      </li>
-      <li>Comments larger than 5,000 characters are not accepted through the free text comment form box.  If the comment is too large, then the form needs to handle the errors.</li>
-      <li>Display the metadata fields specific to each agency"s comment form.</li>
-      <li>Any additional metadata fields that are included on the form need to make clear that they are not provided to Regulations.gov since it is not part of our form.</li>
-      <li>Indicate form fields that are required.</li>
-      <li>Indicate form fields that will be publicly viewable on Regulations.gov.</li>
-      <li>
-        <p>Display the following text: <br />
-&gt;You are filing a document into an official docket.  Any personal information entered on this form may be publicly viewable on the web.<br />
-&gt;<br />
-&gt; I read and understand the statement above.</p>
-      </li>
-      <li>Next to the I read and understand the statement above" text, include a check box that enables the comment button.</li>
-      <li>Include a Submit button.</li>
-      <li>Display any validation or other failed messages to the end user.  Where appropriate, API developers can use their own language to describe any issues with the submission form data.</li>
-      <li>With a successful submission, the API will return a tracking number.  If a user submitted any attachments than they need to receive validation that the attachments were received.  API developers must also display this tracking number to the end-user, along with the following text: <br />
-  &gt; Your comment may be viewable on Regulations.gov once the agency has reviewed it. This process is dependent on agency public submission policies/procedures and processing times. Use your tracking number to find out the status of your comment."</li>
-    </ul>
-    <p>Note: You may not display your own version of a tracking number; you must display the Regulations.gov tracking number.</p>
-    <ul>
-      <li>Links to both the User Notice and Privacy and Security Notice pages need to be included on the widget:<br />
-    * User Notice: http://www.regulations.gov/#!userNotice<br />
-    * Privacy and Security Notice: http://www.regulations.gov/#!privacyNotice</li>
+      <li>Agency Posting Guidelines</li>
+      <li>Alternate Ways to Comment</li>
     </ul>
   </li>
-  <li>Data Collection<br />
-  a. Use of any information obtained through Regulations.gov APIs must not violate any law or the rights of any individual or entity.
+  <li>Comments larger than 5,000 characters are not accepted through the free text comment form box.  If the comment is too large, then the form needs to handle the errors.</li>
+  <li>Display the metadata fields specific to each agency"s comment form.</li>
+  <li>Any additional metadata fields that are included on the form need to make clear that they are not provided to Regulations.gov since it is not part of our form.</li>
+  <li>Indicate form fields that are required.</li>
+  <li>Indicate form fields that will be publicly viewable on Regulations.gov.</li>
+  <li>Display the following text:  </li>
+</ul>
+<blockquote>
+   You are filing a document into an official docket.  Any personal information entered on this form may be publicly viewable on the web.
+   <br /><br />
+   I read and understand the statement above.
+</blockquote>
+<ul>
+  <li>Next to the I read and understand the statement above" text, include a check box that enables the comment button.</li>
+  <li>Include a Submit button.</li>
+  <li>Display any validation or other failed messages to the end user.  Where appropriate, API developers can use their own language to describe any issues with the submission form data.</li>
+  <li>With a successful submission, the API will return a tracking number.  If a user submitted any attachments than they need to receive validation that the attachments were received.  API developers must also display this tracking number to the end-user, along with the following text:  </li>
+</ul>
+<blockquote>
+Your comment may be viewable on Regulations.gov once the agency has reviewed it. This process is dependent on agency public submission policies/procedures and processing times. Use your tracking number to find out the status of your comment."
+</blockquote>
+<p>Note: You may not display your own version of a tracking number; you must display the Regulations.gov tracking number.</p>
+<ul>
+  <li>Links to both the User Notice and Privacy and Security Notice pages need to be included on the widget:
     <ul>
-      <li>You may not transfer any information that a user provides on a comment form.  This includes selling any data that is provided through the form. </li>
+      <li>User Notice: http://www.regulations.gov/#!userNotice</li>
+      <li>Privacy and Security Notice: http://www.regulations.gov/#!privacyNotice</li>
     </ul>
   </li>
+</ul>
+
+<h2 id="data-collection">Data Collection</h2>
+<ul>
+  <li>Use of any information obtained through Regulations.gov APIs must not violate any law or the rights of any individual or entity.</li>
+  <li>You may not transfer any information that a user provides on a comment form.  This includes selling any data that is provided through the form. </li>
 </ul>
 
 <h3 id="api-key-misuse">API Key Misuse</h3>
@@ -226,20 +225,16 @@ Comment Form Configuration Caching</p>
 <p>You may cache the results of the comment form configuration for up to 24 hours.  The return value typically does not change during the comment period.</p>
 
 <h2 id="best-practices--recommendations">Best Practices / Recommendations</h2>
-<ol>
-  <li>Include the title of the Federal Register document.
-    <ul>
-      <li>Include the agency name.</li>
-      <li>Provide a link to the Commenter's Checklist PDF.</li>
-      <li>Provide users with the ability to Upload files.  The individual file size maximum is 10 MB.</li>
-      <li>If a user uploads an attachment without entering text in the comment box, we recommend populating the comment box with the text: "See attached file(s)".  We found this eliminates user frustration when their only intent is to submit the comment as an attachment.</li>
-      <li>You should disable the form after the comment end date.</li>
-      <li>Provide users with the comment due date and time.  This will reduce user confusion and complaints.</li>
-      <li>Our team offers assistance to ensure that the API implementation is working properly.  Please contact us prior to the launch by visiting  <br />
-http://www.regulations.gov/#!contactUs or calling our help desk at 1-877-378-5457 (toll free) or 703-412-3083.</li>
-    </ul>
-  </li>
-</ol>
+<ul>
+  <li>Include the title of the Federal Register document.</li>
+  <li>Include the agency name.</li>
+  <li>Provide a link to the Commenter's Checklist PDF.</li>
+  <li>Provide users with the ability to Upload files.  The individual file size maximum is 10 MB.</li>
+  <li>If a user uploads an attachment without entering text in the comment box, we recommend populating the comment box with the text: "See attached file(s)".  We found this eliminates user frustration when their only intent is to submit the comment as an attachment.</li>
+  <li>You should disable the form after the comment end date.</li>
+  <li>Provide users with the comment due date and time.  This will reduce user confusion and complaints.</li>
+  <li>Our team offers assistance to ensure that the API implementation is working properly.  Please contact us prior to the launch by visiting http://www.regulations.gov/#!contactUs or calling our help desk at 1-877-378-5457 (toll free) or 703-412-3083.</li>
+</ul>
 
     
     <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
