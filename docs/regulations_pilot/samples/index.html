@@ -2,7 +2,7 @@
 <html lang="en-US" class="no-js">
   <head>
     <title>
-        Showcase
+        Samples
           API
         |
       api.data.gov
@@ -37,7 +37,7 @@
       ga('send', 'pageview');
     </script>
   </head>
-  <body class="archive category docs docs_regulations_pilot docs_regulations_pilot_showcase docs_regulations_pilot_showcase_index">
+  <body class="archive category docs docs_regulations_pilot docs_regulations_pilot_samples docs_regulations_pilot_samples_index">
     <!--[if lt IE 8]>
   <div class="alert alert-warning">
     You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your
@@ -148,40 +148,110 @@
             <li>
               <a href="/docs/regulations_pilot/">Regulations.gov</a>
             </li>
-            <li class="active">Showcase</li>
+            <li class="active">Samples</li>
     </ol>
 
       <div class="wrap container content-page">
 
-    <h1 id="showcase">Showcase</h1>
+    <h1 id="samples">Samples</h1>
 
-<p>NEW! Check out what developers are doing with Regulations.gov APIs:</p>
+<h2 id="responses-and-errors">Responses and Errors</h2>
 
-<p><img alt="Bloomberg Government" src="http://www.regulations.gov/images/dev-showcase-bloomberg.png" /></p>
+<h3 id="standard-response-format">Standard Response Format</h3>
+<p>All responses from the Comment API should come in our 'standard response' format.  This format includes a status, which will mirror the HTTP status code returned.  Additionally a message will be included.</p>
 
-<p><img alt="Docket Wrench" src="http://www.regulations.gov/images/dev-showcase-docketwrench.png" /></p>
+<pre class="highlight plaintext">Most responses will also include a code, developerMessage, and moreInfo attributes.  These 3 attributes are not yet populated for most responses, but are intended as a place-holder for future enhancements.
+</pre>
 
-<p><img alt="Notice and Comment" src="http://www.regulations.gov/images/dev-showcase-noticeandcomment.png" /></p>
+<h3 id="submit-comment-response">Submit Comment Response</h3>
+<p>For successful comments, a 'trackingNumber' attribute will be added to the standard response.<br />
+If you are implementing a solution which requires end-users interaction, you are required to make the comment tracking number available to them upon successful return from the API.<br />
+The comment tracking number will be wrapped in a standard response, available in either XML or JSON, depending on the format specified in the submission address.</p>
 
-<p><img alt="Office of the Federal Register" src="http://www.regulations.gov/images/dev-showcase-federalregister.png" /></p>
+<pre class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Success"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"developerMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"n/a"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"moreInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"n/a"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"trackingNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1jx-84zx-1bn2"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre>
 
-<h3 id="disclaimer">Disclaimer:</h3>
-<p>Regulations.gov cannot attest to the accuracy of the information provided by web sites or apps using Regulations.gov APIs. Linking to external web sites is not an endorsement by Regulations.gov of the web sites themselves, the owners or sponsors of the web sites, or the information presented in the website. Regulations.gov does not receive any compensation for web sites using its APIs that require paid subscription.</p>
+<pre class="highlight xml"><span class="nt">&lt;response&gt;</span>
+<span class="nt">&lt;status&gt;</span>201<span class="nt">&lt;/status&gt;</span>
+<span class="nt">&lt;code&gt;</span>201<span class="nt">&lt;/code&gt;</span>
+<span class="nt">&lt;message&gt;</span>Success<span class="nt">&lt;/message&gt;</span>
+<span class="nt">&lt;developerMessage&gt;</span>n/a<span class="nt">&lt;/developerMessage&gt;</span>
+<span class="nt">&lt;moreInfo&gt;</span>n/a<span class="nt">&lt;/moreInfo&gt;</span>
+<span class="nt">&lt;trackingNumber&gt;</span>1jx-84zx-qgkr<span class="nt">&lt;/trackingNumber&gt;</span>
+<span class="nt">&lt;/response&gt;</span>
+</pre>
 
-<p>Contact the Regulations.gov Help Desk to tell us about your integrated application at 1-877-378-5457 (toll free) or 703-412-3083, Monday through Friday, from 9:00 AM until 5:00 PM.  </p>
+<h3 id="invalid-comment-submissions">Invalid Comment Submissions</h3>
+<p>If the comment submission is not validated, you can expect a detailed response, often with additional data to help support corrective actions.<br />
+In the example below, there were problems with the data submitted for five of the fields.  General Comment and Last Name fields were passed to the API, however the value was empty.  The API did not receive data for the First Name, Middle Initial, and Address fields.</p>
 
-<p>For Regulations.gov to consider including a link to a website or app using the APIs, the following criteria must be met:</p>
+<h3 id="missing-required-fields">Missing Required Fields</h3>
+<pre class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Submission is missing required fields.  Please reload this page and try your submission again."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"developerMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Please ensure all required fields are included and contain data."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"moreInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"See included list(s) of invalid fields"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"missingFields"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"first_name"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"mid_initial"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"address1"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"emptyFields"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"last_name"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"general_comment"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre>
 
-<ul>
-  <li>The app must present information in an unbiased and fair manner.</li>
-  <li>The app must not advocate for or against any political party, candidate, or group.</li>
-  <li>The primary purpose of the app must not be to request contributions or donations nor engage in fundraising.<br />
-Regulations.gov prefers that websites and apps be accessible to a wide range of users, including users with disabilities.</li>
-</ul>
+<h3 id="example-of-file-attachment-issue-types">Example of File Attachment Issue Types</h3>
+
+<pre class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">406</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">406</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"There was an issue saving your comment due to invalid file attachments.  Please ensure the files are no large than 10 MB and are of an accepted format."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"developerMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parse the fileList to get the fileName and issueType for each file that was found to be invalid."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fileList"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"virus test.txt"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"issue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FILE_CONTAINS_VIRUS"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10MB.zip"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"issue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID_FILE_TYPE"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"fileName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10270 KB.xls"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"issue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FILE_TOO_LARGE"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre>
+
+<h3 id="http-status-codes-used">HTTP Status Codes Used</h3>
+<pre class="highlight plaintext">The following HTTP status codes can be expected:
+200 - OK
+201 - Created
+400 - Bad Request
+401 - Unauthorized
+404 - Not Found
+500 - Internal Server Error
+</pre>
 
     
     <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
-  <a href="https://github.com/GSA-OCSIT/api.data.gov/blob/master/source/docs/regulations_pilot/showcase.md.erb">Help Improve this Content</a>
+  <a href="https://github.com/GSA-OCSIT/api.data.gov/blob/master/source/docs/regulations_pilot/samples.md.erb">Help Improve this Content</a>
 </div>
 
           </div>

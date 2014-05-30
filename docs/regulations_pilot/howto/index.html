@@ -2,7 +2,7 @@
 <html lang="en-US" class="no-js">
   <head>
     <title>
-        Showcase
+        How to use the Regulations.gov Comment API
           API
         |
       api.data.gov
@@ -37,7 +37,7 @@
       ga('send', 'pageview');
     </script>
   </head>
-  <body class="archive category docs docs_regulations_pilot docs_regulations_pilot_showcase docs_regulations_pilot_showcase_index">
+  <body class="archive category docs docs_regulations_pilot docs_regulations_pilot_howto docs_regulations_pilot_howto_index">
     <!--[if lt IE 8]>
   <div class="alert alert-warning">
     You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your
@@ -148,40 +148,71 @@
             <li>
               <a href="/docs/regulations_pilot/">Regulations.gov</a>
             </li>
-            <li class="active">Showcase</li>
+            <li class="active">How to use the Regulations.gov Comment API</li>
     </ol>
 
       <div class="wrap container content-page">
 
-    <h1 id="showcase">Showcase</h1>
+    <h1 id="how-to-use-the-regulationsgov-comment-api">How to use the Regulations.gov Comment API</h1>
 
-<p>NEW! Check out what developers are doing with Regulations.gov APIs:</p>
+<p>The intended design for developers implementing an end-user oriented solution is that the comment information is submitted to the partner's own infrastructure, not directly to Regulations.gov.  This workflow will help to ensure the API key is protected, and only included in server-to-server communications.<br />
+- The expected format of the data submitted to the Regulations.gov Comment API is in a multipart/form-data encryption type, similar to a typical HTML form.<br />
+- The name attribute should match the attribute names specified from the comment form service.<br />
+- For files, you can allow your users to attach up to 10 documents at 10 MB or less per document. If you have more than one file, the fields should all be named the same: "uploadedFile".<br />
+- The following is a simple example of a form that could be submitted to the Comment API service.  <br />
+- Keep in mind this simple example is not the intended use, as the api_key is exposed in the form action.</p>
 
-<p><img alt="Bloomberg Government" src="http://www.regulations.gov/images/dev-showcase-bloomberg.png" /></p>
+<h3 id="sample-form">Sample Form</h3>
 
-<p><img alt="Docket Wrench" src="http://www.regulations.gov/images/dev-showcase-docketwrench.png" /></p>
+<pre class="highlight html"><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"http://api.data.gov/regulations/v3/comment?api_key=DEMO_KEY"</span> <span class="na">method=</span><span class="s">"post"</span> <span class="na">enctype=</span><span class="s">"multipart/form-data"</span><span class="nt">&gt;</span>
+ 
+    <span class="nt">&lt;p&gt;</span>First <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"first_name"</span> <span class="na">size=</span><span class="s">"30"</span><span class="nt">/&gt;&lt;/p&gt;</span>
+ 
+    <span class="nt">&lt;p&gt;</span>Last <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"last_name"</span> <span class="na">size=</span><span class="s">"30"</span><span class="nt">/&gt;&lt;/p&gt;</span>
+ 
+    <span class="nt">&lt;p&gt;</span>Email <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">size=</span><span class="s">"30"</span><span class="nt">/&gt;&lt;/p&gt;</span>
+ 
+    <span class="nt">&lt;p&gt;</span>country <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"country"</span> <span class="na">size=</span><span class="s">"30"</span><span class="nt">/&gt;&lt;/p&gt;</span>
+ 
+    <span class="nt">&lt;p&gt;</span>organization <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"organization"</span> <span class="na">size=</span><span class="s">"30"</span><span class="nt">/&gt;&lt;/p&gt;</span>
+ 
+    <span class="nt">&lt;p&gt;</span>General Comment <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"general_comment"</span><span class="nt">&gt;&lt;/textarea&gt;&lt;/p&gt;</span>
+ 
+    <span class="nt">&lt;p&gt;</span>Select a file : <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"uploadedFile"</span> <span class="na">size=</span><span class="s">"50"</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+ 
+    <span class="nt">&lt;p&gt;</span>Select a file : <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"uploadedFile"</span> <span class="na">size=</span><span class="s">"50"</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+ 
+    <span class="nt">&lt;p&gt;</span>Select a file : <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"uploadedFile"</span> <span class="na">size=</span><span class="s">"50"</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+ 
+   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"hidden"</span> <span class="na">name=</span><span class="s">comment_on</span> <span class="na">size=</span><span class="s">"30"</span> <span class="na">value=</span><span class="s">"FSIS_FRDOC_0001-0255"</span><span class="nt">/&gt;</span>
+ 
+   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Submit Comment"</span> <span class="nt">/&gt;</span>
+ 
+<span class="nt">&lt;/form&gt;</span>
+</pre>
 
-<p><img alt="Notice and Comment" src="http://www.regulations.gov/images/dev-showcase-noticeandcomment.png" /></p>
+<h2 id="uploaded-files">Uploaded Files</h2>
+<p>The uploaded files must be in one of the accepted formats and no larger then 10 MB.</p>
 
-<p><img alt="Office of the Federal Register" src="http://www.regulations.gov/images/dev-showcase-federalregister.png" /></p>
+<h3 id="accepted-file-types">Accepted File Types</h3>
+<pre class="highlight plaintext">File Types are validated by their extension. The following extensions are currently supported:
+"bmp", "doc", "xls", "pdf", "gif", "htm", "html", "jpg", "jpeg", "png", "ppt", 
+"rtf", "sgml", "tiff", "tif", "txt", "wpd", "xml", "docx", "xlsx", "pptx"
+</pre>
 
-<h3 id="disclaimer">Disclaimer:</h3>
-<p>Regulations.gov cannot attest to the accuracy of the information provided by web sites or apps using Regulations.gov APIs. Linking to external web sites is not an endorsement by Regulations.gov of the web sites themselves, the owners or sponsors of the web sites, or the information presented in the website. Regulations.gov does not receive any compensation for web sites using its APIs that require paid subscription.</p>
+<h3 id="file-size">File Size</h3>
+<pre class="highlight plaintext">Uploaded files (attachments) are limited to 10 MB (10,485,760 bytes)
+</pre>
 
-<p>Contact the Regulations.gov Help Desk to tell us about your integrated application at 1-877-378-5457 (toll free) or 703-412-3083, Monday through Friday, from 9:00 AM until 5:00 PM.  </p>
+<p>If the comment is only provided via one or more uploaded files, then we recommend including the following text as the comment text in general_comment field.</p>
 
-<p>For Regulations.gov to consider including a link to a website or app using the APIs, the following criteria must be met:</p>
-
-<ul>
-  <li>The app must present information in an unbiased and fair manner.</li>
-  <li>The app must not advocate for or against any political party, candidate, or group.</li>
-  <li>The primary purpose of the app must not be to request contributions or donations nor engage in fundraising.<br />
-Regulations.gov prefers that websites and apps be accessible to a wide range of users, including users with disabilities.</li>
-</ul>
+<h3 id="comment-text-for-uploaded-file-only-comments">Comment Text for Uploaded File Only Comments</h3>
+<pre class="highlight plaintext">See attached file(s)
+</pre>
 
     
     <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
-  <a href="https://github.com/GSA-OCSIT/api.data.gov/blob/master/source/docs/regulations_pilot/showcase.md.erb">Help Improve this Content</a>
+  <a href="https://github.com/GSA-OCSIT/api.data.gov/blob/master/source/docs/regulations_pilot/howto.md.erb">Help Improve this Content</a>
 </div>
 
           </div>
