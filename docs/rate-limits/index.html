@@ -168,16 +168,7 @@
 
 <h2 id="rate-limit-error-response">Rate Limit Error Response</h2>
 
-<p>If your API key exceeds the rate limits, you will receive a response with an HTTP status code of 503, Service Unavailable. The response body will contain an error message reading "503 Service Unavailable (Rate Limit Exceeded)." For example, a JSON request that has exceed the rate limits would respond with:</p>
-
-<pre class="highlight json"><span class="p">{</span><span class="w">
-  </span><span class="s2">"errors"</span><span class="p">:[</span><span class="w">
-    </span><span class="s2">"503 Service Unavailable (Rate Limit Exceeded)"</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre>
-
-<p>For more details on how errors are returned, see the <a href="/docs/errors">general Web service errors</a>.</p>
+<p>If your API key exceeds the rate limits, you will receive a response with an HTTP status code of 429 (Too Many Requests).</p>
 
 <h2 id="need-higher-limits">Need Higher Limits?</h2>
 
