@@ -149,58 +149,20 @@
       
       <div class="wrap container content-page">
 
-    <!--[if lt IE 9]>
-<div class="alert">
-  <strong>You're using an outdated web browser</strong><br>
-  In order to view this interactive documentation, please <a href="http://browsehappy.com">upgrade your browser</a>.
-</div>
-<![endif]-->
+    <h1 id="regulationsgov-api">Regulations.gov API</h1>
 
-<style>
-.swagger-ui-wrap .info_description a {
-	font-size: 16px;
-	line-height: 25px;
-}
-.regulations-main h3 em {
-	color: green;
-}
-</style>
-<script type="text/javascript">
-  window.swaggerUi = new SwaggerUi({
-    url: "/docs/regulations/api-docs.json",
-    dom_id: "swagger-ui-container",
-    supportHeaderParams: false,
-    supportedSubmitMethods: ['get', 'post', 'put', 'delete'],
-    onComplete: function(swaggerApi, swaggerUi){
-      if(console) {
-        console.log("Loaded SwaggerUI")
-      }
-      $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
-    },
-    onFailure: function(data) {
-      if(console) {
-        console.log("Unable to Load SwaggerUI");
-        console.log(data);
-      }
-    },
-    docExpansion: "list"
-  });
+<h3 class="doc">
 
-  window.swaggerUi.load();
-</script>
-<div class="regulations-main">
-<h2>Regulations.gov API</h2>
-<p>When Congress passes laws, federal agencies implement those laws through regulations. Regulations vary in subject, but include everything from ensuring water quality to setting health care standards. Regulations.gov is where users can find and comment on federal regulations. In addition to finding information on Regulations.gov, our APIs allow users to develop alternative ways to present regulatory data. To learn more about the program visit the <a href="http://www.regulations.gov/#!aboutProgram">About Us</a> page.<p>
-<h3>Regulations.gov Commenting API</h3>
-<p>Regulations.gov is offering the Regulations.gov Comment API. The Comment API enables developers to build an embeddable comment form on their own site by providing access to agency specific comment forms. A HTTP POST service validates and accepts completed forms, transmitting them to the responsible agency.</p>
-<p>Currently, the Comment API is available exclusively to the eRulemaking Program's federal partner agencies and partner agency sponsored organizations. This effort is still in a BETA period, for information about using the Regulations.gov Commenting API and working with a partner agency, please contact the eRulemaking Program Management Office (Mike Whiting at Whiting.mike@epa.gov)</p>
-</div>
-<div id="swagger-ui-container" class="swagger-ui-wrap swagger-ui-hide-response-content-type">
-</div>
+<a href="http://regulationsgov.github.io/developers">Regulations.gov API</a>
+
+</h3>
+
+<p>Regulations.gov provides access to Federal regulatory materials and increases public participation and their understanding of the Federal rule making process.  The Regulations.gov developer page describes how to access and use regulatory information and public comments via Web services.</p>
+
 
     
     <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
-  <a href="https://github.com/18F/api.data.gov/blob/master/source/docs/regulations/index.html.erb">Help Improve this Content</a>
+  <a href="https://github.com/18F/api.data.gov/blob/master/source/docs/regulations/index.md.erb">Help Improve this Content</a>
 </div>
 
           </div>
