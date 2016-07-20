@@ -160,7 +160,6 @@
 <p>This should be resolved by future <a href="https://bugs.openjdk.java.net/browse/JDK-8154757">JVM updates</a>, but if you're running into the issue, you can resolve it by manually adding the root certificate to the JVM keystore. To manually add the root certificate to the JVM keystore:</p>
 
 <ol>
-  <li>Verify that our certificate is actually trusted by your browser: <a href="https://api.data.gov">https://api.data.gov</a>.</li>
   <li>
     <p>Download the "DST Root CA X3" certificate to a file named <code>dst-root-ca-x3.pem</code>:</p>
 
@@ -168,7 +167,17 @@
     &gt; dst-root-ca-x3.pem
 </pre>
   </li>
-  <li>You should be careful when adding certificates to your keystore. To double check the contents of this file, ensure it's contents match what's listed in <a href="https://curl.haxx.se/ca/cacert.pem">https://curl.haxx.se/ca/cacert.pem</a> under "DST Root CA X3" (this file is extracted from Mozilla Firefox's trusted certificates) and on <a href="https://www.identrust.com/certificates/trustid/root-download-x3.html">https://www.identrust.com/certificates/trustid/root-download-x3.html</a> (this is the vendor's page to provide their root).</li>
+  <li>
+    <p>You should be careful when adding certificates to your keystore. The <code>dst-root-ca-x3.pem</code> file should have a SHA256 checksum of <code>139a5e4a4e0fa505378c72c5f700934ce8333f4e6b1b508886c4b0eb14f4be99</code>:</p>
+
+<pre class="highlight shell"><span class="gp">$ </span>openssl dgst -sha256 dst-root-ca-x3.pem
+SHA256<span class="o">(</span>dst-root-ca-x3.pem<span class="o">)=</span> 139a5e4a4e0fa505378c72c5f700934ce8333f4e6b1b508886c4b0eb14f4be99
+</pre>
+
+    <ul>
+      <li>If you'd like further verification that this "DST Root CA X3" certificate is part of most trusted root stores, you can find the "DST Root CA X3" certificate, with the same contents, at <a href="https://curl.haxx.se/ca/cacert.pem">https://curl.haxx.se/ca/cacert.pem</a> (this file is extracted from Mozilla Firefox's trusted certificates).</li>
+    </ul>
+  </li>
   <li>Find the <code>JAVA_HOME</code> environment variable on your system. This may already be set, or you may need to <a href="http://stackoverflow.com/a/20653441">find it</a> and set it.</li>
   <li>
     <p>Add the <code>dst-root-ca-x3.pem</code> root certificate to the JVM keystore:</p>
