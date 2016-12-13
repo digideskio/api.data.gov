@@ -13,14 +13,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Abel%7CLato%3A100%2C300%2C400%2C700&#038;ver=3.8">
-    <link href="../../static/stylesheets/all-f13dbc63.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/stylesheets/all-2df75cec.css" rel="stylesheet" />
 
     <!--[if lt IE 9]>
-      <script src="../../static/javascripts/ie_lt_9-abc24081.js" type="text/javascript"></script>
+      <script src="../../static/javascripts/ie_lt_9-9f2d2b9c.js"></script>
     <![endif]-->
     <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type='text/javascript' src="//www.google.com/jsapi?ver=3.8"></script>
-    <script src="../../static/javascripts/all-f9727213.js" type="text/javascript"></script>
+    <script src="../../static/javascripts/all-5faa7929.js"></script>
     <script type="text/javascript">
   var analyticsFileTypes = [''];
   var analyticsSnippet = 'enabled';
@@ -163,17 +163,15 @@
   <li>
     <p>Download the "DST Root CA X3" certificate to a file named <code>dst-root-ca-x3.pem</code>:</p>
 
-<pre class="highlight shell"><span class="gp">$ </span>curl <span class="s2">"https://ssl-tools.net/certificates/dac9024f54d8f6df94935fb1732638ca6ad77c13.pem"</span> <span class="se">\</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s2">"https://ssl-tools.net/certificates/dac9024f54d8f6df94935fb1732638ca6ad77c13.pem"</span> <span class="se">\</span>
     &gt; dst-root-ca-x3.pem
-</pre>
-  </li>
+</code></pre>  </li>
   <li>
     <p>You should be careful when adding certificates to your keystore. The <code>dst-root-ca-x3.pem</code> file should have a SHA256 checksum of <code>139a5e4a4e0fa505378c72c5f700934ce8333f4e6b1b508886c4b0eb14f4be99</code>:</p>
 
-<pre class="highlight shell"><span class="gp">$ </span>openssl dgst -sha256 dst-root-ca-x3.pem
+<pre class="highlight shell"><code><span class="gp">$ </span>openssl dgst -sha256 dst-root-ca-x3.pem
 SHA256<span class="o">(</span>dst-root-ca-x3.pem<span class="o">)=</span> 139a5e4a4e0fa505378c72c5f700934ce8333f4e6b1b508886c4b0eb14f4be99
-</pre>
-
+</code></pre>
     <ul>
       <li>If you'd like further verification that this "DST Root CA X3" certificate is part of most trusted root stores, you can find the "DST Root CA X3" certificate, with the same contents, at <a href="https://curl.haxx.se/ca/cacert.pem">https://curl.haxx.se/ca/cacert.pem</a> (this file is extracted from Mozilla Firefox's trusted certificates).</li>
     </ul>
@@ -182,16 +180,15 @@ SHA256<span class="o">(</span>dst-root-ca-x3.pem<span class="o">)=</span> 139a5e
   <li>
     <p>Add the <code>dst-root-ca-x3.pem</code> root certificate to the JVM keystore:</p>
 
-<pre class="highlight shell"><span class="gp">$ </span>sudo keytool -trustcacerts -keystore <span class="nv">$JAVA_HOME</span>/jre/lib/security/cacerts <span class="se">\</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>sudo keytool -trustcacerts -keystore <span class="nv">$JAVA_HOME</span>/jre/lib/security/cacerts <span class="se">\</span>
     -storepass changeit -noprompt -importcert -alias dst-root-ca-x3 <span class="se">\</span>
     -file dst-root-ca-x3.pem
-</pre>
-  </li>
+</code></pre>  </li>
 </ol>
 
     
     <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
-  <a href="https://github.com/18F/api.data.gov/blob/master/source/docs/https.md">Help Improve this Content</a>
+  <a href="https://github.com/18F/api.data.gov/blob/master/source/docs/https.html.md">Help Improve this Content</a>
 </div>
 
           </div>

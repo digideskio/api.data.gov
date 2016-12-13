@@ -12,14 +12,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Abel%7CLato%3A100%2C300%2C400%2C700&#038;ver=3.8">
-    <link href="../../static/stylesheets/all-f13dbc63.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/stylesheets/all-2df75cec.css" rel="stylesheet" />
 
     <!--[if lt IE 9]>
-      <script src="../../static/javascripts/ie_lt_9-abc24081.js" type="text/javascript"></script>
+      <script src="../../static/javascripts/ie_lt_9-9f2d2b9c.js"></script>
     <![endif]-->
     <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type='text/javascript' src="//www.google.com/jsapi?ver=3.8"></script>
-    <script src="../../static/javascripts/all-f9727213.js" type="text/javascript"></script>
+    <script src="../../static/javascripts/all-5faa7929.js"></script>
     <script type="text/javascript">
   var analyticsFileTypes = [''];
   var analyticsSnippet = 'enabled';
@@ -160,9 +160,8 @@
 
 <p>To use your key, simply pass the key as a URL query parameter when making Web service requests. For example:</p>
 
-<pre class="highlight plaintext">GET https://api.data.gov/nrel/alt-fuel-stations/v1.json?limit=1&amp;api_key=YOUR_KEY_HERE
-</pre>
-
+<pre class="highlight plaintext"><code>GET https://api.data.gov/nrel/alt-fuel-stations/v1.json?limit=1&amp;api_key=YOUR_KEY_HERE
+</code></pre>
 <h2 id="ways-to-pass-your-api-key">Ways to Pass Your API Key</h2>
 
 <p>Your API key may be passed to the service in a few different ways. Pick which ever method is easiest for you.</p>
@@ -171,28 +170,25 @@
 
 <p>Pass the API key into the <code>X-Api-Key</code> header:</p>
 
-<pre class="highlight shell">curl -H <span class="s1">'X-Api-Key: DEMO_KEY'</span> <span class="s1">'https://api.data.gov/nrel/alt-fuel-stations/v1.json?limit=1'</span>
-</pre>
-
+<pre class="highlight shell"><code>curl -H <span class="s1">'X-Api-Key: DEMO_KEY'</span> <span class="s1">'https://api.data.gov/nrel/alt-fuel-stations/v1.json?limit=1'</span>
+</code></pre>
 <h3 id="get-query-parameter">GET Query Parameter</h3>
 
 <p>Pass the API key into the <code>api_key</code> GET query string parameter:</p>
 
-<pre class="highlight shell">curl <span class="s1">'https://api.data.gov/nrel/alt-fuel-stations/v1.json?limit=1&amp;api_key=YOUR_KEY_HERE'</span>
-</pre>
-
+<pre class="highlight shell"><code>curl <span class="s1">'https://api.data.gov/nrel/alt-fuel-stations/v1.json?limit=1&amp;api_key=YOUR_KEY_HERE'</span>
+</code></pre>
 <p><em>Note:</em> The GET query parameter may be used for non-GET requests (such as POST and PUT).</p>
 
 <h3 id="http-basic-auth-username">HTTP Basic Auth Username</h3>
 
 <p>As an alternative, pass the API key as the username (with an empty password) using HTTP basic authentication:</p>
 
-<pre class="highlight shell">curl <span class="s1">'https://YOUR_KEY_HERE@api.data.gov/nrel/alt-fuel-stations/v1.json?limit=1'</span>
-</pre>
-
+<pre class="highlight shell"><code>curl <span class="s1">'https://YOUR_KEY_HERE@api.data.gov/nrel/alt-fuel-stations/v1.json?limit=1'</span>
+</code></pre>
     
     <div style="text-align: center; font-style: italic; padding: 3em 0.5em 0em 0.5em;">
-  <a href="https://github.com/18F/api.data.gov/blob/master/source/docs/api-key.md">Help Improve this Content</a>
+  <a href="https://github.com/18F/api.data.gov/blob/master/source/docs/api-key.html.md">Help Improve this Content</a>
 </div>
 
           </div>
